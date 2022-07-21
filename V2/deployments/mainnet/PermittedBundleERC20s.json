@@ -1,0 +1,291 @@
+{
+  "address": "0xb1C43d8208ee1c3b6F9218796970Bb332FFF57ab",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_admin",
+          "type": "address"
+        },
+        {
+          "internalType": "address[]",
+          "name": "_permittedErc20s",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "erc20Contract",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "isPermitted",
+          "type": "bool"
+        }
+      ],
+      "name": "ERC20Permit",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_erc20",
+          "type": "address"
+        }
+      ],
+      "name": "getERC20Permit",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_erc20",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "_permit",
+          "type": "bool"
+        }
+      ],
+      "name": "setERC20Permit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "_erc20s",
+          "type": "address[]"
+        },
+        {
+          "internalType": "bool[]",
+          "name": "_permits",
+          "type": "bool[]"
+        }
+      ],
+      "name": "setERC20Permits",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xd2334247535c5e9d42a69c590c974be9834c530d00352d5afe47ea355e853e82",
+  "receipt": {
+    "to": null,
+    "from": "0x214a4bC7C7843918DDbeF45EE47EBEd1688B0ff2",
+    "contractAddress": "0xb1C43d8208ee1c3b6F9218796970Bb332FFF57ab",
+    "transactionIndex": 231,
+    "gasUsed": "443439",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000008000000001000000000000000000000000000000000000020000000000000000000800000000000000000000000000000000400000000000000800000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000040000000000000800000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x68d4101c6b3f1bde5a1510b52a2e9d1432a4de4c37c1ce2cad58e13d0e480385",
+    "transactionHash": "0xd2334247535c5e9d42a69c590c974be9834c530d00352d5afe47ea355e853e82",
+    "logs": [
+      {
+        "transactionIndex": 231,
+        "blockNumber": 14443466,
+        "transactionHash": "0xd2334247535c5e9d42a69c590c974be9834c530d00352d5afe47ea355e853e82",
+        "address": "0xb1C43d8208ee1c3b6F9218796970Bb332FFF57ab",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x000000000000000000000000dca17eedc1aa3dbb14361678566b2da5a1bb4c31"
+        ],
+        "data": "0x",
+        "logIndex": 275,
+        "blockHash": "0x68d4101c6b3f1bde5a1510b52a2e9d1432a4de4c37c1ce2cad58e13d0e480385"
+      }
+    ],
+    "blockNumber": 14443466,
+    "cumulativeGasUsed": "16157864",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0xDcA17eeDc1aa3dbB14361678566b2dA5A1Bb4C31",
+    []
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "e960dbb71492b307ed8580de393cc147",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_admin\",\"type\":\"address\"},{\"internalType\":\"address[]\",\"name\":\"_permittedErc20s\",\"type\":\"address[]\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"erc20Contract\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"isPermitted\",\"type\":\"bool\"}],\"name\":\"ERC20Permit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_erc20\",\"type\":\"address\"}],\"name\":\"getERC20Permit\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_erc20\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"_permit\",\"type\":\"bool\"}],\"name\":\"setERC20Permit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"_erc20s\",\"type\":\"address[]\"},{\"internalType\":\"bool[]\",\"name\":\"_permits\",\"type\":\"bool[]\"}],\"name\":\"setERC20Permits\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"NFTfi\",\"details\":\"Registry for ERC20 currencies supported by NFTfi. Each ERC20 is associated with a boolean permit.\",\"events\":{\"ERC20Permit(address,bool)\":{\"params\":{\"erc20Contract\":\"- Address of the ERC20 contract.\",\"isPermitted\":\"- Signals ERC20 permit.\"}}},\"kind\":\"dev\",\"methods\":{\"constructor\":{\"params\":{\"_admin\":\"- Initial admin of this contract.\",\"_permittedErc20s\":\"- The batch of addresses initially permitted.\"}},\"getERC20Permit(address)\":{\"params\":{\"_erc20\":\"- The address of the erc20 contract.\"},\"returns\":{\"_0\":\"Returns whether the erc20 is permitted\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"setERC20Permit(address,bool)\":{\"params\":{\"_erc20\":\"- The address of the ERC20 currency whose permit list status changed.\",\"_permit\":\"- The new status of whether the currency is permitted or not.\"}},\"setERC20Permits(address[],bool[])\":{\"params\":{\"_erc20s\":\"- The addresses of the ERC20 currencies whose permit list status changed.\",\"_permits\":\"- The new statuses of whether the currency is permitted or not.\"}},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"title\":\"PermittedERC20s\",\"version\":1},\"userdoc\":{\"events\":{\"ERC20Permit(address,bool)\":{\"notice\":\"This event is fired whenever the admin sets a ERC20 permit.\"}},\"kind\":\"user\",\"methods\":{\"constructor\":{\"notice\":\"Initialize `erc20Permits` with a batch of permitted ERC20s\"},\"getERC20Permit(address)\":{\"notice\":\"This function can be called by anyone to get the permit associated with the erc20 contract.\"},\"setERC20Permit(address,bool)\":{\"notice\":\"This function can be called by admins to change the permitted status of an ERC20 currency. This includes both adding an ERC20 currency to the permitted list and removing it.\"},\"setERC20Permits(address[],bool[])\":{\"notice\":\"This function can be called by admins to change the permitted status of a batch of ERC20 currency. This includes both adding an ERC20 currency to the permitted list and removing it.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/permittedLists/PermittedERC20s.sol\":\"PermittedERC20s\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/Context.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        return msg.data;\\n    }\\n}\\n\",\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\"},\"contracts/interfaces/IPermittedERC20s.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.4;\\n\\ninterface IPermittedERC20s {\\n    function getERC20Permit(address _erc20) external view returns (bool);\\n}\\n\",\"keccak256\":\"0xd159a7f11adfd21220c0acbb85917b5019a82d4912c2fecb20449b267ca9ca15\",\"license\":\"BUSL-1.1\"},\"contracts/permittedLists/PermittedERC20s.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.4;\\n\\nimport \\\"../interfaces/IPermittedERC20s.sol\\\";\\nimport \\\"../utils/Ownable.sol\\\";\\n\\n/**\\n * @title  PermittedERC20s\\n * @author NFTfi\\n * @dev Registry for ERC20 currencies supported by NFTfi. Each ERC20 is\\n * associated with a boolean permit.\\n */\\ncontract PermittedERC20s is Ownable, IPermittedERC20s {\\n    /* ******* */\\n    /* STORAGE */\\n    /* ******* */\\n\\n    /**\\n     * @notice A mapping from an ERC20 currency address to whether that currency\\n     * is permitted to be used by this contract.\\n     */\\n    mapping(address => bool) private erc20Permits;\\n\\n    /* ****** */\\n    /* EVENTS */\\n    /* ****** */\\n\\n    /**\\n     * @notice This event is fired whenever the admin sets a ERC20 permit.\\n     *\\n     * @param erc20Contract - Address of the ERC20 contract.\\n     * @param isPermitted - Signals ERC20 permit.\\n     */\\n    event ERC20Permit(address indexed erc20Contract, bool isPermitted);\\n\\n    /* *********** */\\n    /* CONSTRUCTOR */\\n    /* *********** */\\n\\n    /**\\n     * @notice Initialize `erc20Permits` with a batch of permitted ERC20s\\n     *\\n     * @param _admin - Initial admin of this contract.\\n     * @param _permittedErc20s - The batch of addresses initially permitted.\\n     */\\n    constructor(address _admin, address[] memory _permittedErc20s) Ownable(_admin) {\\n        for (uint256 i = 0; i < _permittedErc20s.length; i++) {\\n            _setERC20Permit(_permittedErc20s[i], true);\\n        }\\n    }\\n\\n    /* ********* */\\n    /* FUNCTIONS */\\n    /* ********* */\\n\\n    /**\\n     * @notice This function can be called by admins to change the permitted status of an ERC20 currency. This includes\\n     * both adding an ERC20 currency to the permitted list and removing it.\\n     *\\n     * @param _erc20 - The address of the ERC20 currency whose permit list status changed.\\n     * @param _permit - The new status of whether the currency is permitted or not.\\n     */\\n    function setERC20Permit(address _erc20, bool _permit) external onlyOwner {\\n        _setERC20Permit(_erc20, _permit);\\n    }\\n\\n    /**\\n     * @notice This function can be called by admins to change the permitted status of a batch of ERC20 currency. This\\n     * includes both adding an ERC20 currency to the permitted list and removing it.\\n     *\\n     * @param _erc20s - The addresses of the ERC20 currencies whose permit list status changed.\\n     * @param _permits - The new statuses of whether the currency is permitted or not.\\n     */\\n    function setERC20Permits(address[] memory _erc20s, bool[] memory _permits) external onlyOwner {\\n        require(_erc20s.length == _permits.length, \\\"setERC20Permits function information arity mismatch\\\");\\n\\n        for (uint256 i = 0; i < _erc20s.length; i++) {\\n            _setERC20Permit(_erc20s[i], _permits[i]);\\n        }\\n    }\\n\\n    /**\\n     * @notice This function can be called by anyone to get the permit associated with the erc20 contract.\\n     *\\n     * @param _erc20 - The address of the erc20 contract.\\n     *\\n     * @return Returns whether the erc20 is permitted\\n     */\\n    function getERC20Permit(address _erc20) external view override returns (bool) {\\n        return erc20Permits[_erc20];\\n    }\\n\\n    /**\\n     * @notice This function can be called by admins to change the permitted status of an ERC20 currency. This includes\\n     * both adding an ERC20 currency to the permitted list and removing it.\\n     *\\n     * @param _erc20 - The address of the ERC20 currency whose permit list status changed.\\n     * @param _permit - The new status of whether the currency is permitted or not.\\n     */\\n    function _setERC20Permit(address _erc20, bool _permit) internal {\\n        require(_erc20 != address(0), \\\"erc20 is zero address\\\");\\n\\n        erc20Permits[_erc20] = _permit;\\n\\n        emit ERC20Permit(_erc20, _permit);\\n    }\\n}\\n\",\"keccak256\":\"0x7880e2f08aa5a34b3900391694211d40a17565f88942ef6bceea13a84a311ea6\",\"license\":\"BUSL-1.1\"},\"contracts/utils/Ownable.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.4;\\n\\nimport \\\"@openzeppelin/contracts/utils/Context.sol\\\";\\n\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * By default, the owner account will be the one that deploys the contract. This\\n * can later be changed with {transferOwnership}.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n *\\n * Modified version from openzeppelin/contracts/access/Ownable.sol that allows to\\n * initialize the owner using a parameter in the constructor\\n */\\nabstract contract Ownable is Context {\\n    address private _owner;\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        require(owner() == _msgSender(), \\\"Ownable: caller is not the owner\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @dev Initializes the contract setting the deployer as the initial owner.\\n     */\\n    constructor(address _initialOwner) {\\n        _setOwner(_initialOwner);\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Can only be called by the current owner.\\n     */\\n    function transferOwnership(address _newOwner) public virtual onlyOwner {\\n        require(_newOwner != address(0), \\\"Ownable: new owner is the zero address\\\");\\n        _setOwner(_newOwner);\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view virtual returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Sets the owner.\\n     */\\n    function _setOwner(address _newOwner) private {\\n        address oldOwner = _owner;\\n        _owner = _newOwner;\\n        emit OwnershipTransferred(oldOwner, _newOwner);\\n    }\\n}\\n\",\"keccak256\":\"0xa1dcb2ae57518644f7c702a4033493c34d5f8a0fe6f9f07c487df10aa95c2ea9\",\"license\":\"BUSL-1.1\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060405161094c38038061094c83398101604081905261002f916101bd565b8161003981610098565b5060005b81518110156100905761007e82828151811061006957634e487b7160e01b600052603260045260246000fd5b602002602001015160016100e860201b60201c565b8061008881610298565b91505061003d565b5050506102d5565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b6001600160a01b0382166101425760405162461bcd60e51b815260206004820152601560248201527f6572633230206973207a65726f20616464726573730000000000000000000000604482015260640160405180910390fd5b6001600160a01b038216600081815260016020908152604091829020805460ff191685151590811790915591519182527ff100355be652ecc881568750e6a98c0713e4316f75d5314ebc9039e0acb52f24910160405180910390a25050565b80516001600160a01b03811681146101b857600080fd5b919050565b600080604083850312156101cf578182fd5b6101d8836101a1565b602084810151919350906001600160401b03808211156101f6578384fd5b818601915086601f830112610209578384fd5b81518181111561021b5761021b6102bf565b8060051b604051601f19603f83011681018181108582111715610240576102406102bf565b604052828152858101935084860182860187018b101561025e578788fd5b8795505b8386101561028757610273816101a1565b855260019590950194938601938601610262565b508096505050505050509250929050565b60006000198214156102b857634e487b7160e01b81526011600452602481fd5b5060010190565b634e487b7160e01b600052604160045260246000fd5b610668806102e46000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c80637836baf11461005c57806379b6404014610071578063872873be146100845780638da5cb5b146100c5578063f2fde38b146100e0575b600080fd5b61006f61006a3660046104a1565b6100f3565b005b61006f61007f3660046104d3565b610134565b6100b0610092366004610480565b6001600160a01b031660009081526001602052604090205460ff1690565b60405190151581526020015b60405180910390f35b6000546040516001600160a01b0390911681526020016100bc565b61006f6100ee366004610480565b610246565b6000546001600160a01b031633146101265760405162461bcd60e51b815260040161011d90610594565b60405180910390fd5b61013082826102e1565b5050565b6000546001600160a01b0316331461015e5760405162461bcd60e51b815260040161011d90610594565b80518251146101cb5760405162461bcd60e51b815260206004820152603360248201527f73657445524332305065726d6974732066756e6374696f6e20696e666f726d616044820152720e8d2dedc40c2e4d2e8f240dad2e6dac2e8c6d606b1b606482015260840161011d565b60005b82518110156102415761022f8382815181106101fa57634e487b7160e01b600052603260045260246000fd5b602002602001015183838151811061022257634e487b7160e01b600052603260045260246000fd5b60200260200101516102e1565b806102398161061e565b9150506101ce565b505050565b6000546001600160a01b031633146102705760405162461bcd60e51b815260040161011d90610594565b6001600160a01b0381166102d55760405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b606482015260840161011d565b6102de8161038e565b50565b6001600160a01b03821661032f5760405162461bcd60e51b81526020600482015260156024820152746572633230206973207a65726f206164647265737360581b604482015260640161011d565b6001600160a01b038216600081815260016020908152604091829020805460ff191685151590811790915591519182527ff100355be652ecc881568750e6a98c0713e4316f75d5314ebc9039e0acb52f24910160405180910390a25050565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b80356001600160a01b03811681146103f557600080fd5b919050565b600082601f83011261040a578081fd5b8135602061041f61041a836105fa565b6105c9565b80838252828201915082860187848660051b890101111561043e578586fd5b855b858110156104635761045182610470565b84529284019290840190600101610440565b5090979650505050505050565b803580151581146103f557600080fd5b600060208284031215610491578081fd5b61049a826103de565b9392505050565b600080604083850312156104b3578081fd5b6104bc836103de565b91506104ca60208401610470565b90509250929050565b600080604083850312156104e5578182fd5b823567ffffffffffffffff808211156104fc578384fd5b818501915085601f83011261050f578384fd5b8135602061051f61041a836105fa565b8083825282820191508286018a848660051b890101111561053e578889fd5b8896505b8487101561056757610553816103de565b835260019690960195918301918301610542565b509650508601359250508082111561057d578283fd5b5061058a858286016103fa565b9150509250929050565b6020808252818101527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604082015260600190565b604051601f8201601f1916810167ffffffffffffffff811182821017156105f2576105f2610645565b604052919050565b600067ffffffffffffffff82111561061457610614610645565b5060051b60200190565b600060001982141561063e57634e487b7160e01b81526011600452602481fd5b5060010190565b634e487b7160e01b600052604160045260246000fdfea164736f6c6343000804000a",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c80637836baf11461005c57806379b6404014610071578063872873be146100845780638da5cb5b146100c5578063f2fde38b146100e0575b600080fd5b61006f61006a3660046104a1565b6100f3565b005b61006f61007f3660046104d3565b610134565b6100b0610092366004610480565b6001600160a01b031660009081526001602052604090205460ff1690565b60405190151581526020015b60405180910390f35b6000546040516001600160a01b0390911681526020016100bc565b61006f6100ee366004610480565b610246565b6000546001600160a01b031633146101265760405162461bcd60e51b815260040161011d90610594565b60405180910390fd5b61013082826102e1565b5050565b6000546001600160a01b0316331461015e5760405162461bcd60e51b815260040161011d90610594565b80518251146101cb5760405162461bcd60e51b815260206004820152603360248201527f73657445524332305065726d6974732066756e6374696f6e20696e666f726d616044820152720e8d2dedc40c2e4d2e8f240dad2e6dac2e8c6d606b1b606482015260840161011d565b60005b82518110156102415761022f8382815181106101fa57634e487b7160e01b600052603260045260246000fd5b602002602001015183838151811061022257634e487b7160e01b600052603260045260246000fd5b60200260200101516102e1565b806102398161061e565b9150506101ce565b505050565b6000546001600160a01b031633146102705760405162461bcd60e51b815260040161011d90610594565b6001600160a01b0381166102d55760405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b606482015260840161011d565b6102de8161038e565b50565b6001600160a01b03821661032f5760405162461bcd60e51b81526020600482015260156024820152746572633230206973207a65726f206164647265737360581b604482015260640161011d565b6001600160a01b038216600081815260016020908152604091829020805460ff191685151590811790915591519182527ff100355be652ecc881568750e6a98c0713e4316f75d5314ebc9039e0acb52f24910160405180910390a25050565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b80356001600160a01b03811681146103f557600080fd5b919050565b600082601f83011261040a578081fd5b8135602061041f61041a836105fa565b6105c9565b80838252828201915082860187848660051b890101111561043e578586fd5b855b858110156104635761045182610470565b84529284019290840190600101610440565b5090979650505050505050565b803580151581146103f557600080fd5b600060208284031215610491578081fd5b61049a826103de565b9392505050565b600080604083850312156104b3578081fd5b6104bc836103de565b91506104ca60208401610470565b90509250929050565b600080604083850312156104e5578182fd5b823567ffffffffffffffff808211156104fc578384fd5b818501915085601f83011261050f578384fd5b8135602061051f61041a836105fa565b8083825282820191508286018a848660051b890101111561053e578889fd5b8896505b8487101561056757610553816103de565b835260019690960195918301918301610542565b509650508601359250508082111561057d578283fd5b5061058a858286016103fa565b9150509250929050565b6020808252818101527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604082015260600190565b604051601f8201601f1916810167ffffffffffffffff811182821017156105f2576105f2610645565b604052919050565b600067ffffffffffffffff82111561061457610614610645565b5060051b60200190565b600060001982141561063e57634e487b7160e01b81526011600452602481fd5b5060010190565b634e487b7160e01b600052604160045260246000fdfea164736f6c6343000804000a",
+  "devdoc": {
+    "author": "NFTfi",
+    "details": "Registry for ERC20 currencies supported by NFTfi. Each ERC20 is associated with a boolean permit.",
+    "events": {
+      "ERC20Permit(address,bool)": {
+        "params": {
+          "erc20Contract": "- Address of the ERC20 contract.",
+          "isPermitted": "- Signals ERC20 permit."
+        }
+      }
+    },
+    "kind": "dev",
+    "methods": {
+      "constructor": {
+        "params": {
+          "_admin": "- Initial admin of this contract.",
+          "_permittedErc20s": "- The batch of addresses initially permitted."
+        }
+      },
+      "getERC20Permit(address)": {
+        "params": {
+          "_erc20": "- The address of the erc20 contract."
+        },
+        "returns": {
+          "_0": "Returns whether the erc20 is permitted"
+        }
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "setERC20Permit(address,bool)": {
+        "params": {
+          "_erc20": "- The address of the ERC20 currency whose permit list status changed.",
+          "_permit": "- The new status of whether the currency is permitted or not."
+        }
+      },
+      "setERC20Permits(address[],bool[])": {
+        "params": {
+          "_erc20s": "- The addresses of the ERC20 currencies whose permit list status changed.",
+          "_permits": "- The new statuses of whether the currency is permitted or not."
+        }
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "title": "PermittedERC20s",
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "ERC20Permit(address,bool)": {
+        "notice": "This event is fired whenever the admin sets a ERC20 permit."
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "constructor": {
+        "notice": "Initialize `erc20Permits` with a batch of permitted ERC20s"
+      },
+      "getERC20Permit(address)": {
+        "notice": "This function can be called by anyone to get the permit associated with the erc20 contract."
+      },
+      "setERC20Permit(address,bool)": {
+        "notice": "This function can be called by admins to change the permitted status of an ERC20 currency. This includes both adding an ERC20 currency to the permitted list and removing it."
+      },
+      "setERC20Permits(address[],bool[])": {
+        "notice": "This function can be called by admins to change the permitted status of a batch of ERC20 currency. This includes both adding an ERC20 currency to the permitted list and removing it."
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 21501,
+        "contract": "contracts/permittedLists/PermittedERC20s.sol:PermittedERC20s",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 18207,
+        "contract": "contracts/permittedLists/PermittedERC20s.sol:PermittedERC20s",
+        "label": "erc20Permits",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_address,t_bool)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_address,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      }
+    }
+  }
+}

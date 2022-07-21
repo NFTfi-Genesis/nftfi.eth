@@ -1,0 +1,469 @@
+{
+  "address": "0x6048C06d97BA978A203519a0d079AeAFf2B4ADe2",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "minLoanPrincipalAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxLoanPrincipalAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "nftCollateralId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "nftCollateralContract",
+              "type": "address"
+            },
+            {
+              "internalType": "uint32",
+              "name": "minLoanDuration",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "maxLoanDuration",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint16",
+              "name": "maxInterestRateForDurationInBasisPoints",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint16",
+              "name": "referralFeeInBasisPoints",
+              "type": "uint16"
+            },
+            {
+              "internalType": "address",
+              "name": "revenueSharePartner",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "loanERC20Denomination",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct LoanData.ListingTerms",
+          "name": "_listingTerms",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "loanPrincipalAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maximumRepaymentAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "nftCollateralId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "nftCollateralContract",
+              "type": "address"
+            },
+            {
+              "internalType": "uint32",
+              "name": "loanDuration",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint16",
+              "name": "loanAdminFeeInBasisPoints",
+              "type": "uint16"
+            },
+            {
+              "internalType": "address",
+              "name": "loanERC20Denomination",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "referrer",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct LoanData.Offer",
+          "name": "_offer",
+          "type": "tuple"
+        }
+      ],
+      "name": "bindingTermsSanityChecks",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "_loanId",
+          "type": "uint32"
+        },
+        {
+          "internalType": "contract INftfiHub",
+          "name": "_hub",
+          "type": "INftfiHub"
+        }
+      ],
+      "name": "checkLoanIdValidity",
+      "outputs": [],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_interestDue",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_adminFeeInBasisPoints",
+          "type": "uint256"
+        }
+      ],
+      "name": "computeAdminFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_loanPrincipalAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_referralFeeInBasisPoints",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_referrer",
+          "type": "address"
+        }
+      ],
+      "name": "computeReferralFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_adminFee",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_revenueShareInBasisPoints",
+          "type": "uint256"
+        }
+      ],
+      "name": "computeRevenueShare",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_revenueSharePartner",
+          "type": "address"
+        },
+        {
+          "internalType": "contract INftfiHub",
+          "name": "_hub",
+          "type": "INftfiHub"
+        }
+      ],
+      "name": "getRevenueSharePercent",
+      "outputs": [
+        {
+          "internalType": "uint16",
+          "name": "",
+          "type": "uint16"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "_loanId",
+          "type": "uint32"
+        },
+        {
+          "internalType": "contract INftfiHub",
+          "name": "_hub",
+          "type": "INftfiHub"
+        }
+      ],
+      "name": "payBackChecks",
+      "outputs": [],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "loanPrincipalAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maximumRepaymentAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "nftCollateralId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "loanERC20Denomination",
+              "type": "address"
+            },
+            {
+              "internalType": "uint32",
+              "name": "loanDuration",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint16",
+              "name": "loanInterestRateForDurationInBasisPoints",
+              "type": "uint16"
+            },
+            {
+              "internalType": "uint16",
+              "name": "loanAdminFeeInBasisPoints",
+              "type": "uint16"
+            },
+            {
+              "internalType": "address",
+              "name": "nftCollateralWrapper",
+              "type": "address"
+            },
+            {
+              "internalType": "uint64",
+              "name": "loanStartTime",
+              "type": "uint64"
+            },
+            {
+              "internalType": "address",
+              "name": "nftCollateralContract",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "borrower",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct LoanData.LoanTerms",
+          "name": "_loan",
+          "type": "tuple"
+        },
+        {
+          "internalType": "uint32",
+          "name": "_loanId",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "_newLoanDuration",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_newMaximumRepaymentAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_lenderNonce",
+          "type": "uint256"
+        },
+        {
+          "internalType": "contract INftfiHub",
+          "name": "_hub",
+          "type": "INftfiHub"
+        }
+      ],
+      "name": "renegotiationChecks",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x2b614b36e085b1e6c932e7f3f926fb543fa87df5b72d7ff9d5356c5ed8c724c9",
+  "receipt": {
+    "to": null,
+    "from": "0x214a4bC7C7843918DDbeF45EE47EBEd1688B0ff2",
+    "contractAddress": "0x6048C06d97BA978A203519a0d079AeAFf2B4ADe2",
+    "transactionIndex": 64,
+    "gasUsed": "1261069",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xe5d765ca3cd206700d85d92b9a5af331c7a69858a0b64290b1ee7836f6808de0",
+    "transactionHash": "0x2b614b36e085b1e6c932e7f3f926fb543fa87df5b72d7ff9d5356c5ed8c724c9",
+    "logs": [],
+    "blockNumber": 14443197,
+    "cumulativeGasUsed": "6665992",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "e960dbb71492b307ed8580de393cc147",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"minLoanPrincipalAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maxLoanPrincipalAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"nftCollateralId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"nftCollateralContract\",\"type\":\"address\"},{\"internalType\":\"uint32\",\"name\":\"minLoanDuration\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"maxLoanDuration\",\"type\":\"uint32\"},{\"internalType\":\"uint16\",\"name\":\"maxInterestRateForDurationInBasisPoints\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"referralFeeInBasisPoints\",\"type\":\"uint16\"},{\"internalType\":\"address\",\"name\":\"revenueSharePartner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"loanERC20Denomination\",\"type\":\"address\"}],\"internalType\":\"struct LoanData.ListingTerms\",\"name\":\"_listingTerms\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"uint256\",\"name\":\"loanPrincipalAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maximumRepaymentAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"nftCollateralId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"nftCollateralContract\",\"type\":\"address\"},{\"internalType\":\"uint32\",\"name\":\"loanDuration\",\"type\":\"uint32\"},{\"internalType\":\"uint16\",\"name\":\"loanAdminFeeInBasisPoints\",\"type\":\"uint16\"},{\"internalType\":\"address\",\"name\":\"loanERC20Denomination\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"referrer\",\"type\":\"address\"}],\"internalType\":\"struct LoanData.Offer\",\"name\":\"_offer\",\"type\":\"tuple\"}],\"name\":\"bindingTermsSanityChecks\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_loanId\",\"type\":\"uint32\"},{\"internalType\":\"contract INftfiHub\",\"name\":\"_hub\",\"type\":\"INftfiHub\"}],\"name\":\"checkLoanIdValidity\",\"outputs\":[],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_interestDue\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_adminFeeInBasisPoints\",\"type\":\"uint256\"}],\"name\":\"computeAdminFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_loanPrincipalAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_referralFeeInBasisPoints\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_referrer\",\"type\":\"address\"}],\"name\":\"computeReferralFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_adminFee\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_revenueShareInBasisPoints\",\"type\":\"uint256\"}],\"name\":\"computeRevenueShare\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_revenueSharePartner\",\"type\":\"address\"},{\"internalType\":\"contract INftfiHub\",\"name\":\"_hub\",\"type\":\"INftfiHub\"}],\"name\":\"getRevenueSharePercent\",\"outputs\":[{\"internalType\":\"uint16\",\"name\":\"\",\"type\":\"uint16\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_loanId\",\"type\":\"uint32\"},{\"internalType\":\"contract INftfiHub\",\"name\":\"_hub\",\"type\":\"INftfiHub\"}],\"name\":\"payBackChecks\",\"outputs\":[],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"loanPrincipalAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maximumRepaymentAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"nftCollateralId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"loanERC20Denomination\",\"type\":\"address\"},{\"internalType\":\"uint32\",\"name\":\"loanDuration\",\"type\":\"uint32\"},{\"internalType\":\"uint16\",\"name\":\"loanInterestRateForDurationInBasisPoints\",\"type\":\"uint16\"},{\"internalType\":\"uint16\",\"name\":\"loanAdminFeeInBasisPoints\",\"type\":\"uint16\"},{\"internalType\":\"address\",\"name\":\"nftCollateralWrapper\",\"type\":\"address\"},{\"internalType\":\"uint64\",\"name\":\"loanStartTime\",\"type\":\"uint64\"},{\"internalType\":\"address\",\"name\":\"nftCollateralContract\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"borrower\",\"type\":\"address\"}],\"internalType\":\"struct LoanData.LoanTerms\",\"name\":\"_loan\",\"type\":\"tuple\"},{\"internalType\":\"uint32\",\"name\":\"_loanId\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"_newLoanDuration\",\"type\":\"uint32\"},{\"internalType\":\"uint256\",\"name\":\"_newMaximumRepaymentAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_lenderNonce\",\"type\":\"uint256\"},{\"internalType\":\"contract INftfiHub\",\"name\":\"_hub\",\"type\":\"INftfiHub\"}],\"name\":\"renegotiationChecks\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"NFTfi\",\"kind\":\"dev\",\"methods\":{\"bindingTermsSanityChecks(LoanData.ListingTerms,LoanData.Offer)\":{\"details\":\"Performs some validation checks over loan parameters when accepting a listing\"},\"computeAdminFee(uint256,uint256)\":{\"params\":{\"_adminFeeInBasisPoints\":\"- The percent (measured in basis points) of the interest earned that will be taken as a fee by the contract admins when the loan is repaid. The fee is stored in the loan struct to prevent an attack where the contract admins could adjust the fee right before a loan is repaid, and take all of the interest earned.\",\"_interestDue\":\"- The amount of interest due, measured in the smallest quantity of the ERC20 currency being used to pay the interest.\"},\"returns\":{\"_0\":\"The quantity of ERC20 currency (measured in smalled units of that ERC20 currency) that is due as an admin fee.\"}},\"computeReferralFee(uint256,uint256,address)\":{\"params\":{\"_loanPrincipalAmount\":\"- The original sum of money transferred from lender to borrower at the beginning of the loan, measured in loanERC20Denomination's smallest units.\",\"_referralFeeInBasisPoints\":\"- The percent (measured in basis points) of the loan principal amount that will be taken as a fee to pay to the referrer, 0 if the lender is not paying referral fee.\",\"_referrer\":\"- The address of the referrer who found the lender matching the listing, Zero address to signal that there is no referrer.\"},\"returns\":{\"_0\":\"The quantity of ERC20 currency (measured in smalled units of that ERC20 currency) that should be sent to the referrer.\"}},\"computeRevenueShare(uint256,uint256)\":{\"params\":{\"_adminFee\":\"- The quantity of ERC20 currency (measured in smalled units of that ERC20 currency) that is due as an admin fee.\",\"_revenueShareInBasisPoints\":\"- The percent (measured in basis points) of the admin fee amount that will be taken as a revenue share for a the partner, at the moment the loan is begun.\"},\"returns\":{\"_0\":\"The quantity of ERC20 currency (measured in smalled units of that ERC20 currency) that should be sent to the `revenueSharePartner`.\"}},\"getRevenueSharePercent(address,INftfiHub)\":{\"details\":\"Function that the partner is permitted and returns its shared percent.\",\"params\":{\"_revenueSharePartner\":\"- Partner's address\"},\"returns\":{\"_0\":\"The revenue share percent for the partner.\"}},\"payBackChecks(uint32,INftfiHub)\":{\"details\":\"Function that performs some validation checks before trying to repay a loan\",\"params\":{\"_loanId\":\"- The id of the loan being repaid\"}},\"renegotiationChecks(LoanData.LoanTerms,uint32,uint32,uint256,uint256,INftfiHub)\":{\"details\":\"Performs some validation checks before trying to renegotiate a loan. Needed to avoid stack too deep.\",\"params\":{\"_lenderNonce\":\"- The nonce referred to here is not the same as an Ethereum account's nonce. We are referring instead to nonces that are used by both the lender and the borrower when they are first signing off-chain NFTfi orders. These nonces can be any uint256 value that the user has not previously used to sign an off-chain order. Each nonce can be used at most once per user within NFTfi, regardless of whether they are the lender or the borrower in that situation. This serves two purposes: - First, it prevents replay attacks where an attacker would submit a user's off-chain order more than once. - Second, it allows a user to cancel an off-chain order by calling NFTfi.cancelLoanCommitmentBeforeLoanHasBegun() , which marks the nonce as used and prevents any future loan from using the user's off-chain order that contains that nonce.\",\"_loan\":\"- The main Loan Terms struct.\",\"_loanId\":\"- The unique identifier for the loan to be renegotiated\",\"_newLoanDuration\":\"- The new amount of time (measured in seconds) that can elapse before the lender can liquidate the loan and seize the underlying collateral NFT.\",\"_newMaximumRepaymentAmount\":\"- The new maximum amount of money that the borrower would be required to retrieve their collateral, measured in the smallest units of the ERC20 currency used for the loan. The borrower will always have to pay this amount to retrieve their collateral, regardless of whether they repay early.\"},\"returns\":{\"_0\":\"Borrower and Lender addresses\"}}},\"title\":\"LoanChecksAndCalculations\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"computeAdminFee(uint256,uint256)\":{\"notice\":\"A convenience function computing the adminFee taken from a specified quantity of interest.\"},\"computeReferralFee(uint256,uint256,address)\":{\"notice\":\"A convenience function computing the referral fee taken from the loan principal amount to transferr to the referrer.\"},\"computeRevenueShare(uint256,uint256)\":{\"notice\":\"A convenience function computing the revenue share taken from the admin fee to transferr to the permitted partner.\"}},\"notice\":\"Helper library for LoanBase\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/loans/direct/loanTypes/LoanChecksAndCalculations.sol\":\"LoanChecksAndCalculations\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (token/ERC721/IERC721.sol)\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../../utils/introspection/IERC165.sol\\\";\\n\\n/**\\n * @dev Required interface of an ERC721 compliant contract.\\n */\\ninterface IERC721 is IERC165 {\\n    /**\\n     * @dev Emitted when `tokenId` token is transferred from `from` to `to`.\\n     */\\n    event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);\\n\\n    /**\\n     * @dev Emitted when `owner` enables `approved` to manage the `tokenId` token.\\n     */\\n    event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId);\\n\\n    /**\\n     * @dev Emitted when `owner` enables or disables (`approved`) `operator` to manage all of its assets.\\n     */\\n    event ApprovalForAll(address indexed owner, address indexed operator, bool approved);\\n\\n    /**\\n     * @dev Returns the number of tokens in ``owner``'s account.\\n     */\\n    function balanceOf(address owner) external view returns (uint256 balance);\\n\\n    /**\\n     * @dev Returns the owner of the `tokenId` token.\\n     *\\n     * Requirements:\\n     *\\n     * - `tokenId` must exist.\\n     */\\n    function ownerOf(uint256 tokenId) external view returns (address owner);\\n\\n    /**\\n     * @dev Safely transfers `tokenId` token from `from` to `to`, checking first that contract recipients\\n     * are aware of the ERC721 protocol to prevent tokens from being forever locked.\\n     *\\n     * Requirements:\\n     *\\n     * - `from` cannot be the zero address.\\n     * - `to` cannot be the zero address.\\n     * - `tokenId` token must exist and be owned by `from`.\\n     * - If the caller is not `from`, it must be have been allowed to move this token by either {approve} or {setApprovalForAll}.\\n     * - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function safeTransferFrom(\\n        address from,\\n        address to,\\n        uint256 tokenId\\n    ) external;\\n\\n    /**\\n     * @dev Transfers `tokenId` token from `from` to `to`.\\n     *\\n     * WARNING: Usage of this method is discouraged, use {safeTransferFrom} whenever possible.\\n     *\\n     * Requirements:\\n     *\\n     * - `from` cannot be the zero address.\\n     * - `to` cannot be the zero address.\\n     * - `tokenId` token must be owned by `from`.\\n     * - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function transferFrom(\\n        address from,\\n        address to,\\n        uint256 tokenId\\n    ) external;\\n\\n    /**\\n     * @dev Gives permission to `to` to transfer `tokenId` token to another account.\\n     * The approval is cleared when the token is transferred.\\n     *\\n     * Only a single account can be approved at a time, so approving the zero address clears previous approvals.\\n     *\\n     * Requirements:\\n     *\\n     * - The caller must own the token or be an approved operator.\\n     * - `tokenId` must exist.\\n     *\\n     * Emits an {Approval} event.\\n     */\\n    function approve(address to, uint256 tokenId) external;\\n\\n    /**\\n     * @dev Returns the account approved for `tokenId` token.\\n     *\\n     * Requirements:\\n     *\\n     * - `tokenId` must exist.\\n     */\\n    function getApproved(uint256 tokenId) external view returns (address operator);\\n\\n    /**\\n     * @dev Approve or remove `operator` as an operator for the caller.\\n     * Operators can call {transferFrom} or {safeTransferFrom} for any token owned by the caller.\\n     *\\n     * Requirements:\\n     *\\n     * - The `operator` cannot be the caller.\\n     *\\n     * Emits an {ApprovalForAll} event.\\n     */\\n    function setApprovalForAll(address operator, bool _approved) external;\\n\\n    /**\\n     * @dev Returns if the `operator` is allowed to manage all of the assets of `owner`.\\n     *\\n     * See {setApprovalForAll}\\n     */\\n    function isApprovedForAll(address owner, address operator) external view returns (bool);\\n\\n    /**\\n     * @dev Safely transfers `tokenId` token from `from` to `to`.\\n     *\\n     * Requirements:\\n     *\\n     * - `from` cannot be the zero address.\\n     * - `to` cannot be the zero address.\\n     * - `tokenId` token must exist and be owned by `from`.\\n     * - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}.\\n     * - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function safeTransferFrom(\\n        address from,\\n        address to,\\n        uint256 tokenId,\\n        bytes calldata data\\n    ) external;\\n}\\n\",\"keccak256\":\"0x516a22876c1fab47f49b1bc22b4614491cd05338af8bd2e7b382da090a079990\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/introspection/IERC165.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Interface of the ERC165 standard, as defined in the\\n * https://eips.ethereum.org/EIPS/eip-165[EIP].\\n *\\n * Implementers can declare support of contract interfaces, which can then be\\n * queried by others ({ERC165Checker}).\\n *\\n * For an implementation, see {ERC165}.\\n */\\ninterface IERC165 {\\n    /**\\n     * @dev Returns true if this contract implements the interface defined by\\n     * `interfaceId`. See the corresponding\\n     * https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section]\\n     * to learn more about how these ids are created.\\n     *\\n     * This function call must use less than 30 000 gas.\\n     */\\n    function supportsInterface(bytes4 interfaceId) external view returns (bool);\\n}\\n\",\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\"},\"contracts/interfaces/IDirectLoanCoordinator.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.4;\\n\\n/**\\n * @title IDirectLoanCoordinator\\n * @author NFTfi\\n * @dev DirectLoanCoordinator interface.\\n */\\ninterface IDirectLoanCoordinator {\\n    enum StatusType {\\n        NOT_EXISTS,\\n        NEW,\\n        RESOLVED\\n    }\\n\\n    /**\\n     * @notice This struct contains data related to a loan\\n     *\\n     * @param smartNftId - The id of both the promissory note and obligation receipt.\\n     * @param status - The status in which the loan currently is.\\n     * @param loanContract - Address of the LoanType contract that created the loan.\\n     */\\n    struct Loan {\\n        address loanContract;\\n        uint64 smartNftId;\\n        StatusType status;\\n    }\\n\\n    function registerLoan(address _lender, bytes32 _loanType) external returns (uint32);\\n\\n    function mintObligationReceipt(uint32 _loanId, address _borrower) external;\\n\\n    function resolveLoan(uint32 _loanId) external;\\n\\n    function promissoryNoteToken() external view returns (address);\\n\\n    function obligationReceiptToken() external view returns (address);\\n\\n    function getLoanData(uint32 _loanId) external view returns (Loan memory);\\n\\n    function isValidLoanId(uint32 _loanId, address _loanContract) external view returns (bool);\\n}\\n\",\"keccak256\":\"0xa2a71768932bf3400304a6846fd764fe5f78407670b41a5ebaed8950aa035f77\",\"license\":\"BUSL-1.1\"},\"contracts/interfaces/INftfiHub.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.4;\\n\\n/**\\n * @title INftfiHub\\n * @author NFTfi\\n * @dev NftfiHub interface\\n */\\ninterface INftfiHub {\\n    function setContract(string calldata _contractKey, address _contractAddress) external;\\n\\n    function getContract(bytes32 _contractKey) external view returns (address);\\n}\\n\",\"keccak256\":\"0x80259ebf45729166a8524b313741b6ea2acfe8ac9dc15243f018a08cc2b14240\",\"license\":\"BUSL-1.1\"},\"contracts/interfaces/IPermittedERC20s.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.4;\\n\\ninterface IPermittedERC20s {\\n    function getERC20Permit(address _erc20) external view returns (bool);\\n}\\n\",\"keccak256\":\"0xd159a7f11adfd21220c0acbb85917b5019a82d4912c2fecb20449b267ca9ca15\",\"license\":\"BUSL-1.1\"},\"contracts/interfaces/IPermittedPartners.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.4;\\n\\ninterface IPermittedPartners {\\n    function getPartnerPermit(address _partner) external view returns (uint16);\\n}\\n\",\"keccak256\":\"0x288db42f55648b3d0305f95b1a47132b30a374b380f41ec848b0e5fd02dbd7f8\",\"license\":\"BUSL-1.1\"},\"contracts/loans/direct/loanTypes/IDirectLoanBase.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\nimport \\\"./LoanData.sol\\\";\\n\\npragma solidity 0.8.4;\\n\\ninterface IDirectLoanBase {\\n    function maximumLoanDuration() external view returns (uint256);\\n\\n    function adminFeeInBasisPoints() external view returns (uint16);\\n\\n    // solhint-disable-next-line func-name-mixedcase\\n    function LOAN_COORDINATOR() external view returns (bytes32);\\n\\n    function loanIdToLoan(uint32)\\n        external\\n        view\\n        returns (\\n            uint256,\\n            uint256,\\n            uint256,\\n            address,\\n            uint32,\\n            uint16,\\n            uint16,\\n            address,\\n            uint64,\\n            address,\\n            address\\n        );\\n\\n    function loanRepaidOrLiquidated(uint32) external view returns (bool);\\n\\n    function getWhetherNonceHasBeenUsedForUser(address _user, uint256 _nonce) external view returns (bool);\\n}\\n\",\"keccak256\":\"0x907a34783f5c832ee22c176feedc4f7523ac35a71b46207585586147a4c6d080\",\"license\":\"BUSL-1.1\"},\"contracts/loans/direct/loanTypes/LoanChecksAndCalculations.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.4;\\n\\nimport \\\"./IDirectLoanBase.sol\\\";\\nimport \\\"./LoanData.sol\\\";\\nimport \\\"../../../interfaces/IDirectLoanCoordinator.sol\\\";\\nimport \\\"../../../utils/ContractKeys.sol\\\";\\nimport \\\"../../../interfaces/INftfiHub.sol\\\";\\nimport \\\"../../../interfaces/IPermittedPartners.sol\\\";\\nimport \\\"../../../interfaces/IPermittedERC20s.sol\\\";\\n\\nimport \\\"@openzeppelin/contracts/token/ERC721/IERC721.sol\\\";\\n\\n/**\\n * @title  LoanChecksAndCalculations\\n * @author NFTfi\\n * @notice Helper library for LoanBase\\n */\\nlibrary LoanChecksAndCalculations {\\n    uint16 private constant HUNDRED_PERCENT = 10000;\\n\\n    /**\\n     * @dev Function that performs some validation checks before trying to repay a loan\\n     *\\n     * @param _loanId - The id of the loan being repaid\\n     */\\n    function payBackChecks(uint32 _loanId, INftfiHub _hub) external view {\\n        checkLoanIdValidity(_loanId, _hub);\\n        // Sanity check that payBackLoan() and liquidateOverdueLoan() have never been called on this loanId.\\n        // Depending on how the rest of the code turns out, this check may be unnecessary.\\n        require(!IDirectLoanBase(address(this)).loanRepaidOrLiquidated(_loanId), \\\"Loan already repaid/liquidated\\\");\\n\\n        // Fetch loan details from storage, but store them in memory for the sake of saving gas.\\n        (, , , , uint32 loanDuration, , , , uint64 loanStartTime, , ) = IDirectLoanBase(address(this)).loanIdToLoan(\\n            _loanId\\n        );\\n\\n        // When a loan exceeds the loan term, it is expired. At this stage the Lender can call Liquidate Loan to resolve\\n        // the loan.\\n        require(block.timestamp <= (uint256(loanStartTime) + uint256(loanDuration)), \\\"Loan is expired\\\");\\n    }\\n\\n    function checkLoanIdValidity(uint32 _loanId, INftfiHub _hub) public view {\\n        require(\\n            IDirectLoanCoordinator(_hub.getContract(IDirectLoanBase(address(this)).LOAN_COORDINATOR())).isValidLoanId(\\n                _loanId,\\n                address(this)\\n            ),\\n            \\\"invalid loanId\\\"\\n        );\\n    }\\n\\n    /**\\n     * @dev Function that the partner is permitted and returns its shared percent.\\n     *\\n     * @param _revenueSharePartner - Partner's address\\n     *\\n     * @return The revenue share percent for the partner.\\n     */\\n    function getRevenueSharePercent(address _revenueSharePartner, INftfiHub _hub) external view returns (uint16) {\\n        // return soon if no partner is set to avoid a public call\\n        if (_revenueSharePartner == address(0)) {\\n            return 0;\\n        }\\n\\n        uint16 revenueSharePercent = IPermittedPartners(_hub.getContract(ContractKeys.PERMITTED_PARTNERS))\\n        .getPartnerPermit(_revenueSharePartner);\\n\\n        return revenueSharePercent;\\n    }\\n\\n    /**\\n     * @dev Performs some validation checks before trying to renegotiate a loan.\\n     * Needed to avoid stack too deep.\\n     *\\n     * @param _loan - The main Loan Terms struct.\\n     * @param _loanId - The unique identifier for the loan to be renegotiated\\n     * @param _newLoanDuration - The new amount of time (measured in seconds) that can elapse before the lender can\\n     * liquidate the loan and seize the underlying collateral NFT.\\n     * @param _newMaximumRepaymentAmount - The new maximum amount of money that the borrower would be required to\\n     * retrieve their collateral, measured in the smallest units of the ERC20 currency used for the loan. The\\n     * borrower will always have to pay this amount to retrieve their collateral, regardless of whether they repay\\n     * early.\\n     * @param _lenderNonce - The nonce referred to here is not the same as an Ethereum account's nonce. We are\\n     * referring instead to nonces that are used by both the lender and the borrower when they are first signing\\n     * off-chain NFTfi orders. These nonces can be any uint256 value that the user has not previously used to sign an\\n     * off-chain order. Each nonce can be used at most once per user within NFTfi, regardless of whether they are the\\n     * lender or the borrower in that situation. This serves two purposes:\\n     * - First, it prevents replay attacks where an attacker would submit a user's off-chain order more than once.\\n     * - Second, it allows a user to cancel an off-chain order by calling NFTfi.cancelLoanCommitmentBeforeLoanHasBegun()\\n     , which marks the nonce as used and prevents any future loan from using the user's off-chain order that contains\\n     * that nonce.\\n     * @return Borrower and Lender addresses\\n     */\\n    function renegotiationChecks(\\n        LoanData.LoanTerms memory _loan,\\n        uint32 _loanId,\\n        uint32 _newLoanDuration,\\n        uint256 _newMaximumRepaymentAmount,\\n        uint256 _lenderNonce,\\n        INftfiHub _hub\\n    ) external view returns (address, address) {\\n        checkLoanIdValidity(_loanId, _hub);\\n        IDirectLoanCoordinator loanCoordinator = IDirectLoanCoordinator(\\n            _hub.getContract(IDirectLoanBase(address(this)).LOAN_COORDINATOR())\\n        );\\n        uint256 smartNftId = loanCoordinator.getLoanData(_loanId).smartNftId;\\n\\n        address borrower;\\n\\n        if (_loan.borrower != address(0)) {\\n            borrower = _loan.borrower;\\n        } else {\\n            borrower = IERC721(loanCoordinator.obligationReceiptToken()).ownerOf(smartNftId);\\n        }\\n\\n        require(msg.sender == borrower, \\\"Only borrower can initiate\\\");\\n        require(block.timestamp <= (uint256(_loan.loanStartTime) + _newLoanDuration), \\\"New duration already expired\\\");\\n        require(\\n            uint256(_newLoanDuration) <= IDirectLoanBase(address(this)).maximumLoanDuration(),\\n            \\\"New duration exceeds maximum loan duration\\\"\\n        );\\n        require(!IDirectLoanBase(address(this)).loanRepaidOrLiquidated(_loanId), \\\"Loan already repaid/liquidated\\\");\\n        require(\\n            _newMaximumRepaymentAmount >= _loan.loanPrincipalAmount,\\n            \\\"Negative interest rate loans are not allowed.\\\"\\n        );\\n\\n        // Fetch current owner of loan promissory note.\\n        address lender = IERC721(loanCoordinator.promissoryNoteToken()).ownerOf(smartNftId);\\n\\n        require(\\n            !IDirectLoanBase(address(this)).getWhetherNonceHasBeenUsedForUser(lender, _lenderNonce),\\n            \\\"Lender nonce invalid\\\"\\n        );\\n\\n        return (borrower, lender);\\n    }\\n\\n    /**\\n     * @dev Performs some validation checks over loan parameters when accepting a listing\\n     *\\n     */\\n    function bindingTermsSanityChecks(LoanData.ListingTerms memory _listingTerms, LoanData.Offer memory _offer)\\n        external\\n        pure\\n    {\\n        // offer vs listing validations\\n        require(_offer.loanERC20Denomination == _listingTerms.loanERC20Denomination, \\\"Invalid loanERC20Denomination\\\");\\n        require(\\n            _offer.loanPrincipalAmount >= _listingTerms.minLoanPrincipalAmount &&\\n                _offer.loanPrincipalAmount <= _listingTerms.maxLoanPrincipalAmount,\\n            \\\"Invalid loanPrincipalAmount\\\"\\n        );\\n        uint256 maxRepaymentLimit = _offer.loanPrincipalAmount +\\n            (_offer.loanPrincipalAmount * _listingTerms.maxInterestRateForDurationInBasisPoints) /\\n            HUNDRED_PERCENT;\\n        require(_offer.maximumRepaymentAmount <= maxRepaymentLimit, \\\"maxInterestRateForDurationInBasisPoints violated\\\");\\n\\n        require(\\n            _offer.loanDuration >= _listingTerms.minLoanDuration &&\\n                _offer.loanDuration <= _listingTerms.maxLoanDuration,\\n            \\\"Invalid loanDuration\\\"\\n        );\\n    }\\n\\n    /**\\n     * @notice A convenience function computing the revenue share taken from the admin fee to transferr to the permitted\\n     * partner.\\n     *\\n     * @param _adminFee - The quantity of ERC20 currency (measured in smalled units of that ERC20 currency) that is due\\n     * as an admin fee.\\n     * @param _revenueShareInBasisPoints - The percent (measured in basis points) of the admin fee amount that will be\\n     * taken as a revenue share for a the partner, at the moment the loan is begun.\\n     *\\n     * @return The quantity of ERC20 currency (measured in smalled units of that ERC20 currency) that should be sent to\\n     * the `revenueSharePartner`.\\n     */\\n    function computeRevenueShare(uint256 _adminFee, uint256 _revenueShareInBasisPoints)\\n        external\\n        pure\\n        returns (uint256)\\n    {\\n        return (_adminFee * _revenueShareInBasisPoints) / HUNDRED_PERCENT;\\n    }\\n\\n    /**\\n     * @notice A convenience function computing the adminFee taken from a specified quantity of interest.\\n     *\\n     * @param _interestDue - The amount of interest due, measured in the smallest quantity of the ERC20 currency being\\n     * used to pay the interest.\\n     * @param _adminFeeInBasisPoints - The percent (measured in basis points) of the interest earned that will be taken\\n     * as a fee by the contract admins when the loan is repaid. The fee is stored in the loan struct to prevent an\\n     * attack where the contract admins could adjust the fee right before a loan is repaid, and take all of the interest\\n     * earned.\\n     *\\n     * @return The quantity of ERC20 currency (measured in smalled units of that ERC20 currency) that is due as an admin\\n     * fee.\\n     */\\n    function computeAdminFee(uint256 _interestDue, uint256 _adminFeeInBasisPoints) external pure returns (uint256) {\\n        return (_interestDue * _adminFeeInBasisPoints) / HUNDRED_PERCENT;\\n    }\\n\\n    /**\\n     * @notice A convenience function computing the referral fee taken from the loan principal amount to transferr to\\n     * the referrer.\\n     *\\n     * @param _loanPrincipalAmount - The original sum of money transferred from lender to borrower at the beginning of\\n     * the loan, measured in loanERC20Denomination's smallest units.\\n     * @param _referralFeeInBasisPoints - The percent (measured in basis points) of the loan principal amount that will\\n     * be taken as a fee to pay to the referrer, 0 if the lender is not paying referral fee.\\n     * @param _referrer - The address of the referrer who found the lender matching the listing, Zero address to signal\\n     * that there is no referrer.\\n     *\\n     * @return The quantity of ERC20 currency (measured in smalled units of that ERC20 currency) that should be sent to\\n     * the referrer.\\n     */\\n    function computeReferralFee(\\n        uint256 _loanPrincipalAmount,\\n        uint256 _referralFeeInBasisPoints,\\n        address _referrer\\n    ) external pure returns (uint256) {\\n        if (_referralFeeInBasisPoints == 0 || _referrer == address(0)) {\\n            return 0;\\n        }\\n        return (_loanPrincipalAmount * _referralFeeInBasisPoints) / HUNDRED_PERCENT;\\n    }\\n}\\n\",\"keccak256\":\"0x45fa911081ed5ca553c699cb518103ef9b4365ff3ac04153210d821abf614608\",\"license\":\"BUSL-1.1\"},\"contracts/loans/direct/loanTypes/LoanData.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.4;\\n\\n/**\\n * @title  LoanData\\n * @author NFTfi\\n * @notice An interface containg the main Loan struct shared by Direct Loans types.\\n */\\ninterface LoanData {\\n    /* ********** */\\n    /* DATA TYPES */\\n    /* ********** */\\n\\n    /**\\n     * @notice The main Loan Terms struct. This data is saved upon loan creation.\\n     *\\n     * @param loanERC20Denomination - The address of the ERC20 contract of the currency being used as principal/interest\\n     * for this loan.\\n     * @param loanPrincipalAmount - The original sum of money transferred from lender to borrower at the beginning of\\n     * the loan, measured in loanERC20Denomination's smallest units.\\n     * @param maximumRepaymentAmount - The maximum amount of money that the borrower would be required to retrieve their\\n     * collateral, measured in the smallest units of the ERC20 currency used for the loan. The borrower will always have\\n     * to pay this amount to retrieve their collateral, regardless of whether they repay early.\\n     * @param nftCollateralContract - The address of the the NFT collateral contract.\\n     * @param nftCollateralWrapper - The NFTfi wrapper of the NFT collateral contract.\\n     * @param nftCollateralId - The ID within the NFTCollateralContract for the NFT being used as collateral for this\\n     * loan. The NFT is stored within this contract during the duration of the loan.\\n     * @param loanStartTime - The block.timestamp when the loan first began (measured in seconds).\\n     * @param loanDuration - The amount of time (measured in seconds) that can elapse before the lender can liquidate\\n     * the loan and seize the underlying collateral NFT.\\n     * @param loanInterestRateForDurationInBasisPoints - This is the interest rate (measured in basis points, e.g.\\n     * hundreths of a percent) for the loan, that must be repaid pro-rata by the borrower at the conclusion of the loan\\n     * or risk seizure of their nft collateral. Note if the type of the loan is fixed then this value  is not used and\\n     * is irrelevant so it should be set to 0.\\n     * @param loanAdminFeeInBasisPoints - The percent (measured in basis points) of the interest earned that will be\\n     * taken as a fee by the contract admins when the loan is repaid. The fee is stored in the loan struct to prevent an\\n     * attack where the contract admins could adjust the fee right before a loan is repaid, and take all of the interest\\n     * earned.\\n     * @param borrower\\n     */\\n    struct LoanTerms {\\n        uint256 loanPrincipalAmount;\\n        uint256 maximumRepaymentAmount;\\n        uint256 nftCollateralId;\\n        address loanERC20Denomination;\\n        uint32 loanDuration;\\n        uint16 loanInterestRateForDurationInBasisPoints;\\n        uint16 loanAdminFeeInBasisPoints;\\n        address nftCollateralWrapper;\\n        uint64 loanStartTime;\\n        address nftCollateralContract;\\n        address borrower;\\n    }\\n\\n    /**\\n     * @notice Some extra Loan's settings struct. This data is saved upon loan creation.\\n     * We need this to avoid stack too deep errors.\\n     *\\n     * @param revenueSharePartner - The address of the partner that will receive the revenue share.\\n     * @param revenueShareInBasisPoints - The percent (measured in basis points) of the admin fee amount that will be\\n     * taken as a revenue share for a t\\n     * @param referralFeeInBasisPoints - The percent (measured in basis points) of the loan principal amount that will\\n     * be taken as a fee to pay to the referrer, 0 if the lender is not paying referral fee.he partner, at the moment\\n     * the loan is begun.\\n     */\\n    struct LoanExtras {\\n        address revenueSharePartner;\\n        uint16 revenueShareInBasisPoints;\\n        uint16 referralFeeInBasisPoints;\\n    }\\n\\n    /**\\n     * @notice The offer made by the lender. Used as parameter on both acceptOffer (initiated by the borrower) and\\n     * acceptListing (initiated by the lender).\\n     *\\n     * @param loanERC20Denomination - The address of the ERC20 contract of the currency being used as principal/interest\\n     * for this loan.\\n     * @param loanPrincipalAmount - The original sum of money transferred from lender to borrower at the beginning of\\n     * the loan, measured in loanERC20Denomination's smallest units.\\n     * @param maximumRepaymentAmount - The maximum amount of money that the borrower would be required to retrieve their\\n     *  collateral, measured in the smallest units of the ERC20 currency used for the loan. The borrower will always\\n     * have to pay this amount to retrieve their collateral, regardless of whether they repay early.\\n     * @param nftCollateralContract - The address of the ERC721 contract of the NFT collateral.\\n     * @param nftCollateralId - The ID within the NFTCollateralContract for the NFT being used as collateral for this\\n     * loan. The NFT is stored within this contract during the duration of the loan.\\n     * @param referrer - The address of the referrer who found the lender matching the listing, Zero address to signal\\n     * this there is no referrer.\\n     * @param loanDuration - The amount of time (measured in seconds) that can elapse before the lender can liquidate\\n     * the loan and seize the underlying collateral NFT.\\n     * @param loanAdminFeeInBasisPoints - The percent (measured in basis points) of the interest earned that will be\\n     * taken as a fee by the contract admins when the loan is repaid. The fee is stored in the loan struct to prevent an\\n     * attack where the contract admins could adjust the fee right before a loan is repaid, and take all of the interest\\n     * earned.\\n     */\\n    struct Offer {\\n        uint256 loanPrincipalAmount;\\n        uint256 maximumRepaymentAmount;\\n        uint256 nftCollateralId;\\n        address nftCollateralContract;\\n        uint32 loanDuration;\\n        uint16 loanAdminFeeInBasisPoints;\\n        address loanERC20Denomination;\\n        address referrer;\\n    }\\n\\n    /**\\n     * @notice Signature related params. Used as parameter on both acceptOffer (containing borrower signature) and\\n     * acceptListing (containing lender signature).\\n     *\\n     * @param signer - The address of the signer. The borrower for `acceptOffer` the lender for `acceptListing`.\\n     * @param nonce - The nonce referred here is not the same as an Ethereum account's nonce.\\n     * We are referring instead to a nonce that is used by the lender or the borrower when they are first signing\\n     * off-chain NFTfi orders. These nonce can be any uint256 value that the user has not previously used to sign an\\n     * off-chain order. Each nonce can be used at most once per\\u00a0user within NFTfi, regardless of whether they are the\\n     * lender or the borrower in that situation. This serves two purposes:\\n     * - First, it prevents replay attacks where an attacker would submit a user's off-chain order more than once.\\n     * - Second, it allows a user to cancel an off-chain order by calling NFTfi.cancelLoanCommitmentBeforeLoanHasBegun()\\n     * , which marks the nonce as used and prevents any future loan from using the user's off-chain order that contains\\n     * that nonce.\\n     * @param expiry - Date when the signature expires\\n     * @param signature - The ECDSA signature of the borrower or the lender, obtained off-chain ahead of time, signing\\n     * the following combination of parameters:\\n     * - Borrower\\n     *   - ListingTerms.loanERC20Denomination,\\n     *   - ListingTerms.minLoanPrincipalAmount,\\n     *   - ListingTerms.maxLoanPrincipalAmount,\\n     *   - ListingTerms.nftCollateralContract,\\n     *   - ListingTerms.nftCollateralId,\\n     *   - ListingTerms.revenueSharePartner,\\n     *   - ListingTerms.minLoanDuration,\\n     *   - ListingTerms.maxLoanDuration,\\n     *   - ListingTerms.maxInterestRateForDurationInBasisPoints,\\n     *   - ListingTerms.referralFeeInBasisPoints,\\n     *   - Signature.signer,\\n     *   - Signature.nonce,\\n     *   - Signature.expiry,\\n     *   - address of the loan type contract\\n     *   - chainId\\n     * - Lender:\\n     *   - Offer.loanERC20Denomination\\n     *   - Offer.loanPrincipalAmount\\n     *   - Offer.maximumRepaymentAmount\\n     *   - Offer.nftCollateralContract\\n     *   - Offer.nftCollateralId\\n     *   - Offer.referrer\\n     *   - Offer.loanDuration\\n     *   - Offer.loanAdminFeeInBasisPoints\\n     *   - Signature.signer,\\n     *   - Signature.nonce,\\n     *   - Signature.expiry,\\n     *   - address of the loan type contract\\n     *   - chainId\\n     */\\n    struct Signature {\\n        uint256 nonce;\\n        uint256 expiry;\\n        address signer;\\n        bytes signature;\\n    }\\n\\n    /**\\n     * @notice Some extra parameters that the borrower needs to set when accepting an offer.\\n     *\\n     * @param revenueSharePartner - The address of the partner that will receive the revenue share.\\n     * @param referralFeeInBasisPoints - The percent (measured in basis points) of the loan principal amount that will\\n     * be taken as a fee to pay to the referrer, 0 if the lender is not paying referral fee.\\n     */\\n    struct BorrowerSettings {\\n        address revenueSharePartner;\\n        uint16 referralFeeInBasisPoints;\\n    }\\n\\n    /**\\n     * @notice Terms the borrower set off-chain and is willing to accept automatically when fulfiled by a lender's\\n     * offer.\\n     *\\n     * @param loanERC20Denomination - The address of the ERC20 contract of the currency being used as principal/interest\\n     * for this loan.\\n     * @param minLoanPrincipalAmount - The minumum sum of money transferred from lender to borrower at the beginning of\\n     * the loan, measured in loanERC20Denomination's smallest units.\\n     * @param maxLoanPrincipalAmount - The  sum of money transferred from lender to borrower at the beginning of\\n     * the loan, measured in loanERC20Denomination's smallest units.\\n     * @param maximumRepaymentAmount - The maximum amount of money that the borrower would be required to retrieve their\\n     * collateral, measured in the smallest units of the ERC20 currency used for the loan. The borrower will always have\\n     * to pay this amount to retrieve their collateral, regardless of whether they repay early.\\n     * @param nftCollateralContract - The address of the ERC721 contract of the NFT collateral.\\n     * @param nftCollateralId - The ID within the NFTCollateralContract for the NFT being used as collateral for this\\n     * loan. The NFT is stored within this contract during the duration of the loan.\\n     * @param revenueSharePartner - The address of the partner that will receive the revenue share.\\n     * @param minLoanDuration - The minumum amount of time (measured in seconds) that can elapse before the lender can\\n     * liquidate the loan and seize the underlying collateral NFT.\\n     * @param maxLoanDuration - The maximum amount of time (measured in seconds) that can elapse before the lender can\\n     * liquidate the loan and seize the underlying collateral NFT.\\n     * @param maxInterestRateForDurationInBasisPoints - This is maximum the interest rate (measured in basis points,\\n     * e.g. hundreths of a percent) for the loan.\\n     * @param referralFeeInBasisPoints - The percent (measured in basis points) of the loan principal amount that will\\n     * be taken as a fee to pay to the referrer, 0 if the lender is not paying referral fee.\\n     */\\n    struct ListingTerms {\\n        uint256 minLoanPrincipalAmount;\\n        uint256 maxLoanPrincipalAmount;\\n        uint256 nftCollateralId;\\n        address nftCollateralContract;\\n        uint32 minLoanDuration;\\n        uint32 maxLoanDuration;\\n        uint16 maxInterestRateForDurationInBasisPoints;\\n        uint16 referralFeeInBasisPoints;\\n        address revenueSharePartner;\\n        address loanERC20Denomination;\\n    }\\n}\\n\",\"keccak256\":\"0x1d2c0ce1b56a119665c118d44f7a210ec3f576f55e25808823b74ac72fab4fc9\",\"license\":\"BUSL-1.1\"},\"contracts/utils/ContractKeys.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.4;\\n\\n/**\\n * @title ContractKeys\\n * @author NFTfi\\n * @dev Common library for contract keys\\n */\\nlibrary ContractKeys {\\n    bytes32 public constant PERMITTED_ERC20S = bytes32(\\\"PERMITTED_ERC20S\\\");\\n    bytes32 public constant PERMITTED_NFTS = bytes32(\\\"PERMITTED_NFTS\\\");\\n    bytes32 public constant PERMITTED_PARTNERS = bytes32(\\\"PERMITTED_PARTNERS\\\");\\n    bytes32 public constant NFT_TYPE_REGISTRY = bytes32(\\\"NFT_TYPE_REGISTRY\\\");\\n    bytes32 public constant LOAN_REGISTRY = bytes32(\\\"LOAN_REGISTRY\\\");\\n    bytes32 public constant PERMITTED_SNFT_RECEIVER = bytes32(\\\"PERMITTED_SNFT_RECEIVER\\\");\\n    bytes32 public constant PERMITTED_BUNDLE_ERC20S = bytes32(\\\"PERMITTED_BUNDLE_ERC20S\\\");\\n    bytes32 public constant PERMITTED_AIRDROPS = bytes32(\\\"PERMITTED_AIRDROPS\\\");\\n    bytes32 public constant AIRDROP_RECEIVER = bytes32(\\\"AIRDROP_RECEIVER\\\");\\n    bytes32 public constant AIRDROP_FACTORY = bytes32(\\\"AIRDROP_FACTORY\\\");\\n    bytes32 public constant AIRDROP_FLASH_LOAN = bytes32(\\\"AIRDROP_FLASH_LOAN\\\");\\n    bytes32 public constant NFTFI_BUNDLER = bytes32(\\\"NFTFI_BUNDLER\\\");\\n\\n    string public constant AIRDROP_WRAPPER_STRING = \\\"AirdropWrapper\\\";\\n\\n    /**\\n     * @notice Returns the bytes32 representation of a string\\n     * @param _key the string key\\n     * @return id bytes32 representation\\n     */\\n    function getIdFromStringKey(string memory _key) external pure returns (bytes32 id) {\\n        require(bytes(_key).length <= 32, \\\"invalid key\\\");\\n\\n        // solhint-disable-next-line no-inline-assembly\\n        assembly {\\n            id := mload(add(_key, 32))\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x2fa7e704ddc4095a739ac5dca2cd49cb261f7b881778038398e9e7d5063c1a25\",\"license\":\"BUSL-1.1\"}},\"version\":1}",
+  "bytecode": "0x6115d961003a600b82828239805160001a60731461002d57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600436106100825760003560e01c80632ad659af146100875780636c9a1576146100ad5780637b2392f1146100c25780637f5e0ed31461008757806380880738146100d55780638fc665be146100e8578063b5ec52631461010e578063b7fa1f6214610141575b600080fd5b61009a61009536600461132c565b610154565b6040519081526020015b60405180910390f35b6100c06100bb366004611454565b610176565b005b61009a6100d036600461134d565b610303565b6100c06100e3366004611097565b610347565b6100fb6100f6366004611027565b610535565b60405161ffff90911681526020016100a4565b61012161011c366004611170565b61065f565b604080516001600160a01b039384168152929091166020830152016100a4565b6100c061014f366004611454565b610d69565b60006127106101638385611548565b61016d9190611528565b90505b92915050565b6101808282610d69565b60405163038bf9d560e11b815263ffffffff831660048201523090630717f3aa9060240160206040518083038186803b1580156101bc57600080fd5b505afa1580156101d0573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906101f4919061105f565b1561021a5760405162461bcd60e51b815260040161021190611471565b60405180910390fd5b60405163044f9b4360e31b815263ffffffff831660048201526000908190309063227cda18906024016101606040518083038186803b15801561025c57600080fd5b505afa158015610270573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906102949190611385565b505098505050509550505050508163ffffffff16816001600160401b03166102bc9190611510565b4211156102fd5760405162461bcd60e51b815260206004820152600f60248201526e131bd85b881a5cc8195e1c1a5c9959608a1b6044820152606401610211565b50505050565b600082158061031957506001600160a01b038216155b1561032657506000610340565b6127106103338486611548565b61033d9190611528565b90505b9392505050565b8161012001516001600160a01b03168160c001516001600160a01b0316146103b15760405162461bcd60e51b815260206004820152601d60248201527f496e76616c6964206c6f616e455243323044656e6f6d696e6174696f6e0000006044820152606401610211565b81518151108015906103c857506020820151815111155b6104145760405162461bcd60e51b815260206004820152601b60248201527f496e76616c6964206c6f616e5072696e636970616c416d6f756e7400000000006044820152606401610211565b60c08201518151600091612710916104309161ffff1690611548565b61043a9190611528565b82516104469190611510565b905080826020015111156104b55760405162461bcd60e51b815260206004820152603060248201527f6d6178496e74657265737452617465466f724475726174696f6e496e4261736960448201526f1cd41bda5b9d1cc81d9a5bdb185d195960821b6064820152608401610211565b826080015163ffffffff16826080015163ffffffff16101580156104ed57508260a0015163ffffffff16826080015163ffffffff1611155b6105305760405162461bcd60e51b815260206004820152601460248201527324b73b30b634b2103637b0b7223ab930ba34b7b760611b6044820152606401610211565b505050565b60006001600160a01b03831661054d57506000610170565b604051631c2d8fb360e31b8152715045524d49545445445f504152544e45525360701b60048201526000906001600160a01b0384169063e16c7d989060240160206040518083038186803b1580156105a457600080fd5b505afa1580156105b8573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906105dc919061100b565b60405163410ed2e560e01b81526001600160a01b038681166004830152919091169063410ed2e59060240160206040518083038186803b15801561061f57600080fd5b505afa158015610633573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106579190611310565b949350505050565b60008061066c8784610d69565b6000836001600160a01b031663e16c7d98306001600160a01b03166377cfa9916040518163ffffffff1660e01b815260040160206040518083038186803b1580156106b657600080fd5b505afa1580156106ca573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106ee919061107f565b6040518263ffffffff1660e01b815260040161070c91815260200190565b60206040518083038186803b15801561072457600080fd5b505afa158015610738573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061075c919061100b565b60405163e6c5a54160e01b815263ffffffff8a1660048201529091506000906001600160a01b0383169063e6c5a5419060240160606040518083038186803b1580156107a757600080fd5b505afa1580156107bb573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906107df9190611291565b602001516001600160401b031690506000806001600160a01b03168b61014001516001600160a01b03161461081a57506101408a015161090b565b826001600160a01b0316638208e76c6040518163ffffffff1660e01b815260040160206040518083038186803b15801561085357600080fd5b505afa158015610867573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061088b919061100b565b6001600160a01b0316636352211e836040518263ffffffff1660e01b81526004016108b891815260200190565b60206040518083038186803b1580156108d057600080fd5b505afa1580156108e4573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610908919061100b565b90505b336001600160a01b038216146109635760405162461bcd60e51b815260206004820152601a60248201527f4f6e6c7920626f72726f7765722063616e20696e6974696174650000000000006044820152606401610211565b8863ffffffff168b61010001516001600160401b03166109839190611510565b4211156109d25760405162461bcd60e51b815260206004820152601c60248201527f4e6577206475726174696f6e20616c72656164792065787069726564000000006044820152606401610211565b306001600160a01b031663192b355d6040518163ffffffff1660e01b815260040160206040518083038186803b158015610a0b57600080fd5b505afa158015610a1f573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610a43919061107f565b8963ffffffff161115610aab5760405162461bcd60e51b815260206004820152602a60248201527f4e6577206475726174696f6e2065786365656473206d6178696d756d206c6f616044820152693710323ab930ba34b7b760b11b6064820152608401610211565b60405163038bf9d560e11b815263ffffffff8b1660048201523090630717f3aa9060240160206040518083038186803b158015610ae757600080fd5b505afa158015610afb573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610b1f919061105f565b15610b3c5760405162461bcd60e51b815260040161021190611471565b8a51881015610ba35760405162461bcd60e51b815260206004820152602d60248201527f4e6567617469766520696e7465726573742072617465206c6f616e732061726560448201526c103737ba1030b63637bbb2b21760991b6064820152608401610211565b6000836001600160a01b0316634fbe68a06040518163ffffffff1660e01b815260040160206040518083038186803b158015610bde57600080fd5b505afa158015610bf2573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610c16919061100b565b6001600160a01b0316636352211e846040518263ffffffff1660e01b8152600401610c4391815260200190565b60206040518083038186803b158015610c5b57600080fd5b505afa158015610c6f573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610c93919061100b565b604051630328404b60e41b81526001600160a01b0382166004820152602481018a9052909150309063328404b09060440160206040518083038186803b158015610cdc57600080fd5b505afa158015610cf0573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610d14919061105f565b15610d585760405162461bcd60e51b815260206004820152601460248201527313195b99195c881b9bdb98d9481a5b9d985b1a5960621b6044820152606401610211565b909b909a5098505050505050505050565b806001600160a01b031663e16c7d98306001600160a01b03166377cfa9916040518163ffffffff1660e01b815260040160206040518083038186803b158015610db157600080fd5b505afa158015610dc5573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610de9919061107f565b6040518263ffffffff1660e01b8152600401610e0791815260200190565b60206040518083038186803b158015610e1f57600080fd5b505afa158015610e33573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610e57919061100b565b6040516352a067e560e01b815263ffffffff841660048201523060248201526001600160a01b0391909116906352a067e59060440160206040518083038186803b158015610ea457600080fd5b505afa158015610eb8573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610edc919061105f565b610f195760405162461bcd60e51b815260206004820152600e60248201526d1a5b9d985b1a59081b1bd85b925960921b6044820152606401610211565b5050565b8035610f288161157d565b919050565b6000610100808385031215610f40578182fd5b604051908101906001600160401b0382118183101715610f6e57634e487b7160e01b83526041600452602483fd5b81604052809250833581526020840135602082015260408401356040820152610f9960608501610f1d565b6060820152610faa60808501610ff5565b6080820152610fbb60a08501610fea565b60a0820152610fcc60c08501610f1d565b60c0820152610fdd60e08501610f1d565b60e0820152505092915050565b8035610f2881611595565b8035610f28816115a5565b8035610f28816115b7565b60006020828403121561101c578081fd5b81516103408161157d565b60008060408385031215611039578081fd5b82356110448161157d565b915060208301356110548161157d565b809150509250929050565b600060208284031215611070578081fd5b81518015158114610340578182fd5b600060208284031215611090578081fd5b5051919050565b6000808284036102408112156110ab578283fd5b610140808212156110ba578384fd5b6110c26114a8565b91508435825260208501356020830152604085013560408301526110e860608601610f1d565b60608301526110f960808601610ff5565b608083015261110a60a08601610ff5565b60a083015261111b60c08601610fea565b60c083015261112c60e08601610fea565b60e083015261010061113f818701610f1d565b90830152610120611151868201610f1d565b818401525081935061116586828701610f2d565b925050509250929050565b60008060008060008086880361020081121561118a578283fd5b61016080821215611199578384fd5b6111a16114df565b91508835825260208901356020830152604089013560408301526111c760608a01610f1d565b60608301526111d860808a01610ff5565b60808301526111e960a08a01610fea565b60a08301526111fa60c08a01610fea565b60c083015261120b60e08a01610f1d565b60e083015261010061121e818b01611000565b908301526101206112308a8201610f1d565b908301526101406112428a8201610f1d565b8184015250819750611255818a01610ff5565b965050506112666101808801610ff5565b93506101a087013592506101c087013591506112856101e08801610f1d565b90509295509295509295565b6000606082840312156112a2578081fd5b604051606081018181106001600160401b03821117156112d057634e487b7160e01b83526041600452602483fd5b60405282516112de8161157d565b815260208301516112ee816115b7565b6020820152604083015160038110611304578283fd5b60408201529392505050565b600060208284031215611321578081fd5b815161034081611595565b6000806040838503121561133e578182fd5b50508035926020909101359150565b600080600060608486031215611361578081fd5b8335925060208401359150604084013561137a8161157d565b809150509250925092565b60008060008060008060008060008060006101608c8e0312156113a6578889fd5b8b519a5060208c0151995060408c0151985060608c01516113c68161157d565b60808d01519098506113d7816115a5565b60a08d01519097506113e881611595565b60c08d01519096506113f981611595565b60e08d015190955061140a8161157d565b6101008d015190945061141c816115b7565b6101208d015190935061142e8161157d565b6101408d01519092506114408161157d565b809150509295989b509295989b9093969950565b60008060408385031215611466578182fd5b8235611044816115a5565b6020808252601e908201527f4c6f616e20616c7265616479207265706169642f6c6971756964617465640000604082015260600190565b60405161014081016001600160401b03811182821017156114d957634e487b7160e01b600052604160045260246000fd5b60405290565b60405161016081016001600160401b03811182821017156114d957634e487b7160e01b600052604160045260246000fd5b6000821982111561152357611523611567565b500190565b60008261154357634e487b7160e01b81526012600452602481fd5b500490565b600081600019048311821515161561156257611562611567565b500290565b634e487b7160e01b600052601160045260246000fd5b6001600160a01b038116811461159257600080fd5b50565b61ffff8116811461159257600080fd5b63ffffffff8116811461159257600080fd5b6001600160401b038116811461159257600080fdfea164736f6c6343000804000a",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600436106100825760003560e01c80632ad659af146100875780636c9a1576146100ad5780637b2392f1146100c25780637f5e0ed31461008757806380880738146100d55780638fc665be146100e8578063b5ec52631461010e578063b7fa1f6214610141575b600080fd5b61009a61009536600461132c565b610154565b6040519081526020015b60405180910390f35b6100c06100bb366004611454565b610176565b005b61009a6100d036600461134d565b610303565b6100c06100e3366004611097565b610347565b6100fb6100f6366004611027565b610535565b60405161ffff90911681526020016100a4565b61012161011c366004611170565b61065f565b604080516001600160a01b039384168152929091166020830152016100a4565b6100c061014f366004611454565b610d69565b60006127106101638385611548565b61016d9190611528565b90505b92915050565b6101808282610d69565b60405163038bf9d560e11b815263ffffffff831660048201523090630717f3aa9060240160206040518083038186803b1580156101bc57600080fd5b505afa1580156101d0573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906101f4919061105f565b1561021a5760405162461bcd60e51b815260040161021190611471565b60405180910390fd5b60405163044f9b4360e31b815263ffffffff831660048201526000908190309063227cda18906024016101606040518083038186803b15801561025c57600080fd5b505afa158015610270573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906102949190611385565b505098505050509550505050508163ffffffff16816001600160401b03166102bc9190611510565b4211156102fd5760405162461bcd60e51b815260206004820152600f60248201526e131bd85b881a5cc8195e1c1a5c9959608a1b6044820152606401610211565b50505050565b600082158061031957506001600160a01b038216155b1561032657506000610340565b6127106103338486611548565b61033d9190611528565b90505b9392505050565b8161012001516001600160a01b03168160c001516001600160a01b0316146103b15760405162461bcd60e51b815260206004820152601d60248201527f496e76616c6964206c6f616e455243323044656e6f6d696e6174696f6e0000006044820152606401610211565b81518151108015906103c857506020820151815111155b6104145760405162461bcd60e51b815260206004820152601b60248201527f496e76616c6964206c6f616e5072696e636970616c416d6f756e7400000000006044820152606401610211565b60c08201518151600091612710916104309161ffff1690611548565b61043a9190611528565b82516104469190611510565b905080826020015111156104b55760405162461bcd60e51b815260206004820152603060248201527f6d6178496e74657265737452617465466f724475726174696f6e496e4261736960448201526f1cd41bda5b9d1cc81d9a5bdb185d195960821b6064820152608401610211565b826080015163ffffffff16826080015163ffffffff16101580156104ed57508260a0015163ffffffff16826080015163ffffffff1611155b6105305760405162461bcd60e51b815260206004820152601460248201527324b73b30b634b2103637b0b7223ab930ba34b7b760611b6044820152606401610211565b505050565b60006001600160a01b03831661054d57506000610170565b604051631c2d8fb360e31b8152715045524d49545445445f504152544e45525360701b60048201526000906001600160a01b0384169063e16c7d989060240160206040518083038186803b1580156105a457600080fd5b505afa1580156105b8573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906105dc919061100b565b60405163410ed2e560e01b81526001600160a01b038681166004830152919091169063410ed2e59060240160206040518083038186803b15801561061f57600080fd5b505afa158015610633573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106579190611310565b949350505050565b60008061066c8784610d69565b6000836001600160a01b031663e16c7d98306001600160a01b03166377cfa9916040518163ffffffff1660e01b815260040160206040518083038186803b1580156106b657600080fd5b505afa1580156106ca573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106ee919061107f565b6040518263ffffffff1660e01b815260040161070c91815260200190565b60206040518083038186803b15801561072457600080fd5b505afa158015610738573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061075c919061100b565b60405163e6c5a54160e01b815263ffffffff8a1660048201529091506000906001600160a01b0383169063e6c5a5419060240160606040518083038186803b1580156107a757600080fd5b505afa1580156107bb573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906107df9190611291565b602001516001600160401b031690506000806001600160a01b03168b61014001516001600160a01b03161461081a57506101408a015161090b565b826001600160a01b0316638208e76c6040518163ffffffff1660e01b815260040160206040518083038186803b15801561085357600080fd5b505afa158015610867573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061088b919061100b565b6001600160a01b0316636352211e836040518263ffffffff1660e01b81526004016108b891815260200190565b60206040518083038186803b1580156108d057600080fd5b505afa1580156108e4573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610908919061100b565b90505b336001600160a01b038216146109635760405162461bcd60e51b815260206004820152601a60248201527f4f6e6c7920626f72726f7765722063616e20696e6974696174650000000000006044820152606401610211565b8863ffffffff168b61010001516001600160401b03166109839190611510565b4211156109d25760405162461bcd60e51b815260206004820152601c60248201527f4e6577206475726174696f6e20616c72656164792065787069726564000000006044820152606401610211565b306001600160a01b031663192b355d6040518163ffffffff1660e01b815260040160206040518083038186803b158015610a0b57600080fd5b505afa158015610a1f573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610a43919061107f565b8963ffffffff161115610aab5760405162461bcd60e51b815260206004820152602a60248201527f4e6577206475726174696f6e2065786365656473206d6178696d756d206c6f616044820152693710323ab930ba34b7b760b11b6064820152608401610211565b60405163038bf9d560e11b815263ffffffff8b1660048201523090630717f3aa9060240160206040518083038186803b158015610ae757600080fd5b505afa158015610afb573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610b1f919061105f565b15610b3c5760405162461bcd60e51b815260040161021190611471565b8a51881015610ba35760405162461bcd60e51b815260206004820152602d60248201527f4e6567617469766520696e7465726573742072617465206c6f616e732061726560448201526c103737ba1030b63637bbb2b21760991b6064820152608401610211565b6000836001600160a01b0316634fbe68a06040518163ffffffff1660e01b815260040160206040518083038186803b158015610bde57600080fd5b505afa158015610bf2573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610c16919061100b565b6001600160a01b0316636352211e846040518263ffffffff1660e01b8152600401610c4391815260200190565b60206040518083038186803b158015610c5b57600080fd5b505afa158015610c6f573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610c93919061100b565b604051630328404b60e41b81526001600160a01b0382166004820152602481018a9052909150309063328404b09060440160206040518083038186803b158015610cdc57600080fd5b505afa158015610cf0573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610d14919061105f565b15610d585760405162461bcd60e51b815260206004820152601460248201527313195b99195c881b9bdb98d9481a5b9d985b1a5960621b6044820152606401610211565b909b909a5098505050505050505050565b806001600160a01b031663e16c7d98306001600160a01b03166377cfa9916040518163ffffffff1660e01b815260040160206040518083038186803b158015610db157600080fd5b505afa158015610dc5573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610de9919061107f565b6040518263ffffffff1660e01b8152600401610e0791815260200190565b60206040518083038186803b158015610e1f57600080fd5b505afa158015610e33573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610e57919061100b565b6040516352a067e560e01b815263ffffffff841660048201523060248201526001600160a01b0391909116906352a067e59060440160206040518083038186803b158015610ea457600080fd5b505afa158015610eb8573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610edc919061105f565b610f195760405162461bcd60e51b815260206004820152600e60248201526d1a5b9d985b1a59081b1bd85b925960921b6044820152606401610211565b5050565b8035610f288161157d565b919050565b6000610100808385031215610f40578182fd5b604051908101906001600160401b0382118183101715610f6e57634e487b7160e01b83526041600452602483fd5b81604052809250833581526020840135602082015260408401356040820152610f9960608501610f1d565b6060820152610faa60808501610ff5565b6080820152610fbb60a08501610fea565b60a0820152610fcc60c08501610f1d565b60c0820152610fdd60e08501610f1d565b60e0820152505092915050565b8035610f2881611595565b8035610f28816115a5565b8035610f28816115b7565b60006020828403121561101c578081fd5b81516103408161157d565b60008060408385031215611039578081fd5b82356110448161157d565b915060208301356110548161157d565b809150509250929050565b600060208284031215611070578081fd5b81518015158114610340578182fd5b600060208284031215611090578081fd5b5051919050565b6000808284036102408112156110ab578283fd5b610140808212156110ba578384fd5b6110c26114a8565b91508435825260208501356020830152604085013560408301526110e860608601610f1d565b60608301526110f960808601610ff5565b608083015261110a60a08601610ff5565b60a083015261111b60c08601610fea565b60c083015261112c60e08601610fea565b60e083015261010061113f818701610f1d565b90830152610120611151868201610f1d565b818401525081935061116586828701610f2d565b925050509250929050565b60008060008060008086880361020081121561118a578283fd5b61016080821215611199578384fd5b6111a16114df565b91508835825260208901356020830152604089013560408301526111c760608a01610f1d565b60608301526111d860808a01610ff5565b60808301526111e960a08a01610fea565b60a08301526111fa60c08a01610fea565b60c083015261120b60e08a01610f1d565b60e083015261010061121e818b01611000565b908301526101206112308a8201610f1d565b908301526101406112428a8201610f1d565b8184015250819750611255818a01610ff5565b965050506112666101808801610ff5565b93506101a087013592506101c087013591506112856101e08801610f1d565b90509295509295509295565b6000606082840312156112a2578081fd5b604051606081018181106001600160401b03821117156112d057634e487b7160e01b83526041600452602483fd5b60405282516112de8161157d565b815260208301516112ee816115b7565b6020820152604083015160038110611304578283fd5b60408201529392505050565b600060208284031215611321578081fd5b815161034081611595565b6000806040838503121561133e578182fd5b50508035926020909101359150565b600080600060608486031215611361578081fd5b8335925060208401359150604084013561137a8161157d565b809150509250925092565b60008060008060008060008060008060006101608c8e0312156113a6578889fd5b8b519a5060208c0151995060408c0151985060608c01516113c68161157d565b60808d01519098506113d7816115a5565b60a08d01519097506113e881611595565b60c08d01519096506113f981611595565b60e08d015190955061140a8161157d565b6101008d015190945061141c816115b7565b6101208d015190935061142e8161157d565b6101408d01519092506114408161157d565b809150509295989b509295989b9093969950565b60008060408385031215611466578182fd5b8235611044816115a5565b6020808252601e908201527f4c6f616e20616c7265616479207265706169642f6c6971756964617465640000604082015260600190565b60405161014081016001600160401b03811182821017156114d957634e487b7160e01b600052604160045260246000fd5b60405290565b60405161016081016001600160401b03811182821017156114d957634e487b7160e01b600052604160045260246000fd5b6000821982111561152357611523611567565b500190565b60008261154357634e487b7160e01b81526012600452602481fd5b500490565b600081600019048311821515161561156257611562611567565b500290565b634e487b7160e01b600052601160045260246000fd5b6001600160a01b038116811461159257600080fd5b50565b61ffff8116811461159257600080fd5b63ffffffff8116811461159257600080fd5b6001600160401b038116811461159257600080fdfea164736f6c6343000804000a",
+  "devdoc": {
+    "author": "NFTfi",
+    "kind": "dev",
+    "methods": {
+      "bindingTermsSanityChecks(LoanData.ListingTerms,LoanData.Offer)": {
+        "details": "Performs some validation checks over loan parameters when accepting a listing"
+      },
+      "computeAdminFee(uint256,uint256)": {
+        "params": {
+          "_adminFeeInBasisPoints": "- The percent (measured in basis points) of the interest earned that will be taken as a fee by the contract admins when the loan is repaid. The fee is stored in the loan struct to prevent an attack where the contract admins could adjust the fee right before a loan is repaid, and take all of the interest earned.",
+          "_interestDue": "- The amount of interest due, measured in the smallest quantity of the ERC20 currency being used to pay the interest."
+        },
+        "returns": {
+          "_0": "The quantity of ERC20 currency (measured in smalled units of that ERC20 currency) that is due as an admin fee."
+        }
+      },
+      "computeReferralFee(uint256,uint256,address)": {
+        "params": {
+          "_loanPrincipalAmount": "- The original sum of money transferred from lender to borrower at the beginning of the loan, measured in loanERC20Denomination's smallest units.",
+          "_referralFeeInBasisPoints": "- The percent (measured in basis points) of the loan principal amount that will be taken as a fee to pay to the referrer, 0 if the lender is not paying referral fee.",
+          "_referrer": "- The address of the referrer who found the lender matching the listing, Zero address to signal that there is no referrer."
+        },
+        "returns": {
+          "_0": "The quantity of ERC20 currency (measured in smalled units of that ERC20 currency) that should be sent to the referrer."
+        }
+      },
+      "computeRevenueShare(uint256,uint256)": {
+        "params": {
+          "_adminFee": "- The quantity of ERC20 currency (measured in smalled units of that ERC20 currency) that is due as an admin fee.",
+          "_revenueShareInBasisPoints": "- The percent (measured in basis points) of the admin fee amount that will be taken as a revenue share for a the partner, at the moment the loan is begun."
+        },
+        "returns": {
+          "_0": "The quantity of ERC20 currency (measured in smalled units of that ERC20 currency) that should be sent to the `revenueSharePartner`."
+        }
+      },
+      "getRevenueSharePercent(address,INftfiHub)": {
+        "details": "Function that the partner is permitted and returns its shared percent.",
+        "params": {
+          "_revenueSharePartner": "- Partner's address"
+        },
+        "returns": {
+          "_0": "The revenue share percent for the partner."
+        }
+      },
+      "payBackChecks(uint32,INftfiHub)": {
+        "details": "Function that performs some validation checks before trying to repay a loan",
+        "params": {
+          "_loanId": "- The id of the loan being repaid"
+        }
+      },
+      "renegotiationChecks(LoanData.LoanTerms,uint32,uint32,uint256,uint256,INftfiHub)": {
+        "details": "Performs some validation checks before trying to renegotiate a loan. Needed to avoid stack too deep.",
+        "params": {
+          "_lenderNonce": "- The nonce referred to here is not the same as an Ethereum account's nonce. We are referring instead to nonces that are used by both the lender and the borrower when they are first signing off-chain NFTfi orders. These nonces can be any uint256 value that the user has not previously used to sign an off-chain order. Each nonce can be used at most once per user within NFTfi, regardless of whether they are the lender or the borrower in that situation. This serves two purposes: - First, it prevents replay attacks where an attacker would submit a user's off-chain order more than once. - Second, it allows a user to cancel an off-chain order by calling NFTfi.cancelLoanCommitmentBeforeLoanHasBegun() , which marks the nonce as used and prevents any future loan from using the user's off-chain order that contains that nonce.",
+          "_loan": "- The main Loan Terms struct.",
+          "_loanId": "- The unique identifier for the loan to be renegotiated",
+          "_newLoanDuration": "- The new amount of time (measured in seconds) that can elapse before the lender can liquidate the loan and seize the underlying collateral NFT.",
+          "_newMaximumRepaymentAmount": "- The new maximum amount of money that the borrower would be required to retrieve their collateral, measured in the smallest units of the ERC20 currency used for the loan. The borrower will always have to pay this amount to retrieve their collateral, regardless of whether they repay early."
+        },
+        "returns": {
+          "_0": "Borrower and Lender addresses"
+        }
+      }
+    },
+    "title": "LoanChecksAndCalculations",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "computeAdminFee(uint256,uint256)": {
+        "notice": "A convenience function computing the adminFee taken from a specified quantity of interest."
+      },
+      "computeReferralFee(uint256,uint256,address)": {
+        "notice": "A convenience function computing the referral fee taken from the loan principal amount to transferr to the referrer."
+      },
+      "computeRevenueShare(uint256,uint256)": {
+        "notice": "A convenience function computing the revenue share taken from the admin fee to transferr to the permitted partner."
+      }
+    },
+    "notice": "Helper library for LoanBase",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}
