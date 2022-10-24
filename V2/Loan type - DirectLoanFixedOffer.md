@@ -3,6 +3,12 @@
 * rinkeby: 0x33e75763f3705252775c5aeed92e5b4987622f44
 * mainnet: 0xf896527c49b44aab3cf22ae356fa3af8e331f280
 
+Redeployed a clone contract of `DirectLoanFixedOffer` on Thu 14 Oct 2022,
+`DirectLoanFixedOfferRedeploy`: 
+
+* Goerli - 0x77097f421CEb2454eB5F77898d25159ff3C7381d
+* mainnet - 0x8252Df1d8b29057d1Afe3062bf5a64D503152BC8
+
 This contract manages the ability to create NFT-backed peer-to-peer loans with fixed interest rate i.e. where the borrower pays the full interest amount regardless of whether they repay early or not.
 
 ## Creating a new loan
