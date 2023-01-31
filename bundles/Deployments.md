@@ -1,0 +1,9 @@
+# Mainnet
+
+* NftfiBundler `0x18faa7748Bfd533638Aab95c2E26F4df00614aeb`
+* ImmutableBundle `0xB9F55139FC79Ed58D9845461f70483f778eBfeF2`
+
+# Görli
+
+* NftfiBundler `0xb5FB95bc206a930089d9b36F1A99C640b0D4F136`
+* ImmutableBundle 0xEAc68594060fd8C2C7Af9Cc368Eb8e6622D16845
