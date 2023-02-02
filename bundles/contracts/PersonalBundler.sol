@@ -63,7 +63,7 @@ contract PersonalBundler is NftfiBundler, Initializable, IERC1155Receiver {
      * have to override, because cloning doesn't work for it
      */
     function name() public view virtual override returns (string memory) {
-        return "NFTFi Personal Bundler";
+        return "NFTFi Personal Bundle";
     }
 
     /**

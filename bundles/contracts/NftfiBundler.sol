@@ -18,7 +18,7 @@ import "@openzeppelin/contracts/utils/Strings.sol";
  * @author NFTfi
  * @dev ERC998 Top-Down Composable Non-Fungible Token that supports ERC721 children.
  */
-contract NftfiBundler is ERC998TopDown, IBundleBuilder, Ownable {
+contract NftfiBundler is ERC998TopDown, IBundleBuilder {
     using EnumerableSet for EnumerableSet.UintSet;
     using EnumerableSet for EnumerableSet.AddressSet;
     using SafeERC20 for IERC20;
@@ -43,7 +43,7 @@ contract NftfiBundler is ERC998TopDown, IBundleBuilder, Ownable {
         string memory _customBaseURI,
         address _permittedNfts,
         address _airdropFlashLoan
-    ) ERC721(_name, _symbol) Ownable(_admin) {
+    ) ERC721(_name, _symbol) ERC998TopDown(_admin) {
         permittedNfts = _permittedNfts;
         airdropFlashLoan = _airdropFlashLoan;
         _setBaseURI(_customBaseURI);
@@ -234,7 +234,6 @@ contract NftfiBundler is ERC998TopDown, IBundleBuilder, Ownable {
      * @param _bundleElements The array of BundleElementERC721 objects to remove.
      */
     function _removeBundleElements(uint256 _tokenId, BundleElementERC721[] memory _bundleElements) internal {
-        _validateTransferSender(_tokenId);
         require(_bundleElements.length > 0, "bundle is empty");
         uint256 elementNumber = _bundleElements.length;
         for (uint256 i; i != elementNumber; ++i) {
@@ -242,7 +241,7 @@ contract NftfiBundler is ERC998TopDown, IBundleBuilder, Ownable {
             uint256 nuberOfIds = _bundleElements[i].ids.length;
             for (uint256 j; j != nuberOfIds; ++j) {
                 uint256 childId = _bundleElements[i].ids[j];
-
+                _validateChildTransfer(_tokenId, erc721Contract, childId);
                 _removeChild(_tokenId, erc721Contract, childId);
                 if (_bundleElements[i].safeTransferable) {
                     IERC721(erc721Contract).safeTransferFrom(address(this), msg.sender, childId);

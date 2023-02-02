@@ -7,7 +7,9 @@ import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "@openzeppelin/contracts/utils/Address.sol";
 import "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import "@openzeppelin/contracts/security/Pausable.sol";
 
+import "./utils/Ownable.sol";
 import "./IERC998ERC721TopDown.sol";
 import "./IERC998ERC721TopDownEnumerable.sol";
 
@@ -22,7 +24,9 @@ abstract contract ERC998TopDown is
     ERC721Enumerable,
     IERC998ERC721TopDown,
     IERC998ERC721TopDownEnumerable,
-    ReentrancyGuard
+    ReentrancyGuard,
+    Ownable,
+    Pausable
 {
     using Address for address;
     using EnumerableSet for EnumerableSet.UintSet;
@@ -44,6 +48,15 @@ abstract contract ERC998TopDown is
     // child address => childId => tokenId
     // this is used for ERC721 type tokens
     mapping(address => mapping(uint256 => uint256)) internal childTokenOwner;
+
+    /**
+     * @dev Stores the admin
+     *
+     * @param _admin address capable of pausing
+     */
+    constructor(address _admin) Ownable(_admin) {
+        // solhint-disable-previous-line no-empty-blocks
+    }
 
     /**
      * @notice Tells whether the ERC721 type child exists or not
@@ -206,7 +219,7 @@ abstract contract ERC998TopDown is
      * @param _to The address that owns the new bundle
      * @return The id of the new bundle
      */
-    function safeMint(address _to) public virtual returns (uint256) {
+    function safeMint(address _to) public virtual whenNotPaused returns (uint256) {
         uint256 id = ++tokenCount;
         _safeMint(_to, id);
 
@@ -302,7 +315,7 @@ abstract contract ERC998TopDown is
         uint256 _tokenId,
         address _childContract,
         uint256 _childTokenId
-    ) public virtual override nonReentrant {
+    ) public virtual override whenNotPaused nonReentrant {
         require(_from == msg.sender, "_from should be msg.sender");
         _receiveChild(_from, _tokenId, _childContract, _childTokenId);
         IERC721(_childContract).transferFrom(_from, address(this), _childTokenId);
@@ -321,7 +334,7 @@ abstract contract ERC998TopDown is
         address _from,
         uint256 _childTokenId,
         bytes calldata _data
-    ) external virtual override nonReentrant returns (bytes4) {
+    ) external virtual override whenNotPaused nonReentrant returns (bytes4) {
         _validateAndReceiveChild(_from, msg.sender, _childTokenId, _data);
         return this.onERC721Received.selector;
     }
@@ -512,5 +525,29 @@ abstract contract ERC998TopDown is
                 isApprovedForAll(rootOwner, msg.sender),
             "transferChild msg.sender not eligible"
         );
+    }
+
+    /**
+     * @dev Triggers stopped state.
+     *
+     * Requirements:
+     *
+     * - Only the owner can call this method.
+     * - The contract must not be paused.
+     */
+    function pause() external onlyOwner {
+        _pause();
+    }
+
+    /**
+     * @dev Returns to normal state.
+     *
+     * Requirements:
+     *
+     * - Only the owner can call this method.
+     * - The contract must be paused.
+     */
+    function unpause() external onlyOwner {
+        _unpause();
     }
 }
