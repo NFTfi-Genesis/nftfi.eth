@@ -47,6 +47,7 @@ contract NftfiBundler is ERC998TopDown, IBundleBuilder {
         permittedNfts = _permittedNfts;
         airdropFlashLoan = _airdropFlashLoan;
         _setBaseURI(_customBaseURI);
+        _pause();
     }
 
     /**
@@ -134,6 +135,8 @@ contract NftfiBundler is ERC998TopDown, IBundleBuilder {
 
             // In each iteration a child is removed, so eventually all contracts children are removed
             while (childTokens[_tokenId][childContract].length() > 0) {
+                // has to re-validate against re-entry attack
+                _validateTransferSender(_tokenId);
                 uint256 childId = childTokens[_tokenId][childContract].at(0);
 
                 _removeChild(_tokenId, childContract, childId);
@@ -144,53 +147,6 @@ contract NftfiBundler is ERC998TopDown, IBundleBuilder {
                     _oldNFTsTransfer(_receiver, childContract, childId);
                 }
                 emit TransferChild(_tokenId, _receiver, childContract, childId);
-            }
-        }
-    }
-
-    /**
-     * @notice Remove all the children from the bundle and send to personla bundler.
-     * If bundle contains a legacy ERC721 element, this will not work.
-     * @dev This method may run out of gas if the list of children is too big. In that case, children can be removed
-     *      individually.
-     * @param _tokenId the id of the bundle
-     * @param _personalBundler address of the receiver of the children
-     */
-    function sendElementsToPersonalBundler(uint256 _tokenId, address _personalBundler) external virtual {
-        _validateReceiver(_personalBundler);
-        _validateTransferSender(_tokenId);
-        require(_personalBundler != address(this), "cannot send to self");
-        require(
-            IERC165(_personalBundler).supportsInterface(type(IERC998ERC721TopDown).interfaceId),
-            "has to implement IERC998ERC721TopDown"
-        );
-        uint256 personalBundleId = 1;
-        //make sure sendeer owns personal bundler token
-        require(IERC721(_personalBundler).ownerOf(personalBundleId) == msg.sender, "has to own personal bundle token");
-
-        // In each iteration all contracts children are removed, so eventually all contracts are removed
-        while (childContracts[_tokenId].length() > 0) {
-            address childContract = childContracts[_tokenId].at(0);
-
-            // In each iteration a child is removed, so eventually all contracts children are removed
-            while (childTokens[_tokenId][childContract].length() > 0) {
-                uint256 childId = childTokens[_tokenId][childContract].at(0);
-
-                _removeChild(_tokenId, childContract, childId);
-
-                try
-                    IERC721(childContract).safeTransferFrom(
-                        address(this),
-                        _personalBundler,
-                        childId,
-                        abi.encodePacked(personalBundleId)
-                    )
-                {
-                    // solhint-disable-previous-line no-empty-blocks
-                } catch {
-                    revert("only safe transfer");
-                }
-                emit TransferChild(_tokenId, _personalBundler, childContract, childId);
             }
         }
     }
