@@ -1,0 +1,439 @@
+{
+  "address": "0x4Bbea54e5bD1194AFDF38dB5b6748c2b941cec0E",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_approved",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "approvedFor",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "mint",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownerOf",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "takeOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "tokenId",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "tokensOf",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xa3050b3223336d3db479cc71b5b8154baeaca2aaa6ef4a03236cca902a653d60",
+  "receipt": {
+    "to": null,
+    "from": "0x02e037F56728E947e92Af2c05baF7FeF387Ddd06",
+    "contractAddress": "0x4Bbea54e5bD1194AFDF38dB5b6748c2b941cec0E",
+    "transactionIndex": 1,
+    "gasUsed": "659444",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xfb93abb6070a27f12eb3cad12e2c94277a9a1dde26126ee6505b04949d40209f",
+    "transactionHash": "0xa3050b3223336d3db479cc71b5b8154baeaca2aaa6ef4a03236cca902a653d60",
+    "logs": [],
+    "blockNumber": 9327867,
+    "cumulativeGasUsed": "918384",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "ed53b264ca360d15692194b3179ecfd5",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_approved\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"approvedFor\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"}],\"name\":\"mint\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"ownerOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"takeOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"tokenId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"tokensOf\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Test contract with SuperRareV1 ERC721 related functionalities. Extracted from https://etherscan.io/address/0x41a322b28d0ff354040e2cbc676f0320d8c8850d#code\",\"kind\":\"dev\",\"methods\":{\"approve(address,uint256)\":{\"details\":\"Approves another address to claim for the ownership of the given token ID\",\"params\":{\"_to\":\"address to be approved for the given token ID\",\"_tokenId\":\"uint256 ID of the token to be approved\"}},\"approvedFor(uint256)\":{\"details\":\"Gets the approved address to take ownership of a given token ID\",\"params\":{\"_tokenId\":\"uint256 ID of the token to query the approval of\"},\"returns\":{\"_0\":\"address currently approved to take ownership of the given token ID\"}},\"balanceOf(address)\":{\"details\":\"Gets the balance of the specified address\",\"params\":{\"_owner\":\"address to query the balance of\"},\"returns\":{\"_0\":\"uint256 representing the amount owned by the passed address\"}},\"mint(address)\":{\"details\":\"External mint token function\",\"params\":{\"_to\":\"The address that will own the minted token\"}},\"ownerOf(uint256)\":{\"details\":\"Gets the owner of the specified token ID\",\"params\":{\"_tokenId\":\"uint256 ID of the token to query the owner of\"},\"returns\":{\"_0\":\"owner address currently marked as the owner of the given token ID\"}},\"takeOwnership(uint256)\":{\"details\":\"Claims the ownership of a given token ID\",\"params\":{\"_tokenId\":\"uint256 ID of the token being claimed by the msg.sender\"}},\"tokensOf(address)\":{\"details\":\"Gets the list of tokens owned by a given address\",\"params\":{\"_owner\":\"address to query the tokens of\"},\"returns\":{\"_0\":\"uint256[] representing the list of tokens owned by the passed address\"}},\"totalSupply()\":{\"details\":\"Gets the total amount of tokens stored by the contract\",\"returns\":{\"_0\":\"uint256 representing the total amount of tokens\"}},\"transfer(address,uint256)\":{\"details\":\"Transfers the ownership of a given token ID to another address\",\"params\":{\"_to\":\"address to receive the ownership of the given token ID\",\"_tokenId\":\"uint256 ID of the token to be transferred\"}}},\"title\":\"TestSuperRareV1\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/test/TestSuperRareV1.sol\":\"TestSuperRareV1\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100},\"remappings\":[]},\"sources\":{\"contracts/interfaces/ISuperRareV1.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\npragma solidity 0.8.4;\\n\\n/**\\n * @title IERC721_CryptoKitties\\n * @author NFTfi\\n * @dev ERC721 compliant interface used by CryptoKitties contract.\\n * Extracted from https://etherscan.io/address/0x41a322b28d0ff354040e2cbc676f0320d8c8850d#code\\n */\\n\\ninterface ISuperRareV1 {\\n    event Transfer(address indexed _from, address indexed _to, uint256 _tokenId);\\n    event Approval(address indexed _owner, address indexed _approved, uint256 _tokenId);\\n\\n    function balanceOf(address _owner) external view returns (uint256 _balance);\\n\\n    function ownerOf(uint256 _tokenId) external view returns (address _owner);\\n\\n    function transfer(address _to, uint256 _tokenId) external;\\n\\n    function approve(address _to, uint256 _tokenId) external;\\n\\n    function takeOwnership(uint256 _tokenId) external;\\n}\\n\",\"keccak256\":\"0x0d65e3c5bf9e97414f672a3c748f2e2121528e4f4ac5777eacfa8959144b936a\",\"license\":\"BUSL-1.1\"},\"contracts/test/TestSuperRareV1.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\npragma solidity 0.8.4;\\n\\nimport \\\"../interfaces/ISuperRareV1.sol\\\";\\n\\n/**\\n * @title TestSuperRareV1\\n * @dev Test contract with SuperRareV1 ERC721 related functionalities.\\n * Extracted from https://etherscan.io/address/0x41a322b28d0ff354040e2cbc676f0320d8c8850d#code\\n */\\ncontract TestSuperRareV1 is ISuperRareV1 {\\n    string public constant name = \\\"SuperRare\\\";\\n    string public constant symbol = \\\"SUPR\\\";\\n\\n    uint256 public tokenId;\\n\\n    // Total amount of tokens\\n    uint256 private totalTokens;\\n\\n    // Mapping from token ID to owner\\n    mapping(uint256 => address) private tokenOwner;\\n\\n    // Mapping from token ID to approved address\\n    mapping(uint256 => address) private tokenApprovals;\\n\\n    // Mapping from owner to list of owned token IDs\\n    mapping(address => uint256[]) private ownedTokens;\\n\\n    // Mapping from token ID to index of the owner tokens list\\n    mapping(uint256 => uint256) private ownedTokensIndex;\\n\\n    /**\\n     * @dev Guarantees msg.sender is owner of the given token\\n     * @param _tokenId uint256 ID of the token to validate its ownership belongs to msg.sender\\n     */\\n    modifier onlyOwnerOf(uint256 _tokenId) {\\n        require(ownerOf(_tokenId) == msg.sender, \\\"\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @dev Gets the total amount of tokens stored by the contract\\n     * @return uint256 representing the total amount of tokens\\n     */\\n    function totalSupply() public view returns (uint256) {\\n        return totalTokens;\\n    }\\n\\n    /**\\n     * @dev Gets the balance of the specified address\\n     * @param _owner address to query the balance of\\n     * @return uint256 representing the amount owned by the passed address\\n     */\\n    function balanceOf(address _owner) public view override returns (uint256) {\\n        return ownedTokens[_owner].length;\\n    }\\n\\n    /**\\n     * @dev Gets the list of tokens owned by a given address\\n     * @param _owner address to query the tokens of\\n     * @return uint256[] representing the list of tokens owned by the passed address\\n     */\\n    function tokensOf(address _owner) public view returns (uint256[] memory) {\\n        return ownedTokens[_owner];\\n    }\\n\\n    /**\\n     * @dev Gets the owner of the specified token ID\\n     * @param _tokenId uint256 ID of the token to query the owner of\\n     * @return owner address currently marked as the owner of the given token ID\\n     */\\n    function ownerOf(uint256 _tokenId) public view override returns (address) {\\n        address owner = tokenOwner[_tokenId];\\n        require(owner != address(0), \\\"\\\");\\n        return owner;\\n    }\\n\\n    /**\\n     * @dev Gets the approved address to take ownership of a given token ID\\n     * @param _tokenId uint256 ID of the token to query the approval of\\n     * @return address currently approved to take ownership of the given token ID\\n     */\\n    function approvedFor(uint256 _tokenId) public view returns (address) {\\n        return tokenApprovals[_tokenId];\\n    }\\n\\n    /**\\n     * @dev Transfers the ownership of a given token ID to another address\\n     * @param _to address to receive the ownership of the given token ID\\n     * @param _tokenId uint256 ID of the token to be transferred\\n     */\\n    function transfer(address _to, uint256 _tokenId) public override onlyOwnerOf(_tokenId) {\\n        clearApprovalAndTransfer(msg.sender, _to, _tokenId);\\n    }\\n\\n    /**\\n     * @dev Approves another address to claim for the ownership of the given token ID\\n     * @param _to address to be approved for the given token ID\\n     * @param _tokenId uint256 ID of the token to be approved\\n     */\\n    function approve(address _to, uint256 _tokenId) public override onlyOwnerOf(_tokenId) {\\n        address owner = ownerOf(_tokenId);\\n        require(_to != owner, \\\"\\\");\\n        if (approvedFor(_tokenId) != address(0) || _to != address(0)) {\\n            tokenApprovals[_tokenId] = _to;\\n            emit Approval(owner, _to, _tokenId);\\n        }\\n    }\\n\\n    /**\\n     * @dev Claims the ownership of a given token ID\\n     * @param _tokenId uint256 ID of the token being claimed by the msg.sender\\n     */\\n    function takeOwnership(uint256 _tokenId) public override {\\n        require(isApprovedFor(msg.sender, _tokenId), \\\"\\\");\\n        clearApprovalAndTransfer(ownerOf(_tokenId), msg.sender, _tokenId);\\n    }\\n\\n    /**\\n     * @dev External mint token function\\n     * @param _to The address that will own the minted token\\n     */\\n    function mint(address _to) external {\\n        _mint(_to, tokenId);\\n        tokenId++;\\n    }\\n\\n    /**\\n     * @dev Mint token function\\n     * @param _to The address that will own the minted token\\n     * @param _tokenId uint256 ID of the token to be minted by the msg.sender\\n     */\\n    function _mint(address _to, uint256 _tokenId) internal {\\n        require(_to != address(0), \\\"\\\");\\n        addToken(_to, _tokenId);\\n        emit Transfer(address(0), _to, _tokenId);\\n    }\\n\\n    /**\\n     * @dev Burns a specific token\\n     * @param _tokenId uint256 ID of the token being burned by the msg.sender\\n     */\\n    function _burn(uint256 _tokenId) internal onlyOwnerOf(_tokenId) {\\n        if (approvedFor(_tokenId) != address(0)) {\\n            clearApproval(msg.sender, _tokenId);\\n        }\\n        removeToken(msg.sender, _tokenId);\\n        emit Transfer(msg.sender, address(0), _tokenId);\\n    }\\n\\n    /**\\n     * @dev Tells whether the msg.sender is approved for the given token ID or not\\n     * This function is not private so it can be extended in further implementations like the operatable ERC721\\n     * @param _owner address of the owner to query the approval of\\n     * @param _tokenId uint256 ID of the token to query the approval of\\n     * @return bool whether the msg.sender is approved for the given token ID or not\\n     */\\n    function isApprovedFor(address _owner, uint256 _tokenId) internal view returns (bool) {\\n        return approvedFor(_tokenId) == _owner;\\n    }\\n\\n    /**\\n     * @dev Internal function to clear current approval and transfer the ownership of a given token ID\\n     * @param _from address which you want to send tokens from\\n     * @param _to address which you want to transfer the token to\\n     * @param _tokenId uint256 ID of the token to be transferred\\n     */\\n    function clearApprovalAndTransfer(\\n        address _from,\\n        address _to,\\n        uint256 _tokenId\\n    ) internal {\\n        require(_to != address(0), \\\"\\\");\\n        require(_to != ownerOf(_tokenId), \\\"\\\");\\n        require(ownerOf(_tokenId) == _from, \\\"\\\");\\n\\n        clearApproval(_from, _tokenId);\\n        removeToken(_from, _tokenId);\\n        addToken(_to, _tokenId);\\n        emit Transfer(_from, _to, _tokenId);\\n    }\\n\\n    /**\\n     * @dev Internal function to clear current approval of a given token ID\\n     * @param _tokenId uint256 ID of the token to be transferred\\n     */\\n    function clearApproval(address _owner, uint256 _tokenId) private {\\n        require(ownerOf(_tokenId) == _owner, \\\"\\\");\\n        tokenApprovals[_tokenId] = address(0);\\n        emit Approval(_owner, address(0), _tokenId);\\n    }\\n\\n    /**\\n     * @dev Internal function to add a token ID to the list of a given address\\n     * @param _to address representing the new owner of the given token ID\\n     * @param _tokenId uint256 ID of the token to be added to the tokens list of the given address\\n     */\\n    function addToken(address _to, uint256 _tokenId) private {\\n        require(tokenOwner[_tokenId] == address(0), \\\"\\\");\\n        tokenOwner[_tokenId] = _to;\\n        uint256 length = balanceOf(_to);\\n        ownedTokens[_to].push(_tokenId);\\n        ownedTokensIndex[_tokenId] = length;\\n        totalTokens += 1;\\n    }\\n\\n    /**\\n     * @dev Internal function to remove a token ID from the list of a given address\\n     * @param _from address representing the previous owner of the given token ID\\n     * @param _tokenId uint256 ID of the token to be removed from the tokens list of the given address\\n     */\\n    function removeToken(address _from, uint256 _tokenId) private {\\n        require(ownerOf(_tokenId) == _from, \\\"\\\");\\n\\n        uint256 tokenIndex = ownedTokensIndex[_tokenId];\\n        uint256 lastTokenIndex = balanceOf(_from) - 1;\\n        uint256 lastToken = ownedTokens[_from][lastTokenIndex];\\n\\n        tokenOwner[_tokenId] = address(0);\\n        ownedTokens[_from][tokenIndex] = lastToken;\\n        ownedTokens[_from].pop();\\n        // Note that this will handle single-element arrays. In that case,\\n        // both tokenIndex and lastTokenIndex are going to be zero. Then we can make sure\\n        // that we will remove _tokenId from the ownedTokens list since we are first swapping\\n        // the lastToken to the first position, and then dropping the element placed in the last position of the list\\n\\n        ownedTokensIndex[_tokenId] = 0;\\n        ownedTokensIndex[lastToken] = tokenIndex;\\n        totalTokens = totalTokens - 1;\\n    }\\n}\\n\",\"keccak256\":\"0x8cb83ef36333317ef25f02ff541417ec46dfaf5b68dd409f68245b1722e8fd34\",\"license\":\"BUSL-1.1\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610af6806100206000396000f3fe608060405234801561001057600080fd5b50600436106100b45760003560e01c80636352211e116100715780636352211e146101765780636a6278421461018957806370a082311461019c57806395d89b41146101af578063a9059cbb146101d2578063b2e6ceeb146101e557600080fd5b806306fdde03146100b9578063095ea7b3146100f757806317d70f7c1461010c57806318160ddd146101235780632a6dd48f1461012b5780635a3f267214610156575b600080fd5b6100e16040518060400160405280600981526020016853757065725261726560b81b81525081565b6040516100ee9190610a36565b60405180910390f35b61010a6101053660046109b1565b6101f8565b005b61011560005481565b6040519081526020016100ee565b600154610115565b61013e6101393660046109da565b610319565b6040516001600160a01b0390911681526020016100ee565b610169610164366004610990565b610334565b6040516100ee91906109f2565b61013e6101843660046109da565b6103a0565b61010a610197366004610990565b6103e5565b6101156101aa366004610990565b610408565b6100e16040518060400160405280600481526020016329aaa82960e11b81525081565b61010a6101e03660046109b1565b610423565b61010a6101f33660046109da565b61046e565b8033610203826103a0565b6001600160a01b0316146102385760405162461bcd60e51b815260206004820152600060248201526044015b60405180910390fd5b6000610243836103a0565b9050806001600160a01b0316846001600160a01b031614156102815760405162461bcd60e51b8152602060048201526000602482015260440161022f565b600061028c84610319565b6001600160a01b03161415806102aa57506001600160a01b03841615155b156103135760008381526003602090815260409182902080546001600160a01b0319166001600160a01b038881169182179092559251868152908416917f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925910160405180910390a35b50505050565b6000908152600360205260409020546001600160a01b031690565b6001600160a01b03811660009081526004602090815260409182902080548351818402810184019094528084526060939283018282801561039457602002820191906000526020600020905b815481526020019060010190808311610380575b50505050509050919050565b6000818152600260205260408120546001600160a01b0316806103df5760405162461bcd60e51b8152602060048201526000602482015260440161022f565b92915050565b6103f1816000546104b4565b60008054908061040083610ab8565b919050555050565b6001600160a01b031660009081526004602052604090205490565b803361042e826103a0565b6001600160a01b03161461045e5760405162461bcd60e51b8152602060048201526000602482015260440161022f565b610469338484610534565b505050565b610478338261065b565b61049e5760405162461bcd60e51b8152602060048201526000602482015260440161022f565b6104b16104aa826103a0565b3383610534565b50565b6001600160a01b0382166104e45760405162461bcd60e51b8152602060048201526000602482015260440161022f565b6104ee8282610681565b6040518181526001600160a01b038316906000907fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef906020015b60405180910390a35050565b6001600160a01b0382166105645760405162461bcd60e51b8152602060048201526000602482015260440161022f565b61056d816103a0565b6001600160a01b0316826001600160a01b031614156105a85760405162461bcd60e51b8152602060048201526000602482015260440161022f565b826001600160a01b03166105bb826103a0565b6001600160a01b0316146105eb5760405162461bcd60e51b8152602060048201526000602482015260440161022f565b6105f58382610749565b6105ff83826107e2565b6106098282610681565b816001600160a01b0316836001600160a01b03167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef8360405161064e91815260200190565b60405180910390a3505050565b6000826001600160a01b031661067083610319565b6001600160a01b0316149392505050565b6000818152600260205260409020546001600160a01b0316156106c05760405162461bcd60e51b8152602060048201526000602482015260440161022f565b600081815260026020526040812080546001600160a01b0319166001600160a01b0385161790556106f083610408565b6001600160a01b0384166000908152600460209081526040808320805460018181018355918552838520018790558684526005909252822083905580549293509182919061073f908390610a89565b9091555050505050565b816001600160a01b031661075c826103a0565b6001600160a01b03161461078c5760405162461bcd60e51b8152602060048201526000602482015260440161022f565b600081815260036020908152604080832080546001600160a01b0319169055518381526001600160a01b038516917f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b9259101610528565b816001600160a01b03166107f5826103a0565b6001600160a01b0316146108255760405162461bcd60e51b8152602060048201526000602482015260440161022f565b60008181526005602052604081205490600161084085610408565b61084a9190610aa1565b6001600160a01b0385166000908152600460205260408120805492935090918390811061088757634e487b7160e01b600052603260045260246000fd5b600091825260208083209091015486835260028252604080842080546001600160a01b03191690556001600160a01b03891684526004909252912080549192508291859081106108e757634e487b7160e01b600052603260045260246000fd5b60009182526020808320909101929092556001600160a01b038716815260049091526040902080548061092a57634e487b7160e01b600052603160045260246000fd5b60008281526020808220830160001990810183905590920190925585825260059052604080822082905582825290208390556001805461096a9190610aa1565b6001555050505050565b80356001600160a01b038116811461098b57600080fd5b919050565b6000602082840312156109a1578081fd5b6109aa82610974565b9392505050565b600080604083850312156109c3578081fd5b6109cc83610974565b946020939093013593505050565b6000602082840312156109eb578081fd5b5035919050565b6020808252825182820181905260009190848201906040850190845b81811015610a2a57835183529284019291840191600101610a0e565b50909695505050505050565b6000602080835283518082850152825b81811015610a6257858101830151858201604001528201610a46565b81811115610a735783604083870101525b50601f01601f1916929092016040019392505050565b60008219821115610a9c57610a9c610ad3565b500190565b600082821015610ab357610ab3610ad3565b500390565b6000600019821415610acc57610acc610ad3565b5060010190565b634e487b7160e01b600052601160045260246000fdfea164736f6c6343000804000a",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100b45760003560e01c80636352211e116100715780636352211e146101765780636a6278421461018957806370a082311461019c57806395d89b41146101af578063a9059cbb146101d2578063b2e6ceeb146101e557600080fd5b806306fdde03146100b9578063095ea7b3146100f757806317d70f7c1461010c57806318160ddd146101235780632a6dd48f1461012b5780635a3f267214610156575b600080fd5b6100e16040518060400160405280600981526020016853757065725261726560b81b81525081565b6040516100ee9190610a36565b60405180910390f35b61010a6101053660046109b1565b6101f8565b005b61011560005481565b6040519081526020016100ee565b600154610115565b61013e6101393660046109da565b610319565b6040516001600160a01b0390911681526020016100ee565b610169610164366004610990565b610334565b6040516100ee91906109f2565b61013e6101843660046109da565b6103a0565b61010a610197366004610990565b6103e5565b6101156101aa366004610990565b610408565b6100e16040518060400160405280600481526020016329aaa82960e11b81525081565b61010a6101e03660046109b1565b610423565b61010a6101f33660046109da565b61046e565b8033610203826103a0565b6001600160a01b0316146102385760405162461bcd60e51b815260206004820152600060248201526044015b60405180910390fd5b6000610243836103a0565b9050806001600160a01b0316846001600160a01b031614156102815760405162461bcd60e51b8152602060048201526000602482015260440161022f565b600061028c84610319565b6001600160a01b03161415806102aa57506001600160a01b03841615155b156103135760008381526003602090815260409182902080546001600160a01b0319166001600160a01b038881169182179092559251868152908416917f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925910160405180910390a35b50505050565b6000908152600360205260409020546001600160a01b031690565b6001600160a01b03811660009081526004602090815260409182902080548351818402810184019094528084526060939283018282801561039457602002820191906000526020600020905b815481526020019060010190808311610380575b50505050509050919050565b6000818152600260205260408120546001600160a01b0316806103df5760405162461bcd60e51b8152602060048201526000602482015260440161022f565b92915050565b6103f1816000546104b4565b60008054908061040083610ab8565b919050555050565b6001600160a01b031660009081526004602052604090205490565b803361042e826103a0565b6001600160a01b03161461045e5760405162461bcd60e51b8152602060048201526000602482015260440161022f565b610469338484610534565b505050565b610478338261065b565b61049e5760405162461bcd60e51b8152602060048201526000602482015260440161022f565b6104b16104aa826103a0565b3383610534565b50565b6001600160a01b0382166104e45760405162461bcd60e51b8152602060048201526000602482015260440161022f565b6104ee8282610681565b6040518181526001600160a01b038316906000907fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef906020015b60405180910390a35050565b6001600160a01b0382166105645760405162461bcd60e51b8152602060048201526000602482015260440161022f565b61056d816103a0565b6001600160a01b0316826001600160a01b031614156105a85760405162461bcd60e51b8152602060048201526000602482015260440161022f565b826001600160a01b03166105bb826103a0565b6001600160a01b0316146105eb5760405162461bcd60e51b8152602060048201526000602482015260440161022f565b6105f58382610749565b6105ff83826107e2565b6106098282610681565b816001600160a01b0316836001600160a01b03167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef8360405161064e91815260200190565b60405180910390a3505050565b6000826001600160a01b031661067083610319565b6001600160a01b0316149392505050565b6000818152600260205260409020546001600160a01b0316156106c05760405162461bcd60e51b8152602060048201526000602482015260440161022f565b600081815260026020526040812080546001600160a01b0319166001600160a01b0385161790556106f083610408565b6001600160a01b0384166000908152600460209081526040808320805460018181018355918552838520018790558684526005909252822083905580549293509182919061073f908390610a89565b9091555050505050565b816001600160a01b031661075c826103a0565b6001600160a01b03161461078c5760405162461bcd60e51b8152602060048201526000602482015260440161022f565b600081815260036020908152604080832080546001600160a01b0319169055518381526001600160a01b038516917f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b9259101610528565b816001600160a01b03166107f5826103a0565b6001600160a01b0316146108255760405162461bcd60e51b8152602060048201526000602482015260440161022f565b60008181526005602052604081205490600161084085610408565b61084a9190610aa1565b6001600160a01b0385166000908152600460205260408120805492935090918390811061088757634e487b7160e01b600052603260045260246000fd5b600091825260208083209091015486835260028252604080842080546001600160a01b03191690556001600160a01b03891684526004909252912080549192508291859081106108e757634e487b7160e01b600052603260045260246000fd5b60009182526020808320909101929092556001600160a01b038716815260049091526040902080548061092a57634e487b7160e01b600052603160045260246000fd5b60008281526020808220830160001990810183905590920190925585825260059052604080822082905582825290208390556001805461096a9190610aa1565b6001555050505050565b80356001600160a01b038116811461098b57600080fd5b919050565b6000602082840312156109a1578081fd5b6109aa82610974565b9392505050565b600080604083850312156109c3578081fd5b6109cc83610974565b946020939093013593505050565b6000602082840312156109eb578081fd5b5035919050565b6020808252825182820181905260009190848201906040850190845b81811015610a2a57835183529284019291840191600101610a0e565b50909695505050505050565b6000602080835283518082850152825b81811015610a6257858101830151858201604001528201610a46565b81811115610a735783604083870101525b50601f01601f1916929092016040019392505050565b60008219821115610a9c57610a9c610ad3565b500190565b600082821015610ab357610ab3610ad3565b500390565b6000600019821415610acc57610acc610ad3565b5060010190565b634e487b7160e01b600052601160045260246000fdfea164736f6c6343000804000a",
+  "devdoc": {
+    "details": "Test contract with SuperRareV1 ERC721 related functionalities. Extracted from https://etherscan.io/address/0x41a322b28d0ff354040e2cbc676f0320d8c8850d#code",
+    "kind": "dev",
+    "methods": {
+      "approve(address,uint256)": {
+        "details": "Approves another address to claim for the ownership of the given token ID",
+        "params": {
+          "_to": "address to be approved for the given token ID",
+          "_tokenId": "uint256 ID of the token to be approved"
+        }
+      },
+      "approvedFor(uint256)": {
+        "details": "Gets the approved address to take ownership of a given token ID",
+        "params": {
+          "_tokenId": "uint256 ID of the token to query the approval of"
+        },
+        "returns": {
+          "_0": "address currently approved to take ownership of the given token ID"
+        }
+      },
+      "balanceOf(address)": {
+        "details": "Gets the balance of the specified address",
+        "params": {
+          "_owner": "address to query the balance of"
+        },
+        "returns": {
+          "_0": "uint256 representing the amount owned by the passed address"
+        }
+      },
+      "mint(address)": {
+        "details": "External mint token function",
+        "params": {
+          "_to": "The address that will own the minted token"
+        }
+      },
+      "ownerOf(uint256)": {
+        "details": "Gets the owner of the specified token ID",
+        "params": {
+          "_tokenId": "uint256 ID of the token to query the owner of"
+        },
+        "returns": {
+          "_0": "owner address currently marked as the owner of the given token ID"
+        }
+      },
+      "takeOwnership(uint256)": {
+        "details": "Claims the ownership of a given token ID",
+        "params": {
+          "_tokenId": "uint256 ID of the token being claimed by the msg.sender"
+        }
+      },
+      "tokensOf(address)": {
+        "details": "Gets the list of tokens owned by a given address",
+        "params": {
+          "_owner": "address to query the tokens of"
+        },
+        "returns": {
+          "_0": "uint256[] representing the list of tokens owned by the passed address"
+        }
+      },
+      "totalSupply()": {
+        "details": "Gets the total amount of tokens stored by the contract",
+        "returns": {
+          "_0": "uint256 representing the total amount of tokens"
+        }
+      },
+      "transfer(address,uint256)": {
+        "details": "Transfers the ownership of a given token ID to another address",
+        "params": {
+          "_to": "address to receive the ownership of the given token ID",
+          "_tokenId": "uint256 ID of the token to be transferred"
+        }
+      }
+    },
+    "title": "TestSuperRareV1",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 24130,
+        "contract": "contracts/test/TestSuperRareV1.sol:TestSuperRareV1",
+        "label": "tokenId",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 24132,
+        "contract": "contracts/test/TestSuperRareV1.sol:TestSuperRareV1",
+        "label": "totalTokens",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 24136,
+        "contract": "contracts/test/TestSuperRareV1.sol:TestSuperRareV1",
+        "label": "tokenOwner",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_uint256,t_address)"
+      },
+      {
+        "astId": 24140,
+        "contract": "contracts/test/TestSuperRareV1.sol:TestSuperRareV1",
+        "label": "tokenApprovals",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_mapping(t_uint256,t_address)"
+      },
+      {
+        "astId": 24145,
+        "contract": "contracts/test/TestSuperRareV1.sol:TestSuperRareV1",
+        "label": "ownedTokens",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)"
+      },
+      {
+        "astId": 24149,
+        "contract": "contracts/test/TestSuperRareV1.sol:TestSuperRareV1",
+        "label": "ownedTokensIndex",
+        "offset": 0,
+        "slot": "5",
+        "type": "t_mapping(t_uint256,t_uint256)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_uint256)dyn_storage": {
+        "base": "t_uint256",
+        "encoding": "dynamic_array",
+        "label": "uint256[]",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256[])",
+        "numberOfBytes": "32",
+        "value": "t_array(t_uint256)dyn_storage"
+      },
+      "t_mapping(t_uint256,t_address)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => address)",
+        "numberOfBytes": "32",
+        "value": "t_address"
+      },
+      "t_mapping(t_uint256,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

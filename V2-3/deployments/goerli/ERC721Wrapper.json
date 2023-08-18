@@ -1,0 +1,154 @@
+{
+  "address": "0x276f960aD44d844756aAe27999978C088f6e25db",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_nftContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_sender",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_nftContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_nftId",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferNFT",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_nftContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_nftId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_beneficiary",
+          "type": "address"
+        }
+      ],
+      "name": "wrapAirdropReceiver",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xa9fe33324bc0c578feae28a9071012756c7ad44fd1dac0a0dba6bef5cbe2b1bf",
+  "receipt": {
+    "to": null,
+    "from": "0x02e037F56728E947e92Af2c05baF7FeF387Ddd06",
+    "contractAddress": "0x276f960aD44d844756aAe27999978C088f6e25db",
+    "transactionIndex": 24,
+    "gasUsed": "256028",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xea43665c0493a6759f76b4a4c5b459b9f3c7b042c8076ca640f06fbe5fc33230",
+    "transactionHash": "0xa9fe33324bc0c578feae28a9071012756c7ad44fd1dac0a0dba6bef5cbe2b1bf",
+    "logs": [],
+    "blockNumber": 7721222,
+    "cumulativeGasUsed": "16428440",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "32dd1857130027c4619df8c447073dac",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_nftContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_recipient\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_nftContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_nftId\",\"type\":\"uint256\"}],\"name\":\"transferNFT\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_recipient\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_nftContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_nftId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_beneficiary\",\"type\":\"address\"}],\"name\":\"wrapAirdropReceiver\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"NFTfi\",\"details\":\"Provides logic to transfer ERC721\",\"kind\":\"dev\",\"methods\":{\"transferNFT(address,address,address,uint256)\":{\"details\":\"Transfers ERC721 `_nftId` handled by the contract `_nftContract` from `_sender` to `_recipient`\",\"params\":{\"_nftContract\":\"- ERC721 contract\",\"_nftId\":\"- ERC721 id\",\"_recipient\":\"- The new owner of the ERC721\",\"_sender\":\"- The current owner of the ERC721\"},\"returns\":{\"_0\":\"true if successfully transferred, false otherwise\"}}},\"title\":\"ERC721Wrapper\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/nftTypeRegistry/nftTypes/ERC721Wrapper.sol\":\"ERC721Wrapper\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (token/ERC721/IERC721.sol)\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../../utils/introspection/IERC165.sol\\\";\\n\\n/**\\n * @dev Required interface of an ERC721 compliant contract.\\n */\\ninterface IERC721 is IERC165 {\\n    /**\\n     * @dev Emitted when `tokenId` token is transferred from `from` to `to`.\\n     */\\n    event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);\\n\\n    /**\\n     * @dev Emitted when `owner` enables `approved` to manage the `tokenId` token.\\n     */\\n    event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId);\\n\\n    /**\\n     * @dev Emitted when `owner` enables or disables (`approved`) `operator` to manage all of its assets.\\n     */\\n    event ApprovalForAll(address indexed owner, address indexed operator, bool approved);\\n\\n    /**\\n     * @dev Returns the number of tokens in ``owner``'s account.\\n     */\\n    function balanceOf(address owner) external view returns (uint256 balance);\\n\\n    /**\\n     * @dev Returns the owner of the `tokenId` token.\\n     *\\n     * Requirements:\\n     *\\n     * - `tokenId` must exist.\\n     */\\n    function ownerOf(uint256 tokenId) external view returns (address owner);\\n\\n    /**\\n     * @dev Safely transfers `tokenId` token from `from` to `to`, checking first that contract recipients\\n     * are aware of the ERC721 protocol to prevent tokens from being forever locked.\\n     *\\n     * Requirements:\\n     *\\n     * - `from` cannot be the zero address.\\n     * - `to` cannot be the zero address.\\n     * - `tokenId` token must exist and be owned by `from`.\\n     * - If the caller is not `from`, it must be have been allowed to move this token by either {approve} or {setApprovalForAll}.\\n     * - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function safeTransferFrom(\\n        address from,\\n        address to,\\n        uint256 tokenId\\n    ) external;\\n\\n    /**\\n     * @dev Transfers `tokenId` token from `from` to `to`.\\n     *\\n     * WARNING: Usage of this method is discouraged, use {safeTransferFrom} whenever possible.\\n     *\\n     * Requirements:\\n     *\\n     * - `from` cannot be the zero address.\\n     * - `to` cannot be the zero address.\\n     * - `tokenId` token must be owned by `from`.\\n     * - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function transferFrom(\\n        address from,\\n        address to,\\n        uint256 tokenId\\n    ) external;\\n\\n    /**\\n     * @dev Gives permission to `to` to transfer `tokenId` token to another account.\\n     * The approval is cleared when the token is transferred.\\n     *\\n     * Only a single account can be approved at a time, so approving the zero address clears previous approvals.\\n     *\\n     * Requirements:\\n     *\\n     * - The caller must own the token or be an approved operator.\\n     * - `tokenId` must exist.\\n     *\\n     * Emits an {Approval} event.\\n     */\\n    function approve(address to, uint256 tokenId) external;\\n\\n    /**\\n     * @dev Returns the account approved for `tokenId` token.\\n     *\\n     * Requirements:\\n     *\\n     * - `tokenId` must exist.\\n     */\\n    function getApproved(uint256 tokenId) external view returns (address operator);\\n\\n    /**\\n     * @dev Approve or remove `operator` as an operator for the caller.\\n     * Operators can call {transferFrom} or {safeTransferFrom} for any token owned by the caller.\\n     *\\n     * Requirements:\\n     *\\n     * - The `operator` cannot be the caller.\\n     *\\n     * Emits an {ApprovalForAll} event.\\n     */\\n    function setApprovalForAll(address operator, bool _approved) external;\\n\\n    /**\\n     * @dev Returns if the `operator` is allowed to manage all of the assets of `owner`.\\n     *\\n     * See {setApprovalForAll}\\n     */\\n    function isApprovedForAll(address owner, address operator) external view returns (bool);\\n\\n    /**\\n     * @dev Safely transfers `tokenId` token from `from` to `to`.\\n     *\\n     * Requirements:\\n     *\\n     * - `from` cannot be the zero address.\\n     * - `to` cannot be the zero address.\\n     * - `tokenId` token must exist and be owned by `from`.\\n     * - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}.\\n     * - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function safeTransferFrom(\\n        address from,\\n        address to,\\n        uint256 tokenId,\\n        bytes calldata data\\n    ) external;\\n}\\n\",\"keccak256\":\"0x516a22876c1fab47f49b1bc22b4614491cd05338af8bd2e7b382da090a079990\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/introspection/IERC165.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Interface of the ERC165 standard, as defined in the\\n * https://eips.ethereum.org/EIPS/eip-165[EIP].\\n *\\n * Implementers can declare support of contract interfaces, which can then be\\n * queried by others ({ERC165Checker}).\\n *\\n * For an implementation, see {ERC165}.\\n */\\ninterface IERC165 {\\n    /**\\n     * @dev Returns true if this contract implements the interface defined by\\n     * `interfaceId`. See the corresponding\\n     * https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section]\\n     * to learn more about how these ids are created.\\n     *\\n     * This function call must use less than 30 000 gas.\\n     */\\n    function supportsInterface(bytes4 interfaceId) external view returns (bool);\\n}\\n\",\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\"},\"contracts/interfaces/INftWrapper.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.4;\\n\\n/**\\n * @title INftTypeRegistry\\n * @author NFTfi\\n * @dev Interface for NFT Wrappers.\\n */\\ninterface INftWrapper {\\n    function transferNFT(\\n        address from,\\n        address to,\\n        address nftContract,\\n        uint256 tokenId\\n    ) external returns (bool);\\n\\n    function isOwner(\\n        address owner,\\n        address nftContract,\\n        uint256 tokenId\\n    ) external view returns (bool);\\n\\n    function wrapAirdropReceiver(\\n        address _recipient,\\n        address _nftContract,\\n        uint256 _nftId,\\n        address _beneficiary\\n    ) external returns (bool);\\n}\\n\",\"keccak256\":\"0xab8d7d01ca2b8679af9bc02a2db44192b2153c369bf436185d69e56eb9696b5f\",\"license\":\"BUSL-1.1\"},\"contracts/nftTypeRegistry/nftTypes/ERC721Wrapper.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\npragma solidity 0.8.4;\\n\\nimport \\\"@openzeppelin/contracts/token/ERC721/IERC721.sol\\\";\\nimport \\\"../../interfaces/INftWrapper.sol\\\";\\n\\n/**\\n * @title ERC721Wrapper\\n * @author NFTfi\\n * @dev Provides logic to transfer ERC721\\n */\\ncontract ERC721Wrapper is INftWrapper {\\n    /**\\n     * @dev Transfers ERC721 `_nftId` handled by the contract `_nftContract` from `_sender` to `_recipient`\\n     *\\n     * @param _sender - The current owner of the ERC721\\n     * @param _recipient - The new owner of the ERC721\\n     * @param _nftContract - ERC721 contract\\n     * @param _nftId - ERC721 id\\n     *\\n     * @return true if successfully transferred, false otherwise\\n     */\\n    function transferNFT(\\n        address _sender,\\n        address _recipient,\\n        address _nftContract,\\n        uint256 _nftId\\n    ) external override returns (bool) {\\n        IERC721(_nftContract).safeTransferFrom(_sender, _recipient, _nftId);\\n        return true;\\n    }\\n\\n    function isOwner(\\n        address _owner,\\n        address _nftContract,\\n        uint256 _tokenId\\n    ) external view override returns (bool) {\\n        return IERC721(_nftContract).ownerOf(_tokenId) == _owner;\\n    }\\n\\n    function wrapAirdropReceiver(\\n        address _recipient,\\n        address _nftContract,\\n        uint256 _nftId,\\n        address _beneficiary\\n    ) external override returns (bool) {\\n        IERC721(_nftContract).safeTransferFrom(address(this), _recipient, _nftId, abi.encode(_beneficiary));\\n\\n        return true;\\n    }\\n}\\n\",\"keccak256\":\"0xc267f06a62bb2921ff543377d4b7857454061e1a6eaf6cd4457af3e143abd876\",\"license\":\"BUSL-1.1\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506103ab806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c8063b030667114610046578063c7783aaa1461006d578063f370e8c514610080575b600080fd5b61005961005436600461022e565b610093565b604051901515815260200160405180910390f35b61005961007b3660046102be565b61010d565b61005961008e36600461027e565b61016f565b604051632142170760e11b81526001600160a01b038581166004830152848116602483015260448201839052600091908416906342842e0e906064015b600060405180830381600087803b1580156100ea57600080fd5b505af11580156100fe573d6000803e3d6000fd5b50600198975050505050505050565b6000836001600160a01b031663b88d4fde3087868660405160200161014191906001600160a01b0391909116815260200190565b6040516020818303038152906040526040518563ffffffff1660e01b81526004016100d09493929190610310565b6000836001600160a01b0316836001600160a01b0316636352211e846040518263ffffffff1660e01b81526004016101a991815260200190565b60206040518083038186803b1580156101c157600080fd5b505afa1580156101d5573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906101f9919061020b565b6001600160a01b031614949350505050565b60006020828403121561021c578081fd5b815161022781610386565b9392505050565b60008060008060808587031215610243578283fd5b843561024e81610386565b9350602085013561025e81610386565b9250604085013561026e81610386565b9396929550929360600135925050565b600080600060608486031215610292578283fd5b833561029d81610386565b925060208401356102ad81610386565b929592945050506040919091013590565b600080600080608085870312156102d3578384fd5b84356102de81610386565b935060208501356102ee81610386565b925060408501359150606085013561030581610386565b939692955090935050565b600060018060a01b0380871683526020818716818501528560408501526080606085015284519150816080850152825b8281101561035c5785810182015185820160a001528101610340565b8281111561036d578360a084870101525b5050601f01601f19169190910160a00195945050505050565b6001600160a01b038116811461039b57600080fd5b5056fea164736f6c6343000804000a",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c8063b030667114610046578063c7783aaa1461006d578063f370e8c514610080575b600080fd5b61005961005436600461022e565b610093565b604051901515815260200160405180910390f35b61005961007b3660046102be565b61010d565b61005961008e36600461027e565b61016f565b604051632142170760e11b81526001600160a01b038581166004830152848116602483015260448201839052600091908416906342842e0e906064015b600060405180830381600087803b1580156100ea57600080fd5b505af11580156100fe573d6000803e3d6000fd5b50600198975050505050505050565b6000836001600160a01b031663b88d4fde3087868660405160200161014191906001600160a01b0391909116815260200190565b6040516020818303038152906040526040518563ffffffff1660e01b81526004016100d09493929190610310565b6000836001600160a01b0316836001600160a01b0316636352211e846040518263ffffffff1660e01b81526004016101a991815260200190565b60206040518083038186803b1580156101c157600080fd5b505afa1580156101d5573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906101f9919061020b565b6001600160a01b031614949350505050565b60006020828403121561021c578081fd5b815161022781610386565b9392505050565b60008060008060808587031215610243578283fd5b843561024e81610386565b9350602085013561025e81610386565b9250604085013561026e81610386565b9396929550929360600135925050565b600080600060608486031215610292578283fd5b833561029d81610386565b925060208401356102ad81610386565b929592945050506040919091013590565b600080600080608085870312156102d3578384fd5b84356102de81610386565b935060208501356102ee81610386565b925060408501359150606085013561030581610386565b939692955090935050565b600060018060a01b0380871683526020818716818501528560408501526080606085015284519150816080850152825b8281101561035c5785810182015185820160a001528101610340565b8281111561036d578360a084870101525b5050601f01601f19169190910160a00195945050505050565b6001600160a01b038116811461039b57600080fd5b5056fea164736f6c6343000804000a",
+  "devdoc": {
+    "author": "NFTfi",
+    "details": "Provides logic to transfer ERC721",
+    "kind": "dev",
+    "methods": {
+      "transferNFT(address,address,address,uint256)": {
+        "details": "Transfers ERC721 `_nftId` handled by the contract `_nftContract` from `_sender` to `_recipient`",
+        "params": {
+          "_nftContract": "- ERC721 contract",
+          "_nftId": "- ERC721 id",
+          "_recipient": "- The new owner of the ERC721",
+          "_sender": "- The current owner of the ERC721"
+        },
+        "returns": {
+          "_0": "true if successfully transferred, false otherwise"
+        }
+      }
+    },
+    "title": "ERC721Wrapper",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}
