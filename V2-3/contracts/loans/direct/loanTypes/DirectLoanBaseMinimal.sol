@@ -1,11 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-pragma solidity 0.8.4;
+pragma solidity 0.8.19;
 
 import "./IDirectLoanBase.sol";
 import "./LoanData.sol";
 import "./LoanChecksAndCalculations.sol";
-import "./LoanAirdropUtils.sol";
 import "../../BaseLoan.sol";
 import "../../../utils/NftReceiver.sol";
 import "../../../utils/NFTfiSigningUtils.sol";
@@ -337,7 +336,7 @@ abstract contract DirectLoanBaseMinimal is IDirectLoanBase, IPermittedERC20s, Ba
     ) BaseLoan(_admin) {
         hub = INftfiHub(_nftfiHub);
         LOAN_COORDINATOR = _loanCoordinatorKey;
-        for (uint256 i = 0; i < _permittedErc20s.length; i++) {
+        for (uint256 i; i < _permittedErc20s.length; ++i) {
             _setERC20Permit(_permittedErc20s[i], true);
         }
     }
@@ -420,7 +419,7 @@ abstract contract DirectLoanBaseMinimal is IDirectLoanBase, IPermittedERC20s, Ba
         if (_erc20s.length != _permits.length) {
             revert FunctionInformationArityMismatch();
         }
-        for (uint256 i = 0; i < _erc20s.length; i++) {
+        for (uint256 i = 0; i < _erc20s.length; ++i) {
             _setERC20Permit(_erc20s[i], _permits[i]);
         }
     }
@@ -654,86 +653,6 @@ abstract contract DirectLoanBaseMinimal is IDirectLoanBase, IPermittedERC20s, Ba
             block.timestamp,
             loan.nftCollateralContract
         );
-    }
-
-    /**
-     * @notice this function initiates a flashloan to pull an airdrop from a tartget contract
-     *
-     * @param _loanId -
-     * @param _target - address of the airdropping contract
-     * @param _data - function selector to be called on the airdropping contract
-     * @param _nftAirdrop - address of the used claiming nft in the drop
-     * @param _nftAirdropId - id of the used claiming nft in the drop
-     * @param _is1155 -
-     * @param _nftAirdropAmount - amount in case of 1155
-     */
-
-    function pullAirdrop(
-        uint32 _loanId,
-        address _target,
-        bytes calldata _data,
-        address _nftAirdrop,
-        uint256 _nftAirdropId,
-        bool _is1155,
-        uint256 _nftAirdropAmount
-    ) external nonReentrant {
-        LoanChecksAndCalculations.checkLoanIdValidity(_loanId, hub);
-        if (loanRepaidOrLiquidated[_loanId]) {
-            revert LoanAlreadyRepaidOrLiquidated();
-        }
-        LoanTerms memory loan = loanIdToLoan[_loanId];
-
-        LoanAirdropUtils.pullAirdrop(
-            _loanId,
-            loan,
-            _target,
-            _data,
-            _nftAirdrop,
-            _nftAirdropId,
-            _is1155,
-            _nftAirdropAmount,
-            hub
-        );
-    }
-
-    /**
-     * @notice this function initiates a flashloan to pull an airdrop from a tartget contract
-     *
-     * @param _loanId -
-     * @param _target - address of the airdropping contract
-     * @param _data - function selector to be called on the airdropping contract
-     */
-
-    function pullAirdropReceiver(
-        uint32 _loanId,
-        address _target,
-        bytes calldata _data
-    ) external nonReentrant {
-        LoanChecksAndCalculations.checkLoanIdValidity(_loanId, hub);
-        if (loanRepaidOrLiquidated[_loanId]) {
-            revert LoanAlreadyRepaidOrLiquidated();
-        }
-        LoanTerms memory loan = loanIdToLoan[_loanId];
-
-        LoanAirdropUtils.pullAirdropReceiver(_loanId, loan, _target, _data, hub);
-    }
-
-    /**
-     * @notice this function creates a proxy contract wrapping the collateral to be able to catch an expected airdrop
-     *
-     * @param _loanId -
-     */
-
-    function wrapCollateral(uint32 _loanId) external nonReentrant {
-        LoanChecksAndCalculations.checkLoanIdValidity(_loanId, hub);
-        if (loanRepaidOrLiquidated[_loanId]) {
-            revert LoanAlreadyRepaidOrLiquidated();
-        }
-        LoanTerms storage loan = loanIdToLoan[_loanId];
-
-        _escrowTokens[loan.nftCollateralContract][loan.nftCollateralId] -= 1;
-        (address instance, uint256 receiverId) = LoanAirdropUtils.wrapCollateral(_loanId, loan, hub);
-        _escrowTokens[instance][receiverId] += 1;
     }
 
     /**

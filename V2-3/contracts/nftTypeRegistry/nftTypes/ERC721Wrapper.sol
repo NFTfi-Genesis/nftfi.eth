@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: BUSL-1.1
-pragma solidity 0.8.4;
+pragma solidity 0.8.19;
 
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "../../interfaces/INftWrapper.sol";
@@ -36,15 +36,5 @@ contract ERC721Wrapper is INftWrapper {
         uint256 _tokenId
     ) external view override returns (bool) {
         return IERC721(_nftContract).ownerOf(_tokenId) == _owner;
-    }
-
-    function wrapAirdropReceiver(
-        address _recipient,
-        address _nftContract,
-        uint256 _nftId
-    ) external override returns (bool) {
-        IERC721(_nftContract).safeTransferFrom(address(this), _recipient, _nftId);
-
-        return true;
     }
 }

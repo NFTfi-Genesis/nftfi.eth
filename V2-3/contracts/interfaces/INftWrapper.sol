@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-pragma solidity 0.8.4;
+pragma solidity 0.8.19;
 
 /**
  * @title INftTypeRegistry
@@ -20,10 +20,4 @@ interface INftWrapper {
         address nftContract,
         uint256 tokenId
     ) external view returns (bool);
-
-    function wrapAirdropReceiver(
-        address _recipient,
-        address _nftContract,
-        uint256 _nftId
-    ) external returns (bool);
 }

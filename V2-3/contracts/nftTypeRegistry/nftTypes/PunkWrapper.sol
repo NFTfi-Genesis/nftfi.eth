@@ -1,11 +1,9 @@
 // SPDX-License-Identifier: BUSL-1.1
-pragma solidity 0.8.4;
+pragma solidity 0.8.19;
 
 import "../../interfaces/INftWrapper.sol";
 import "../../interfaces/IPunks.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
-
-import "../../airdrop/AirdropReceiver.sol";
 
 /**
  * @title PunkWrapper
@@ -29,21 +27,13 @@ contract PunkWrapper is INftWrapper {
         address _nftContract,
         uint256 _nftId
     ) external override returns (bool) {
-        // we have to check if we are wrapped -
-        // ideally should be fixed in loan airdrop utils:
-        // should update collateralWrapper, but that would need a loans contract re-deploy
-        try IERC721(_nftContract).supportsInterface(type(IERC721).interfaceId) {
-            IERC721(_nftContract).transferFrom(_sender, _recipient, _nftId);
-            return true;
-        } catch {
-            if (address(this) == _sender) {
-                IPunks(_nftContract).transferPunk(_recipient, _nftId);
-            } else {
-                require(isOwner(_sender, _nftContract, _nftId), "PunkWrapper:sender must be owner");
-                IPunks(_nftContract).buyPunk(_nftId);
-            }
-            return true;
+        if (address(this) == _sender) {
+            IPunks(_nftContract).transferPunk(_recipient, _nftId);
+        } else {
+            require(isOwner(_sender, _nftContract, _nftId), "PunkWrapper:sender must be owner");
+            IPunks(_nftContract).buyPunk(_nftId);
         }
+        return true;
     }
 
     function isOwner(
@@ -52,17 +42,5 @@ contract PunkWrapper is INftWrapper {
         uint256 _tokenId
     ) public view override returns (bool) {
         return IPunks(_nftContract).punkIndexToAddress(_tokenId) == _owner;
-    }
-
-    function wrapAirdropReceiver(
-        address _recipient,
-        address _nftContract,
-        uint256 _nftId
-    ) external override returns (bool) {
-        IPunks(_nftContract).offerPunkForSaleToAddress(_nftId, 0, _recipient);
-
-        AirdropReceiver(_recipient).wrap(address(this), _nftContract, _nftId);
-
-        return true;
     }
 }

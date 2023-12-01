@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-pragma solidity 0.8.4;
+pragma solidity 0.8.19;
 
 import "../interfaces/IPermittedERC20s.sol";
 import "../utils/Ownable.sol";
@@ -45,7 +45,7 @@ contract PermittedERC20s is Ownable, IPermittedERC20s {
      * @param _permittedErc20s - The batch of addresses initially permitted.
      */
     constructor(address _admin, address[] memory _permittedErc20s) Ownable(_admin) {
-        for (uint256 i = 0; i < _permittedErc20s.length; i++) {
+        for (uint256 i; i < _permittedErc20s.length; ++i) {
             _setERC20Permit(_permittedErc20s[i], true);
         }
     }
@@ -75,7 +75,7 @@ contract PermittedERC20s is Ownable, IPermittedERC20s {
     function setERC20Permits(address[] memory _erc20s, bool[] memory _permits) external onlyOwner {
         require(_erc20s.length == _permits.length, "setERC20Permits function information arity mismatch");
 
-        for (uint256 i = 0; i < _erc20s.length; i++) {
+        for (uint256 i; i < _erc20s.length; ++i) {
             _setERC20Permit(_erc20s[i], _permits[i]);
         }
     }

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-pragma solidity 0.8.4;
+pragma solidity 0.8.19;
 
 import "./DirectLoanFixedOffer.sol";
 import "../../../utils/NFTfiCollectionOfferSigningUtils.sol";
@@ -22,13 +22,12 @@ import "../../../utils/NFTfiCollectionOfferSigningUtils.sol";
  *   2. the lender calls erc20Contract.approve(NFTfi), allowing NFTfi to move the lender's ERC20 tokens on their
  * behalf.
  *   3. the lender signs a reusable off-chain message, proposing its collection offer terms.
- *   4. the borrower gets a protocol signature from an offchain service to approve their nft
- *   5. the borrower calls `acceptOffer` to accept these terms and enter into the loan. The NFT is stored in
+ *   4. the borrower calls `acceptOffer` to accept these terms and enter into the loan. The NFT is stored in
  * the contract, the borrower receives the loan principal in the specified ERC20 currency, the lender receives an
  * NFTfi promissory note (in ERC721 form) that represents the rights to either the principal-plus-interest, or the
  * underlying NFT collateral if the borrower does not pay back in time, and the borrower receives obligation receipt
  * (in ERC721 form) that gives them the right to pay back the loan and get the collateral back.
- *  6. another borrower can also repeat step 4 until the original lender cancels or their
+ *  5. another borrower can also repeat step 4 until the original lender cancels or their
  * wallet runs out of funds with allowance to the contract
  *
  * The lender can freely transfer and trade this ERC721 promissory note as they wish, with the knowledge that
@@ -52,8 +51,6 @@ contract DirectLoanFixedCollectionOffer is DirectLoanFixedOffer {
     /* CUSTOM ERRORS */
     /* ************* */
 
-    error InvalidProtocolSigner();
-    error InvalidProtocolSignature();
     error CollateralIdNotInRange();
     error MinIdGreaterThanMaxId();
     error OriginalAcceptOfferDisabled();
@@ -72,13 +69,10 @@ contract DirectLoanFixedCollectionOffer is DirectLoanFixedOffer {
     constructor(
         address _admin,
         address _nftfiHub,
-        address[] memory _permittedErc20s,
-        address _protocolSignerAddress
+        address[] memory _permittedErc20s
     ) DirectLoanFixedOffer(_admin, _nftfiHub, _permittedErc20s) {
-        protocolSignerAddress = _protocolSignerAddress;
+        // solhint-disable-previous-line no-empty-blocks
     }
-
-    address public protocolSignerAddress;
 
     /* ******************* */
     /* READ-ONLY FUNCTIONS */
@@ -109,14 +103,12 @@ contract DirectLoanFixedCollectionOffer is DirectLoanFixedOffer {
      *
      * @param _offer - The offer made by the lender.
      * @param _signature - The components of the lender's signature.
-     * @param _protocolSignature - signature of the given nftId by the protocol to filter
      * stolen or otherwise unwanted items
      * @param _borrowerSettings - Some extra parameters that the borrower needs to set when accepting an offer.
      */
     function acceptCollectionOffer(
         Offer memory _offer,
         Signature memory _signature,
-        ProtocolSignature memory _protocolSignature,
         BorrowerSettings memory _borrowerSettings
     ) external whenNotPaused nonReentrant {
         address nftWrapper = _getWrapper(_offer.nftCollateralContract);
@@ -126,8 +118,7 @@ contract DirectLoanFixedCollectionOffer is DirectLoanFixedOffer {
             _setupLoanTerms(_offer, nftWrapper),
             _setupLoanExtras(_borrowerSettings.revenueSharePartner, _borrowerSettings.referralFeeInBasisPoints),
             _offer,
-            _signature,
-            _protocolSignature
+            _signature
         );
     }
 
@@ -139,7 +130,6 @@ contract DirectLoanFixedCollectionOffer is DirectLoanFixedOffer {
      * @param _idRange - min and max (inclusive) Id ranges for collection offers on collections,
      * like ArtBlocks, where multiple collections are defined on one contract differentiated by id-ranges
      * @param _signature - The components of the lender's signature.
-     * @param _protocolSignature - signature of the given nftId by the protocol to filter
      * stolen or otherwise unwanted items
      * @param _borrowerSettings - Some extra parameters that the borrower needs to set when accepting an offer.
      */
@@ -147,7 +137,6 @@ contract DirectLoanFixedCollectionOffer is DirectLoanFixedOffer {
         Offer memory _offer,
         CollectionIdRange memory _idRange,
         Signature memory _signature,
-        ProtocolSignature memory _protocolSignature,
         BorrowerSettings memory _borrowerSettings
     ) external whenNotPaused nonReentrant {
         address nftWrapper = _getWrapper(_offer.nftCollateralContract);
@@ -159,30 +148,13 @@ contract DirectLoanFixedCollectionOffer is DirectLoanFixedOffer {
             _setupLoanExtras(_borrowerSettings.revenueSharePartner, _borrowerSettings.referralFeeInBasisPoints),
             _offer,
             _idRange,
-            _signature,
-            _protocolSignature
+            _signature
         );
-    }
-
-    function setProtocolSignerAddress(address _protocolSignerAddress) external onlyOwner {
-        protocolSignerAddress = _protocolSignerAddress;
     }
 
     /* ****************** */
     /* INTERNAL FUNCTIONS */
     /* ****************** */
-
-    /**
-     * @notice overriding to make it impossible to create a regular offer on this contract (only collection offers)
-     */
-    function _acceptOffer(
-        LoanTerms memory,
-        LoanExtras memory,
-        Offer memory,
-        Signature memory
-    ) internal pure override returns (uint32) {
-        revert OriginalAcceptOfferDisabled();
-    }
 
     /**
      * @notice This function is called by the borrower when accepting a lender's offer
@@ -192,16 +164,14 @@ contract DirectLoanFixedCollectionOffer is DirectLoanFixedOffer {
      * @param _loanExtras - The main Loan Terms struct. This data is saved upon loan creation on loanIdToLoanExtras.
      * @param _offer - The offer made by the lender.
      * @param _signature - The components of the lender's signature.
-     * @param _protocolSignature - signature of the given nftId by the protocol to filter
      * stolen or otherwise unwanted items
      */
     function _acceptOffer(
         LoanTerms memory _loanTerms,
         LoanExtras memory _loanExtras,
         Offer memory _offer,
-        Signature memory _signature,
-        ProtocolSignature memory _protocolSignature
-    ) internal returns (uint32) {
+        Signature memory _signature
+    ) internal override returns (uint32) {
         // still checking the nonce for possible cancellations
         if (_nonceHasBeenUsedForUser[_signature.signer][_signature.nonce]) {
             revert InvalidNonce();
@@ -209,26 +179,12 @@ contract DirectLoanFixedCollectionOffer is DirectLoanFixedOffer {
         // Note that we are not invalidating the nonce as part of acceptOffer (as is the case for loan types in general)
         // since the nonce that the lender signed with remains valid for all loans for the collection offer
 
-        if (_protocolSignature.signer != protocolSignerAddress) {
-            revert InvalidProtocolSigner();
-        }
-
         Offer memory offerToCheck = _offer;
 
         offerToCheck.nftCollateralId = 0;
 
         if (!NFTfiSigningUtils.isValidLenderSignature(offerToCheck, _signature)) {
             revert InvalidLenderSignature();
-        }
-        if (
-            !NFTfiCollectionOfferSigningUtils.isValidProtocolSignature(
-                _signature.signature,
-                msg.sender,
-                _loanTerms.nftCollateralId,
-                _protocolSignature
-            )
-        ) {
-            revert InvalidProtocolSignature();
         }
 
         uint32 loanId = _createLoan(
@@ -256,7 +212,6 @@ contract DirectLoanFixedCollectionOffer is DirectLoanFixedOffer {
      * like ArtBlocks, where multiple collections are defined on one contract differentiated by id-ranges
      * @param _offer - The offer made by the lender.
      * @param _signature - The components of the lender's signature.
-     * @param _protocolSignature - signature of the given nftId by the protocol to filter
      * stolen or otherwise unwanted items
      */
     function _acceptOfferWithIdRange(
@@ -264,8 +219,7 @@ contract DirectLoanFixedCollectionOffer is DirectLoanFixedOffer {
         LoanExtras memory _loanExtras,
         Offer memory _offer,
         CollectionIdRange memory _idRange,
-        Signature memory _signature,
-        ProtocolSignature memory _protocolSignature
+        Signature memory _signature
     ) internal {
         // still checking the nonce for possible cancellations
         if (_nonceHasBeenUsedForUser[_signature.signer][_signature.nonce]) {
@@ -273,10 +227,6 @@ contract DirectLoanFixedCollectionOffer is DirectLoanFixedOffer {
         }
         // Note that we are not invalidating the nonce as part of acceptOffer (as is the case for loan types in general)
         // since the nonce that the lender signed with remains valid for all loans for the collection offer
-
-        if (_protocolSignature.signer != protocolSignerAddress) {
-            revert InvalidProtocolSigner();
-        }
 
         //check for id range
         if (_loanTerms.nftCollateralId < _idRange.minId || _loanTerms.nftCollateralId > _idRange.maxId) {
@@ -288,16 +238,6 @@ contract DirectLoanFixedCollectionOffer is DirectLoanFixedOffer {
 
         if (!NFTfiCollectionOfferSigningUtils.isValidLenderSignatureWithIdRange(offerToCheck, _idRange, _signature)) {
             revert InvalidLenderSignature();
-        }
-        if (
-            !NFTfiCollectionOfferSigningUtils.isValidProtocolSignature(
-                _signature.signature,
-                msg.sender,
-                _loanTerms.nftCollateralId,
-                _protocolSignature
-            )
-        ) {
-            revert InvalidProtocolSignature();
         }
 
         uint32 loanId = _createLoan(

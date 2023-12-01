@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-pragma solidity 0.8.4;
+pragma solidity 0.8.19;
 
 import "./interfaces/INftfiHub.sol";
 import "./utils/Ownable.sol";
@@ -101,7 +101,7 @@ contract NftfiHub is Ownable, Pausable, ReentrancyGuard, INftfiHub {
     function _setContracts(string[] memory _contractKeys, address[] memory _contractAddresses) internal {
         require(_contractKeys.length == _contractAddresses.length, "setContracts function information arity mismatch");
 
-        for (uint256 i = 0; i < _contractKeys.length; i++) {
+        for (uint256 i; i < _contractKeys.length; ++i) {
             _setContract(_contractKeys[i], _contractAddresses[i]);
         }
     }

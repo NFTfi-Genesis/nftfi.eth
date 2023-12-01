@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: BUSL-1.1
-pragma solidity 0.8.4;
+pragma solidity 0.8.19;
 
 /**
- * @title IERC721_CryptoKitties
+ * @title TestSuperRareV1
  * @author NFTfi
- * @dev ERC721 compliant interface used by CryptoKitties contract.
- * Extracted from https://etherscan.io/address/0x06012c8cf97bead5deae237070f9587f8e7a266d#code
+ * @dev Test contract with SuperRareV1 ERC721 related functionalities.
+ * Extracted from https://etherscan.io/address/0x41a322b28d0ff354040e2cbc676f0320d8c8850d#code
  */
 interface ICryptoKitties {
     // Events

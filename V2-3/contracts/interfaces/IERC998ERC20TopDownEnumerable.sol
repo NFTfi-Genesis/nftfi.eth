@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-pragma solidity 0.8.4;
+pragma solidity 0.8.19;
 
 interface IERC998ERC20TopDownEnumerable {
     function totalERC20Contracts(uint256 _tokenId) external view returns (uint256);

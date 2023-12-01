@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-pragma solidity 0.8.4;
+pragma solidity 0.8.19;
 
 import "../loans/direct/loanTypes/LoanData.sol";
 import "@openzeppelin/contracts/utils/cryptography/SignatureChecker.sol";
@@ -125,53 +125,6 @@ library NFTfiCollectionOfferSigningUtils {
                     _signature.signer,
                     ECDSA.toEthSignedMessageHash(message),
                     _signature.signature
-                );
-        }
-    }
-
-    /**
-     * @notice This function checked is when the borrower accepts a lender's collection offer,
-     * to validate the protocols's signature that the
-     * protocols provided off-chain via a service to verify that the given nft is not stolen
-     * @param _originalSignature the original lender signature of the offer
-     * @param _borrower address  getting the approval fro the given nft
-     * @param _nftCollateralId approved nft id
-     * @param _protocolSignature - The signature structure containing:
-     * - signer: The address of the signer, in this case and address controlled by the protocol
-     * - expiry: Date when the signature expires
-     * - signature: The ECDSA signature of the protocol, obtained off-chain ahead of time, signing the following
-     * combination of parameters:
-     *   - originalSignature
-     *   - borrower address
-     *   - nftCollateralId
-     *   - protocolSignature.signer
-     *   - protocolSignature.expiry
-     */
-    function isValidProtocolSignature(
-        bytes memory _originalSignature,
-        address _borrower,
-        uint256 _nftCollateralId,
-        LoanData.ProtocolSignature memory _protocolSignature
-    ) internal view returns (bool) {
-        require(block.timestamp <= _protocolSignature.expiry, "Protocol Signature expired");
-        if (_protocolSignature.signer == address(0)) {
-            return false;
-        } else {
-            bytes32 message = keccak256(
-                abi.encodePacked(
-                    _originalSignature,
-                    _borrower,
-                    _nftCollateralId,
-                    _protocolSignature.signer,
-                    _protocolSignature.expiry
-                )
-            );
-
-            return
-                SignatureChecker.isValidSignatureNow(
-                    _protocolSignature.signer,
-                    ECDSA.toEthSignedMessageHash(message),
-                    _protocolSignature.signature
                 );
         }
     }

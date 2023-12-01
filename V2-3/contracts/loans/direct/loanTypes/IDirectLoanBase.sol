@@ -2,7 +2,7 @@
 
 import "./LoanData.sol";
 
-pragma solidity 0.8.4;
+pragma solidity 0.8.19;
 
 interface IDirectLoanBase {
     function maximumLoanDuration() external view returns (uint256);

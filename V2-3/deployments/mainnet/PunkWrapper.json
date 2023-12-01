@@ -1,0 +1,120 @@
+{
+  "address": "0xf4CB058AB8f253C6085839bF87d7B369B90D7A44",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_nftContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_sender",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_nftContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_nftId",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferNFT",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xc830796da7bfff8012d861049c89ca2a3bda99ebcac9315b600b216279e077ee",
+  "receipt": {
+    "to": null,
+    "from": "0x169ee6762811ab9BC59A609331bc721d9f0CD56c",
+    "contractAddress": "0xf4CB058AB8f253C6085839bF87d7B369B90D7A44",
+    "transactionIndex": 76,
+    "gasUsed": "224070",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x02312e34c7db003dc7dbca26416ed349dfa3d6b2b4e949c8750b77e7a92baf89",
+    "transactionHash": "0xc830796da7bfff8012d861049c89ca2a3bda99ebcac9315b600b216279e077ee",
+    "logs": [],
+    "blockNumber": 18220507,
+    "cumulativeGasUsed": "4713584",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "103c7252f85cc80233118bf16e4e3c05",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_nftContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_recipient\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_nftContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_nftId\",\"type\":\"uint256\"}],\"name\":\"transferNFT\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"NFTfi\",\"details\":\"Provides logic to transfer Punks\",\"kind\":\"dev\",\"methods\":{\"transferNFT(address,address,address,uint256)\":{\"details\":\"Transfers Punk `_nftId` handled by the contract `_nftContract` from `_sender` to `_recipient`\",\"params\":{\"_nftContract\":\"- Punk contract\",\"_nftId\":\"- Punk id\",\"_recipient\":\"- The new owner of the Punk\",\"_sender\":\"- The current owner of the Punk\"},\"returns\":{\"_0\":\"true if successfully transferred, false otherwise\"}}},\"title\":\"PunkWrapper\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/nftTypeRegistry/nftTypes/PunkWrapper.sol\":\"PunkWrapper\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.9.0) (token/ERC721/IERC721.sol)\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../../utils/introspection/IERC165.sol\\\";\\n\\n/**\\n * @dev Required interface of an ERC721 compliant contract.\\n */\\ninterface IERC721 is IERC165 {\\n    /**\\n     * @dev Emitted when `tokenId` token is transferred from `from` to `to`.\\n     */\\n    event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);\\n\\n    /**\\n     * @dev Emitted when `owner` enables `approved` to manage the `tokenId` token.\\n     */\\n    event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId);\\n\\n    /**\\n     * @dev Emitted when `owner` enables or disables (`approved`) `operator` to manage all of its assets.\\n     */\\n    event ApprovalForAll(address indexed owner, address indexed operator, bool approved);\\n\\n    /**\\n     * @dev Returns the number of tokens in ``owner``'s account.\\n     */\\n    function balanceOf(address owner) external view returns (uint256 balance);\\n\\n    /**\\n     * @dev Returns the owner of the `tokenId` token.\\n     *\\n     * Requirements:\\n     *\\n     * - `tokenId` must exist.\\n     */\\n    function ownerOf(uint256 tokenId) external view returns (address owner);\\n\\n    /**\\n     * @dev Safely transfers `tokenId` token from `from` to `to`.\\n     *\\n     * Requirements:\\n     *\\n     * - `from` cannot be the zero address.\\n     * - `to` cannot be the zero address.\\n     * - `tokenId` token must exist and be owned by `from`.\\n     * - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}.\\n     * - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function safeTransferFrom(address from, address to, uint256 tokenId, bytes calldata data) external;\\n\\n    /**\\n     * @dev Safely transfers `tokenId` token from `from` to `to`, checking first that contract recipients\\n     * are aware of the ERC721 protocol to prevent tokens from being forever locked.\\n     *\\n     * Requirements:\\n     *\\n     * - `from` cannot be the zero address.\\n     * - `to` cannot be the zero address.\\n     * - `tokenId` token must exist and be owned by `from`.\\n     * - If the caller is not `from`, it must have been allowed to move this token by either {approve} or {setApprovalForAll}.\\n     * - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function safeTransferFrom(address from, address to, uint256 tokenId) external;\\n\\n    /**\\n     * @dev Transfers `tokenId` token from `from` to `to`.\\n     *\\n     * WARNING: Note that the caller is responsible to confirm that the recipient is capable of receiving ERC721\\n     * or else they may be permanently lost. Usage of {safeTransferFrom} prevents loss, though the caller must\\n     * understand this adds an external call which potentially creates a reentrancy vulnerability.\\n     *\\n     * Requirements:\\n     *\\n     * - `from` cannot be the zero address.\\n     * - `to` cannot be the zero address.\\n     * - `tokenId` token must be owned by `from`.\\n     * - If the caller is not `from`, it must be approved to move this token by either {approve} or {setApprovalForAll}.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function transferFrom(address from, address to, uint256 tokenId) external;\\n\\n    /**\\n     * @dev Gives permission to `to` to transfer `tokenId` token to another account.\\n     * The approval is cleared when the token is transferred.\\n     *\\n     * Only a single account can be approved at a time, so approving the zero address clears previous approvals.\\n     *\\n     * Requirements:\\n     *\\n     * - The caller must own the token or be an approved operator.\\n     * - `tokenId` must exist.\\n     *\\n     * Emits an {Approval} event.\\n     */\\n    function approve(address to, uint256 tokenId) external;\\n\\n    /**\\n     * @dev Approve or remove `operator` as an operator for the caller.\\n     * Operators can call {transferFrom} or {safeTransferFrom} for any token owned by the caller.\\n     *\\n     * Requirements:\\n     *\\n     * - The `operator` cannot be the caller.\\n     *\\n     * Emits an {ApprovalForAll} event.\\n     */\\n    function setApprovalForAll(address operator, bool approved) external;\\n\\n    /**\\n     * @dev Returns the account approved for `tokenId` token.\\n     *\\n     * Requirements:\\n     *\\n     * - `tokenId` must exist.\\n     */\\n    function getApproved(uint256 tokenId) external view returns (address operator);\\n\\n    /**\\n     * @dev Returns if the `operator` is allowed to manage all of the assets of `owner`.\\n     *\\n     * See {setApprovalForAll}\\n     */\\n    function isApprovedForAll(address owner, address operator) external view returns (bool);\\n}\\n\",\"keccak256\":\"0x5bce51e11f7d194b79ea59fe00c9e8de9fa2c5530124960f29a24d4c740a3266\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/introspection/IERC165.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Interface of the ERC165 standard, as defined in the\\n * https://eips.ethereum.org/EIPS/eip-165[EIP].\\n *\\n * Implementers can declare support of contract interfaces, which can then be\\n * queried by others ({ERC165Checker}).\\n *\\n * For an implementation, see {ERC165}.\\n */\\ninterface IERC165 {\\n    /**\\n     * @dev Returns true if this contract implements the interface defined by\\n     * `interfaceId`. See the corresponding\\n     * https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section]\\n     * to learn more about how these ids are created.\\n     *\\n     * This function call must use less than 30 000 gas.\\n     */\\n    function supportsInterface(bytes4 interfaceId) external view returns (bool);\\n}\\n\",\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\"},\"contracts/interfaces/INftWrapper.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.19;\\n\\n/**\\n * @title INftTypeRegistry\\n * @author NFTfi\\n * @dev Interface for NFT Wrappers.\\n */\\ninterface INftWrapper {\\n    function transferNFT(\\n        address from,\\n        address to,\\n        address nftContract,\\n        uint256 tokenId\\n    ) external returns (bool);\\n\\n    function isOwner(\\n        address owner,\\n        address nftContract,\\n        uint256 tokenId\\n    ) external view returns (bool);\\n}\\n\",\"keccak256\":\"0xc764aac0a16eb50573f9eb673bdb8a1fef1f4f26e40f279d1d233ed033afa5b0\",\"license\":\"BUSL-1.1\"},\"contracts/interfaces/IPunks.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.19;\\n\\ninterface IPunks {\\n    function balanceOf(address owner) external view returns (uint256);\\n\\n    function punkIndexToAddress(uint256 punkIndex) external view returns (address);\\n\\n    function transferPunk(address to, uint256 punkIndex) external;\\n\\n    function offerPunkForSaleToAddress(\\n        uint256 punkIndex,\\n        uint256 minSalePriceInWei,\\n        address toAddress\\n    ) external;\\n\\n    function buyPunk(uint256 punkIndex) external payable;\\n}\\n\",\"keccak256\":\"0x1a4de83912b50c35339c168e0049a26054c2aa95b7a2a83de9ae73d316936a89\",\"license\":\"BUSL-1.1\"},\"contracts/nftTypeRegistry/nftTypes/PunkWrapper.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\npragma solidity 0.8.19;\\n\\nimport \\\"../../interfaces/INftWrapper.sol\\\";\\nimport \\\"../../interfaces/IPunks.sol\\\";\\nimport \\\"@openzeppelin/contracts/token/ERC721/IERC721.sol\\\";\\n\\n/**\\n * @title PunkWrapper\\n * @author NFTfi\\n * @dev Provides logic to transfer Punks\\n */\\ncontract PunkWrapper is INftWrapper {\\n    /**\\n     * @dev Transfers Punk `_nftId` handled by the contract `_nftContract` from `_sender` to `_recipient`\\n     *\\n     * @param _sender - The current owner of the Punk\\n     * @param _recipient - The new owner of the Punk\\n     * @param _nftContract - Punk contract\\n     * @param _nftId - Punk id\\n     *\\n     * @return true if successfully transferred, false otherwise\\n     */\\n    function transferNFT(\\n        address _sender,\\n        address _recipient,\\n        address _nftContract,\\n        uint256 _nftId\\n    ) external override returns (bool) {\\n        if (address(this) == _sender) {\\n            IPunks(_nftContract).transferPunk(_recipient, _nftId);\\n        } else {\\n            require(isOwner(_sender, _nftContract, _nftId), \\\"PunkWrapper:sender must be owner\\\");\\n            IPunks(_nftContract).buyPunk(_nftId);\\n        }\\n        return true;\\n    }\\n\\n    function isOwner(\\n        address _owner,\\n        address _nftContract,\\n        uint256 _tokenId\\n    ) public view override returns (bool) {\\n        return IPunks(_nftContract).punkIndexToAddress(_tokenId) == _owner;\\n    }\\n}\\n\",\"keccak256\":\"0x4d609cccc63f6aa67a5628626917fd3fad9b5858a4561e2d1ecfb04eb697e25a\",\"license\":\"BUSL-1.1\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610317806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c8063b03066711461003b578063f370e8c514610062575b600080fd5b61004e610049366004610254565b610075565b604051901515815260200160405180910390f35b61004e6100703660046102a5565b6101af565b60006001600160a01b03851630036100ee576040516322dca8bb60e21b81526001600160a01b03858116600483015260248201849052841690638b72a2ec90604401600060405180830381600087803b1580156100d157600080fd5b505af11580156100e5573d6000803e3d6000fd5b505050506101a4565b6100f98584846101af565b6101495760405162461bcd60e51b815260206004820181905260248201527f50756e6b577261707065723a73656e646572206d757374206265206f776e6572604482015260640160405180910390fd5b60405163104c9fd360e31b8152600481018390526001600160a01b03841690638264fe9890602401600060405180830381600087803b15801561018b57600080fd5b505af115801561019f573d6000803e3d6000fd5b505050505b506001949350505050565b6000836001600160a01b0316836001600160a01b03166358178168846040518263ffffffff1660e01b81526004016101e991815260200190565b602060405180830381865afa158015610206573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061022a91906102e6565b6001600160a01b031614949350505050565b6001600160a01b038116811461025157600080fd5b50565b6000806000806080858703121561026a57600080fd5b84356102758161023c565b935060208501356102858161023c565b925060408501356102958161023c565b9396929550929360600135925050565b6000806000606084860312156102ba57600080fd5b83356102c58161023c565b925060208401356102d58161023c565b929592945050506040919091013590565b6000602082840312156102f857600080fd5b81516103038161023c565b939250505056fea164736f6c6343000813000a",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c8063b03066711461003b578063f370e8c514610062575b600080fd5b61004e610049366004610254565b610075565b604051901515815260200160405180910390f35b61004e6100703660046102a5565b6101af565b60006001600160a01b03851630036100ee576040516322dca8bb60e21b81526001600160a01b03858116600483015260248201849052841690638b72a2ec90604401600060405180830381600087803b1580156100d157600080fd5b505af11580156100e5573d6000803e3d6000fd5b505050506101a4565b6100f98584846101af565b6101495760405162461bcd60e51b815260206004820181905260248201527f50756e6b577261707065723a73656e646572206d757374206265206f776e6572604482015260640160405180910390fd5b60405163104c9fd360e31b8152600481018390526001600160a01b03841690638264fe9890602401600060405180830381600087803b15801561018b57600080fd5b505af115801561019f573d6000803e3d6000fd5b505050505b506001949350505050565b6000836001600160a01b0316836001600160a01b03166358178168846040518263ffffffff1660e01b81526004016101e991815260200190565b602060405180830381865afa158015610206573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061022a91906102e6565b6001600160a01b031614949350505050565b6001600160a01b038116811461025157600080fd5b50565b6000806000806080858703121561026a57600080fd5b84356102758161023c565b935060208501356102858161023c565b925060408501356102958161023c565b9396929550929360600135925050565b6000806000606084860312156102ba57600080fd5b83356102c58161023c565b925060208401356102d58161023c565b929592945050506040919091013590565b6000602082840312156102f857600080fd5b81516103038161023c565b939250505056fea164736f6c6343000813000a",
+  "devdoc": {
+    "author": "NFTfi",
+    "details": "Provides logic to transfer Punks",
+    "kind": "dev",
+    "methods": {
+      "transferNFT(address,address,address,uint256)": {
+        "details": "Transfers Punk `_nftId` handled by the contract `_nftContract` from `_sender` to `_recipient`",
+        "params": {
+          "_nftContract": "- Punk contract",
+          "_nftId": "- Punk id",
+          "_recipient": "- The new owner of the Punk",
+          "_sender": "- The current owner of the Punk"
+        },
+        "returns": {
+          "_0": "true if successfully transferred, false otherwise"
+        }
+      }
+    },
+    "title": "PunkWrapper",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}

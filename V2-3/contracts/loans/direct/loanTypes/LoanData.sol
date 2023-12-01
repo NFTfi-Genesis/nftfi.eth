@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-pragma solidity 0.8.4;
+pragma solidity 0.8.19;
 
 /**
  * @title  LoanData
@@ -136,20 +136,6 @@ interface LoanData {
      */
     struct Signature {
         uint256 nonce;
-        uint256 expiry;
-        address signer;
-        bytes signature;
-    }
-
-    /**
-     * Signed message contents contents:
-     *  - Signature.signature,
-     *  - borrower address, - (msg.sender)
-     *  - Offer.nftCollateralId, - (actual id here, since in CollateralOffer the original offer signature's id is 0)
-     *  - Signature.signer, - porotocol address
-     *  - Signature.expiry,
-     */
-    struct ProtocolSignature {
         uint256 expiry;
         address signer;
         bytes signature;

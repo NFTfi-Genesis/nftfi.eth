@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-pragma solidity 0.8.4;
+pragma solidity 0.8.19;
 
 import "./NFTfiCollectionOfferSigningUtils.sol";
 
@@ -31,21 +31,6 @@ contract NFTfiCollectionOfferSigningUtilsContract {
                 _idRange,
                 _signature,
                 _loanContract
-            );
-    }
-
-    function isValidProtocolSignature(
-        bytes memory _originalSignature,
-        address _borrower,
-        uint256 nftCollateralId,
-        LoanData.ProtocolSignature memory _protocolSignature
-    ) public view returns (bool) {
-        return
-            NFTfiCollectionOfferSigningUtils.isValidProtocolSignature(
-                _originalSignature,
-                _borrower,
-                nftCollateralId,
-                _protocolSignature
             );
     }
 }

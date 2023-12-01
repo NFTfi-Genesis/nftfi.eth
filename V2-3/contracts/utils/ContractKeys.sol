@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-pragma solidity 0.8.4;
+pragma solidity 0.8.19;
 
 /**
  * @title ContractKeys
@@ -14,12 +14,6 @@ library ContractKeys {
     bytes32 public constant NFT_TYPE_REGISTRY = bytes32("NFT_TYPE_REGISTRY");
     bytes32 public constant LOAN_REGISTRY = bytes32("LOAN_REGISTRY");
     bytes32 public constant PERMITTED_SNFT_RECEIVER = bytes32("PERMITTED_SNFT_RECEIVER");
-    bytes32 public constant PERMITTED_AIRDROPS = bytes32("PERMITTED_AIRDROPS");
-    bytes32 public constant AIRDROP_RECEIVER = bytes32("AIRDROP_RECEIVER");
-    bytes32 public constant AIRDROP_FACTORY = bytes32("AIRDROP_FACTORY");
-    bytes32 public constant AIRDROP_FLASH_LOAN = bytes32("AIRDROP_FLASH_LOAN");
-
-    string public constant AIRDROP_WRAPPER_STRING = "AirdropWrapper";
 
     /**
      * @notice Returns the bytes32 representation of a string

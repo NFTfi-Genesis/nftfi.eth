@@ -1,9 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
-pragma solidity 0.8.4;
+pragma solidity 0.8.19;
 
 import "../../interfaces/INftWrapper.sol";
 import "../../interfaces/ICryptoKitties.sol";
-import "../../airdrop/AirdropReceiver.sol";
 
 /**
  * @title CryptoKittiesWrapper
@@ -42,17 +41,5 @@ contract CryptoKittiesWrapper is INftWrapper {
         uint256 _tokenId
     ) external view override returns (bool) {
         return ICryptoKitties(_nftContract).ownerOf(_tokenId) == _owner;
-    }
-
-    function wrapAirdropReceiver(
-        address _recipient,
-        address _nftContract,
-        uint256 _nftId
-    ) external override returns (bool) {
-        ICryptoKitties(_nftContract).approve(_recipient, _nftId);
-
-        AirdropReceiver(_recipient).wrap(address(this), _nftContract, _nftId);
-
-        return true;
     }
 }

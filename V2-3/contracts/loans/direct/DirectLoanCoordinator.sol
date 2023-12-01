@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-pragma solidity 0.8.4;
+pragma solidity 0.8.19;
 
 import "../../smartNft/SmartNft.sol";
 import "../../interfaces/IDirectLoanCoordinator.sol";
@@ -297,7 +297,7 @@ contract DirectLoanCoordinator is IDirectLoanCoordinator, Ownable {
     function _registerLoanTypes(string[] memory _loanTypes, address[] memory _loanContracts) internal {
         require(_loanTypes.length == _loanContracts.length, "function information arity mismatch");
 
-        for (uint256 i = 0; i < _loanTypes.length; i++) {
+        for (uint256 i; i < _loanTypes.length; ++i) {
             _registerLoanType(_loanTypes[i], _loanContracts[i]);
         }
     }

@@ -1,0 +1,399 @@
+{
+  "address": "0x4deAcdDEF0E6ada9a35e360126181C75fA7F8EdA",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_admin",
+          "type": "address"
+        },
+        {
+          "internalType": "string[]",
+          "name": "_contractKeys",
+          "type": "string[]"
+        },
+        {
+          "internalType": "address[]",
+          "name": "_contractAddresses",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "contractKey",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "contractAddress",
+          "type": "address"
+        }
+      ],
+      "name": "ContractUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Paused",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Unpaused",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "acceptTransferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "cancelTransferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_contractKey",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getContract",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "paused",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "rejectTransferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newOwnerCandidate",
+          "type": "address"
+        }
+      ],
+      "name": "requestTransferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_contractKey",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "_contractAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setContract",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string[]",
+          "name": "_contractKeys",
+          "type": "string[]"
+        },
+        {
+          "internalType": "address[]",
+          "name": "_contractAddresses",
+          "type": "address[]"
+        }
+      ],
+      "name": "setContracts",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xa6bc99237fd4114e0b1b2edd0eb7389e57d75573fdbfc3157a819385f8571907",
+  "receipt": {
+    "to": null,
+    "from": "0x169ee6762811ab9BC59A609331bc721d9f0CD56c",
+    "contractAddress": "0x4deAcdDEF0E6ada9a35e360126181C75fA7F8EdA",
+    "transactionIndex": 71,
+    "gasUsed": "639924",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000001000000000000000008000000000000000000020000000000000000000800000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002020000000000000080000000000000000000000000000100000001000000000000000",
+    "blockHash": "0xae3e91bd17d162520acc4b9909b6497e9a37f08c5ea8b351ac2c7d9ccbf96e21",
+    "transactionHash": "0xa6bc99237fd4114e0b1b2edd0eb7389e57d75573fdbfc3157a819385f8571907",
+    "logs": [
+      {
+        "transactionIndex": 71,
+        "blockNumber": 18220506,
+        "transactionHash": "0xa6bc99237fd4114e0b1b2edd0eb7389e57d75573fdbfc3157a819385f8571907",
+        "address": "0x4deAcdDEF0E6ada9a35e360126181C75fA7F8EdA",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x000000000000000000000000169ee6762811ab9bc59a609331bc721d9f0cd56c"
+        ],
+        "data": "0x",
+        "logIndex": 121,
+        "blockHash": "0xae3e91bd17d162520acc4b9909b6497e9a37f08c5ea8b351ac2c7d9ccbf96e21"
+      }
+    ],
+    "blockNumber": 18220506,
+    "cumulativeGasUsed": "6028729",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x169ee6762811ab9BC59A609331bc721d9f0CD56c",
+    [],
+    []
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "103c7252f85cc80233118bf16e4e3c05",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_admin\",\"type\":\"address\"},{\"internalType\":\"string[]\",\"name\":\"_contractKeys\",\"type\":\"string[]\"},{\"internalType\":\"address[]\",\"name\":\"_contractAddresses\",\"type\":\"address[]\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"contractKey\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"contractAddress\",\"type\":\"address\"}],\"name\":\"ContractUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Paused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Unpaused\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"acceptTransferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"cancelTransferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_contractKey\",\"type\":\"bytes32\"}],\"name\":\"getContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"paused\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"rejectTransferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newOwnerCandidate\",\"type\":\"address\"}],\"name\":\"requestTransferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_contractKey\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"_contractAddress\",\"type\":\"address\"}],\"name\":\"setContract\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string[]\",\"name\":\"_contractKeys\",\"type\":\"string[]\"},{\"internalType\":\"address[]\",\"name\":\"_contractAddresses\",\"type\":\"address[]\"}],\"name\":\"setContracts\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"NFTfi\",\"details\":\"Registry for the contracts supported by NFTfi protocol.\",\"events\":{\"ContractUpdated(bytes32,address)\":{\"params\":{\"contractAddress\":\"- Address of the contract.\",\"contractKey\":\"- Contract key e.g. bytes32('PERMITTED_NFTS').\"}},\"Paused(address)\":{\"details\":\"Emitted when the pause is triggered by `account`.\"},\"Unpaused(address)\":{\"details\":\"Emitted when the pause is lifted by `account`.\"}},\"kind\":\"dev\",\"methods\":{\"constructor\":{\"details\":\"Initializes `contracts` with a batch of permitted contracts\",\"params\":{\"_admin\":\"- Initial admin of this contract.\",\"_contractAddresses\":\"- Initial associated contract addresses.\",\"_contractKeys\":\"- Initial contract keys.\"}},\"getContract(bytes32)\":{\"params\":{\"_contractKey\":\"- The index to the contract address.\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"paused()\":{\"details\":\"Returns true if the contract is paused, and false otherwise.\"},\"requestTransferOwnership(address)\":{\"details\":\"Requests transferring ownership of the contract to a new account (`_newOwnerCandidate`). Can only be called by the current owner.\"},\"setContract(string,address)\":{\"params\":{\"_contractAddress\":\"- The associated contract address.\",\"_contractKey\":\"- New or existing contract key.\"}},\"setContracts(string[],address[])\":{\"params\":{\"_contractAddresses\":\"- The associated contract addresses.\",\"_contractKeys\":\"- New or existing contract keys.\"}}},\"title\":\"NftfiHub\",\"version\":1},\"userdoc\":{\"events\":{\"ContractUpdated(bytes32,address)\":{\"notice\":\"This event is fired whenever the admin registers a contract.\"}},\"kind\":\"user\",\"methods\":{\"getContract(bytes32)\":{\"notice\":\"This function can be called by anyone to lookup the contract address associated with the key.\"},\"setContract(string,address)\":{\"notice\":\"Set or update the contract address for the given key.\"},\"setContracts(string[],address[])\":{\"notice\":\"Set or update the contract addresses for the given keys.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/NftfiHub.sol\":\"NftfiHub\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/security/Pausable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.7.0) (security/Pausable.sol)\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../utils/Context.sol\\\";\\n\\n/**\\n * @dev Contract module which allows children to implement an emergency stop\\n * mechanism that can be triggered by an authorized account.\\n *\\n * This module is used through inheritance. It will make available the\\n * modifiers `whenNotPaused` and `whenPaused`, which can be applied to\\n * the functions of your contract. Note that they will not be pausable by\\n * simply including this module, only once the modifiers are put in place.\\n */\\nabstract contract Pausable is Context {\\n    /**\\n     * @dev Emitted when the pause is triggered by `account`.\\n     */\\n    event Paused(address account);\\n\\n    /**\\n     * @dev Emitted when the pause is lifted by `account`.\\n     */\\n    event Unpaused(address account);\\n\\n    bool private _paused;\\n\\n    /**\\n     * @dev Initializes the contract in unpaused state.\\n     */\\n    constructor() {\\n        _paused = false;\\n    }\\n\\n    /**\\n     * @dev Modifier to make a function callable only when the contract is not paused.\\n     *\\n     * Requirements:\\n     *\\n     * - The contract must not be paused.\\n     */\\n    modifier whenNotPaused() {\\n        _requireNotPaused();\\n        _;\\n    }\\n\\n    /**\\n     * @dev Modifier to make a function callable only when the contract is paused.\\n     *\\n     * Requirements:\\n     *\\n     * - The contract must be paused.\\n     */\\n    modifier whenPaused() {\\n        _requirePaused();\\n        _;\\n    }\\n\\n    /**\\n     * @dev Returns true if the contract is paused, and false otherwise.\\n     */\\n    function paused() public view virtual returns (bool) {\\n        return _paused;\\n    }\\n\\n    /**\\n     * @dev Throws if the contract is paused.\\n     */\\n    function _requireNotPaused() internal view virtual {\\n        require(!paused(), \\\"Pausable: paused\\\");\\n    }\\n\\n    /**\\n     * @dev Throws if the contract is not paused.\\n     */\\n    function _requirePaused() internal view virtual {\\n        require(paused(), \\\"Pausable: not paused\\\");\\n    }\\n\\n    /**\\n     * @dev Triggers stopped state.\\n     *\\n     * Requirements:\\n     *\\n     * - The contract must not be paused.\\n     */\\n    function _pause() internal virtual whenNotPaused {\\n        _paused = true;\\n        emit Paused(_msgSender());\\n    }\\n\\n    /**\\n     * @dev Returns to normal state.\\n     *\\n     * Requirements:\\n     *\\n     * - The contract must be paused.\\n     */\\n    function _unpause() internal virtual whenPaused {\\n        _paused = false;\\n        emit Unpaused(_msgSender());\\n    }\\n}\\n\",\"keccak256\":\"0x0849d93b16c9940beb286a7864ed02724b248b93e0d80ef6355af5ef15c64773\",\"license\":\"MIT\"},\"@openzeppelin/contracts/security/ReentrancyGuard.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.9.0) (security/ReentrancyGuard.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Contract module that helps prevent reentrant calls to a function.\\n *\\n * Inheriting from `ReentrancyGuard` will make the {nonReentrant} modifier\\n * available, which can be applied to functions to make sure there are no nested\\n * (reentrant) calls to them.\\n *\\n * Note that because there is a single `nonReentrant` guard, functions marked as\\n * `nonReentrant` may not call one another. This can be worked around by making\\n * those functions `private`, and then adding `external` `nonReentrant` entry\\n * points to them.\\n *\\n * TIP: If you would like to learn more about reentrancy and alternative ways\\n * to protect against it, check out our blog post\\n * https://blog.openzeppelin.com/reentrancy-after-istanbul/[Reentrancy After Istanbul].\\n */\\nabstract contract ReentrancyGuard {\\n    // Booleans are more expensive than uint256 or any type that takes up a full\\n    // word because each write operation emits an extra SLOAD to first read the\\n    // slot's contents, replace the bits taken up by the boolean, and then write\\n    // back. This is the compiler's defense against contract upgrades and\\n    // pointer aliasing, and it cannot be disabled.\\n\\n    // The values being non-zero value makes deployment a bit more expensive,\\n    // but in exchange the refund on every call to nonReentrant will be lower in\\n    // amount. Since refunds are capped to a percentage of the total\\n    // transaction's gas, it is best to keep them low in cases like this one, to\\n    // increase the likelihood of the full refund coming into effect.\\n    uint256 private constant _NOT_ENTERED = 1;\\n    uint256 private constant _ENTERED = 2;\\n\\n    uint256 private _status;\\n\\n    constructor() {\\n        _status = _NOT_ENTERED;\\n    }\\n\\n    /**\\n     * @dev Prevents a contract from calling itself, directly or indirectly.\\n     * Calling a `nonReentrant` function from another `nonReentrant`\\n     * function is not supported. It is possible to prevent this from happening\\n     * by making the `nonReentrant` function external, and making it call a\\n     * `private` function that does the actual work.\\n     */\\n    modifier nonReentrant() {\\n        _nonReentrantBefore();\\n        _;\\n        _nonReentrantAfter();\\n    }\\n\\n    function _nonReentrantBefore() private {\\n        // On the first call to nonReentrant, _status will be _NOT_ENTERED\\n        require(_status != _ENTERED, \\\"ReentrancyGuard: reentrant call\\\");\\n\\n        // Any calls to nonReentrant after this point will fail\\n        _status = _ENTERED;\\n    }\\n\\n    function _nonReentrantAfter() private {\\n        // By storing the original value once again, a refund is triggered (see\\n        // https://eips.ethereum.org/EIPS/eip-2200)\\n        _status = _NOT_ENTERED;\\n    }\\n\\n    /**\\n     * @dev Returns true if the reentrancy guard is currently set to \\\"entered\\\", which indicates there is a\\n     * `nonReentrant` function in the call stack.\\n     */\\n    function _reentrancyGuardEntered() internal view returns (bool) {\\n        return _status == _ENTERED;\\n    }\\n}\\n\",\"keccak256\":\"0xa535a5df777d44e945dd24aa43a11e44b024140fc340ad0dfe42acf4002aade1\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/Context.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        return msg.data;\\n    }\\n}\\n\",\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\"},\"contracts/NftfiHub.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.19;\\n\\nimport \\\"./interfaces/INftfiHub.sol\\\";\\nimport \\\"./utils/Ownable.sol\\\";\\nimport \\\"@openzeppelin/contracts/security/Pausable.sol\\\";\\nimport \\\"@openzeppelin/contracts/security/ReentrancyGuard.sol\\\";\\nimport \\\"./utils/ContractKeys.sol\\\";\\n\\n/**\\n * @title  NftfiHub\\n * @author NFTfi\\n * @dev Registry for the contracts supported by NFTfi protocol.\\n */\\ncontract NftfiHub is Ownable, Pausable, ReentrancyGuard, INftfiHub {\\n    /* ******* */\\n    /* STORAGE */\\n    /* ******* */\\n\\n    mapping(bytes32 => address) private contracts;\\n\\n    /* ****** */\\n    /* EVENTS */\\n    /* ****** */\\n\\n    /**\\n     * @notice This event is fired whenever the admin registers a contract.\\n     *\\n     * @param contractKey - Contract key e.g. bytes32('PERMITTED_NFTS').\\n     * @param contractAddress - Address of the contract.\\n     */\\n    event ContractUpdated(bytes32 indexed contractKey, address indexed contractAddress);\\n\\n    /* *********** */\\n    /* CONSTRUCTOR */\\n    /* *********** */\\n\\n    /**\\n     * @dev Initializes `contracts` with a batch of permitted contracts\\n     *\\n     * @param _admin - Initial admin of this contract.\\n     * @param _contractKeys - Initial contract keys.\\n     * @param _contractAddresses - Initial associated contract addresses.\\n     */\\n    constructor(\\n        address _admin,\\n        string[] memory _contractKeys,\\n        address[] memory _contractAddresses\\n    ) Ownable(_admin) {\\n        _setContracts(_contractKeys, _contractAddresses);\\n    }\\n\\n    /* ********* */\\n    /* FUNCTIONS */\\n    /* ********* */\\n\\n    /**\\n     * @notice Set or update the contract address for the given key.\\n     * @param _contractKey - New or existing contract key.\\n     * @param _contractAddress - The associated contract address.\\n     */\\n    function setContract(string calldata _contractKey, address _contractAddress) external override onlyOwner {\\n        _setContract(_contractKey, _contractAddress);\\n    }\\n\\n    /**\\n     * @notice Set or update the contract addresses for the given keys.\\n     * @param _contractKeys - New or existing contract keys.\\n     * @param _contractAddresses - The associated contract addresses.\\n     */\\n    function setContracts(string[] memory _contractKeys, address[] memory _contractAddresses) external onlyOwner {\\n        _setContracts(_contractKeys, _contractAddresses);\\n    }\\n\\n    /**\\n     * @notice This function can be called by anyone to lookup the contract address associated with the key.\\n     * @param  _contractKey - The index to the contract address.\\n     */\\n    function getContract(bytes32 _contractKey) external view override returns (address) {\\n        return contracts[_contractKey];\\n    }\\n\\n    /**\\n     * @notice Set or update the contract address for the given key.\\n     * @param _contractKey - New or existing contract key.\\n     * @param _contractAddress - The associated contract address.\\n     */\\n    function _setContract(string memory _contractKey, address _contractAddress) internal {\\n        bytes32 key = ContractKeys.getIdFromStringKey(_contractKey);\\n        contracts[key] = _contractAddress;\\n\\n        emit ContractUpdated(key, _contractAddress);\\n    }\\n\\n    /**\\n     * @notice Set or update the contract addresses for the given keys.\\n     * @param _contractKeys - New or existing contract key.\\n     * @param _contractAddresses - The associated contract address.\\n     */\\n    function _setContracts(string[] memory _contractKeys, address[] memory _contractAddresses) internal {\\n        require(_contractKeys.length == _contractAddresses.length, \\\"setContracts function information arity mismatch\\\");\\n\\n        for (uint256 i; i < _contractKeys.length; ++i) {\\n            _setContract(_contractKeys[i], _contractAddresses[i]);\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x0a2530f3d978e78002ec8407be7ac225cc0494f7e640570cd9e272e6ea39caf6\",\"license\":\"BUSL-1.1\"},\"contracts/interfaces/INftfiHub.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.19;\\n\\n/**\\n * @title INftfiHub\\n * @author NFTfi\\n * @dev NftfiHub interface\\n */\\ninterface INftfiHub {\\n    function setContract(string calldata _contractKey, address _contractAddress) external;\\n\\n    function getContract(bytes32 _contractKey) external view returns (address);\\n}\\n\",\"keccak256\":\"0x65320571d7049eefd4bfd6dcff48b752a4a01c56a23ae7acf0f3b7183b9b08db\",\"license\":\"BUSL-1.1\"},\"contracts/utils/ContractKeys.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.19;\\n\\n/**\\n * @title ContractKeys\\n * @author NFTfi\\n * @dev Common library for contract keys\\n */\\nlibrary ContractKeys {\\n    bytes32 public constant PERMITTED_ERC20S = bytes32(\\\"PERMITTED_ERC20S\\\");\\n    bytes32 public constant PERMITTED_NFTS = bytes32(\\\"PERMITTED_NFTS\\\");\\n    bytes32 public constant PERMITTED_PARTNERS = bytes32(\\\"PERMITTED_PARTNERS\\\");\\n    bytes32 public constant NFT_TYPE_REGISTRY = bytes32(\\\"NFT_TYPE_REGISTRY\\\");\\n    bytes32 public constant LOAN_REGISTRY = bytes32(\\\"LOAN_REGISTRY\\\");\\n    bytes32 public constant PERMITTED_SNFT_RECEIVER = bytes32(\\\"PERMITTED_SNFT_RECEIVER\\\");\\n\\n    /**\\n     * @notice Returns the bytes32 representation of a string\\n     * @param _key the string key\\n     * @return id bytes32 representation\\n     */\\n    function getIdFromStringKey(string memory _key) external pure returns (bytes32 id) {\\n        require(bytes(_key).length <= 32, \\\"invalid key\\\");\\n\\n        // solhint-disable-next-line no-inline-assembly\\n        assembly {\\n            id := mload(add(_key, 32))\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0xa015e2d06916420f9d878a030fa693557bdf2944626f2d4b0e96e129ad2227f0\",\"license\":\"BUSL-1.1\"},\"contracts/utils/Ownable.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.19;\\n\\nimport \\\"@openzeppelin/contracts/utils/Context.sol\\\";\\n\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * By default, the owner account will be the one that deploys the contract. This\\n * can later be changed with {transferOwnership}.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n *\\n * Modified version from openzeppelin/contracts/access/Ownable.sol that allows to\\n * initialize the owner using a parameter in the constructor\\n */\\nabstract contract Ownable is Context {\\n    address private _owner;\\n\\n    address private _ownerCandidate;\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        require(owner() == _msgSender(), \\\"Ownable: caller is not the owner\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @dev Initializes the contract setting the deployer as the initial owner.\\n     */\\n    constructor(address _initialOwner) {\\n        _setOwner(_initialOwner);\\n    }\\n\\n    /**\\n     * @dev Requests transferring ownership of the contract to a new account (`_newOwnerCandidate`).\\n     * Can only be called by the current owner.\\n     */\\n    function requestTransferOwnership(address _newOwnerCandidate) public virtual onlyOwner {\\n        require(_newOwnerCandidate != address(0), \\\"Ownable: new owner is the zero address\\\");\\n        _ownerCandidate = _newOwnerCandidate;\\n    }\\n\\n    function acceptTransferOwnership() public virtual {\\n        require(_ownerCandidate == _msgSender(), \\\"Ownable: not owner candidate\\\");\\n        _setOwner(_ownerCandidate);\\n        delete _ownerCandidate;\\n    }\\n\\n    function cancelTransferOwnership() public virtual onlyOwner {\\n        delete _ownerCandidate;\\n    }\\n\\n    function rejectTransferOwnership() public virtual {\\n        require(_ownerCandidate == _msgSender(), \\\"Ownable: not owner candidate\\\");\\n        delete _ownerCandidate;\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view virtual returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Sets the owner.\\n     */\\n    function _setOwner(address _newOwner) internal {\\n        address oldOwner = _owner;\\n        _owner = _newOwner;\\n        emit OwnershipTransferred(oldOwner, _newOwner);\\n    }\\n}\\n\",\"keccak256\":\"0x49779c1a0636477c162d193e201860fec0ef1f103c7d76b3afb88a81a8e555bc\",\"license\":\"BUSL-1.1\"}},\"version\":1}",
+  "bytecode": "0x60806040523480156200001157600080fd5b5060405162000edf38038062000edf83398101604081905262000034916200039d565b82620000408162000066565b506001805460ff60a01b191681556002556200005d8282620000b6565b5050506200057c565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b8051825114620001255760405162461bcd60e51b815260206004820152603060248201527f736574436f6e7472616374732066756e6374696f6e20696e666f726d6174696f60448201526f0dc40c2e4d2e8f240dad2e6dac2e8c6d60831b606482015260840160405180910390fd5b60005b82518110156200018f576200017c8382815181106200014b576200014b620004ef565b6020026020010151838381518110620001685762000168620004ef565b60200260200101516200019460201b60201c565b620001878162000505565b905062000128565b505050565b60405163f99a8ffb60e01b815260009073733aC632056AA272130Af63809fF3301C80bD1e79063f99a8ffb90620001d09086906004016200052d565b602060405180830381865af4158015620001ee573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019062000214919062000562565b60008181526003602052604080822080546001600160a01b0319166001600160a01b03871690811790915590519293509183917fd45de243cd15102b320d0d75eb12a34864595b07f8853b6b7d487946b292463091a3505050565b80516001600160a01b03811681146200028757600080fd5b919050565b634e487b7160e01b600052604160045260246000fd5b604051601f8201601f191681016001600160401b0381118282101715620002cd57620002cd6200028c565b604052919050565b60006001600160401b03821115620002f157620002f16200028c565b5060051b60200190565b60005b8381101562000318578181015183820152602001620002fe565b50506000910152565b600082601f8301126200033357600080fd5b815160206200034c6200034683620002d5565b620002a2565b82815260059290921b840181019181810190868411156200036c57600080fd5b8286015b84811015620003925762000384816200026f565b835291830191830162000370565b509695505050505050565b600080600060608486031215620003b357600080fd5b620003be846200026f565b602085810151919450906001600160401b0380821115620003de57600080fd5b818701915087601f830112620003f357600080fd5b8151620004046200034682620002d5565b81815260059190911b8301840190848101908a8311156200042457600080fd5b8585015b83811015620004ba57805185811115620004425760008081fd5b8601603f81018d13620004555760008081fd5b878101516040878211156200046e576200046e6200028c565b62000482601f8301601f19168b01620002a2565b8281528f82848601011115620004985760008081fd5b620004a9838c8301848701620002fb565b865250505091860191860162000428565b5060408a01519097509450505080831115620004d557600080fd5b5050620004e58682870162000321565b9150509250925092565b634e487b7160e01b600052603260045260246000fd5b6000600182016200052657634e487b7160e01b600052601160045260246000fd5b5060010190565b60208152600082518060208401526200054e816040850160208701620002fb565b601f01601f19169190910160400192915050565b6000602082840312156200057557600080fd5b5051919050565b610953806200058c6000396000f3fe608060405234801561001057600080fd5b50600436106100835760003560e01c80633f0ed0df146100885780635c975abb1461009d5780635f992fdd146100bf5780637b371107146100c75780637ca9e0c4146100cf5780638da5cb5b146100e257806392fede00146101025780639d6fa6181461010a578063e16c7d981461011d575b600080fd5b61009b610096366004610574565b610146565b005b600154600160a01b900460ff1660405190151581526020015b60405180910390f35b61009b6101c4565b61009b610200565b61009b6100dd3660046106d2565b61023f565b6100ea61027c565b6040516001600160a01b0390911681526020016100b6565b61009b61028b565b61009b6101183660046107fb565b6102ba565b6100ea61012b36600461081d565b6000908152600360205260409020546001600160a01b031690565b3361014f61027c565b6001600160a01b03161461017e5760405162461bcd60e51b815260040161017590610836565b60405180910390fd5b6101bf83838080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250859250610370915050565b505050565b6001546001600160a01b031633146101ee5760405162461bcd60e51b81526004016101759061086b565b600180546001600160a01b0319169055565b6001546001600160a01b0316331461022a5760405162461bcd60e51b81526004016101759061086b565b6001546101ee906001600160a01b0316610446565b3361024861027c565b6001600160a01b03161461026e5760405162461bcd60e51b815260040161017590610836565b6102788282610496565b5050565b6000546001600160a01b031690565b3361029461027c565b6001600160a01b0316146101ee5760405162461bcd60e51b815260040161017590610836565b336102c361027c565b6001600160a01b0316146102e95760405162461bcd60e51b815260040161017590610836565b6001600160a01b03811661034e5760405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b6064820152608401610175565b600180546001600160a01b0319166001600160a01b0392909216919091179055565b60405163f99a8ffb60e01b815260009073733aC632056AA272130Af63809fF3301C80bD1e79063f99a8ffb906103aa9086906004016108a2565b602060405180830381865af41580156103c7573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103eb91906108f0565b60008181526003602052604080822080546001600160a01b0319166001600160a01b03871690811790915590519293509183917fd45de243cd15102b320d0d75eb12a34864595b07f8853b6b7d487946b292463091a3505050565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b80518251146105005760405162461bcd60e51b815260206004820152603060248201527f736574436f6e7472616374732066756e6374696f6e20696e666f726d6174696f60448201526f0dc40c2e4d2e8f240dad2e6dac2e8c6d60831b6064820152608401610175565b60005b82518110156101bf5761054883828151811061052157610521610909565b602002602001015183838151811061053b5761053b610909565b6020026020010151610370565b6105518161091f565b9050610503565b80356001600160a01b038116811461056f57600080fd5b919050565b60008060006040848603121561058957600080fd5b833567ffffffffffffffff808211156105a157600080fd5b818601915086601f8301126105b557600080fd5b8135818111156105c457600080fd5b8760208285010111156105d657600080fd5b6020928301955093506105ec9186019050610558565b90509250925092565b634e487b7160e01b600052604160045260246000fd5b604051601f8201601f1916810167ffffffffffffffff81118282101715610634576106346105f5565b604052919050565b600067ffffffffffffffff821115610656576106566105f5565b5060051b60200190565b600082601f83011261067157600080fd5b813560206106866106818361063c565b61060b565b82815260059290921b840181019181810190868411156106a557600080fd5b8286015b848110156106c7576106ba81610558565b83529183019183016106a9565b509695505050505050565b60008060408084860312156106e657600080fd5b833567ffffffffffffffff808211156106fe57600080fd5b8186019150601f878184011261071357600080fd5b823560206107236106818361063c565b82815260059290921b8501810191818101908b84111561074257600080fd5b8287015b848110156107cb5780358781111561075e5760008081fd5b8801603f81018e136107705760008081fd5b8481013588811115610784576107846105f5565b610795818901601f1916870161060b565b8181528f8c8385010111156107aa5760008081fd5b818c8401888301376000918101870191909152845250918301918301610746565b5098505088013594505050808311156107e357600080fd5b50506107f185828601610660565b9150509250929050565b60006020828403121561080d57600080fd5b61081682610558565b9392505050565b60006020828403121561082f57600080fd5b5035919050565b6020808252818101527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604082015260600190565b6020808252601c908201527f4f776e61626c653a206e6f74206f776e65722063616e64696461746500000000604082015260600190565b600060208083528351808285015260005b818110156108cf578581018301518582016040015282016108b3565b506000604082860101526040601f19601f8301168501019250505092915050565b60006020828403121561090257600080fd5b5051919050565b634e487b7160e01b600052603260045260246000fd5b60006001820161093f57634e487b7160e01b600052601160045260246000fd5b506001019056fea164736f6c6343000813000a",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100835760003560e01c80633f0ed0df146100885780635c975abb1461009d5780635f992fdd146100bf5780637b371107146100c75780637ca9e0c4146100cf5780638da5cb5b146100e257806392fede00146101025780639d6fa6181461010a578063e16c7d981461011d575b600080fd5b61009b610096366004610574565b610146565b005b600154600160a01b900460ff1660405190151581526020015b60405180910390f35b61009b6101c4565b61009b610200565b61009b6100dd3660046106d2565b61023f565b6100ea61027c565b6040516001600160a01b0390911681526020016100b6565b61009b61028b565b61009b6101183660046107fb565b6102ba565b6100ea61012b36600461081d565b6000908152600360205260409020546001600160a01b031690565b3361014f61027c565b6001600160a01b03161461017e5760405162461bcd60e51b815260040161017590610836565b60405180910390fd5b6101bf83838080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250859250610370915050565b505050565b6001546001600160a01b031633146101ee5760405162461bcd60e51b81526004016101759061086b565b600180546001600160a01b0319169055565b6001546001600160a01b0316331461022a5760405162461bcd60e51b81526004016101759061086b565b6001546101ee906001600160a01b0316610446565b3361024861027c565b6001600160a01b03161461026e5760405162461bcd60e51b815260040161017590610836565b6102788282610496565b5050565b6000546001600160a01b031690565b3361029461027c565b6001600160a01b0316146101ee5760405162461bcd60e51b815260040161017590610836565b336102c361027c565b6001600160a01b0316146102e95760405162461bcd60e51b815260040161017590610836565b6001600160a01b03811661034e5760405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b6064820152608401610175565b600180546001600160a01b0319166001600160a01b0392909216919091179055565b60405163f99a8ffb60e01b815260009073__$d7e2e0a2db402280e6c36233d590dce656$__9063f99a8ffb906103aa9086906004016108a2565b602060405180830381865af41580156103c7573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103eb91906108f0565b60008181526003602052604080822080546001600160a01b0319166001600160a01b03871690811790915590519293509183917fd45de243cd15102b320d0d75eb12a34864595b07f8853b6b7d487946b292463091a3505050565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b80518251146105005760405162461bcd60e51b815260206004820152603060248201527f736574436f6e7472616374732066756e6374696f6e20696e666f726d6174696f60448201526f0dc40c2e4d2e8f240dad2e6dac2e8c6d60831b6064820152608401610175565b60005b82518110156101bf5761054883828151811061052157610521610909565b602002602001015183838151811061053b5761053b610909565b6020026020010151610370565b6105518161091f565b9050610503565b80356001600160a01b038116811461056f57600080fd5b919050565b60008060006040848603121561058957600080fd5b833567ffffffffffffffff808211156105a157600080fd5b818601915086601f8301126105b557600080fd5b8135818111156105c457600080fd5b8760208285010111156105d657600080fd5b6020928301955093506105ec9186019050610558565b90509250925092565b634e487b7160e01b600052604160045260246000fd5b604051601f8201601f1916810167ffffffffffffffff81118282101715610634576106346105f5565b604052919050565b600067ffffffffffffffff821115610656576106566105f5565b5060051b60200190565b600082601f83011261067157600080fd5b813560206106866106818361063c565b61060b565b82815260059290921b840181019181810190868411156106a557600080fd5b8286015b848110156106c7576106ba81610558565b83529183019183016106a9565b509695505050505050565b60008060408084860312156106e657600080fd5b833567ffffffffffffffff808211156106fe57600080fd5b8186019150601f878184011261071357600080fd5b823560206107236106818361063c565b82815260059290921b8501810191818101908b84111561074257600080fd5b8287015b848110156107cb5780358781111561075e5760008081fd5b8801603f81018e136107705760008081fd5b8481013588811115610784576107846105f5565b610795818901601f1916870161060b565b8181528f8c8385010111156107aa5760008081fd5b818c8401888301376000918101870191909152845250918301918301610746565b5098505088013594505050808311156107e357600080fd5b50506107f185828601610660565b9150509250929050565b60006020828403121561080d57600080fd5b61081682610558565b9392505050565b60006020828403121561082f57600080fd5b5035919050565b6020808252818101527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604082015260600190565b6020808252601c908201527f4f776e61626c653a206e6f74206f776e65722063616e64696461746500000000604082015260600190565b600060208083528351808285015260005b818110156108cf578581018301518582016040015282016108b3565b506000604082860101526040601f19601f8301168501019250505092915050565b60006020828403121561090257600080fd5b5051919050565b634e487b7160e01b600052603260045260246000fd5b60006001820161093f57634e487b7160e01b600052601160045260246000fd5b506001019056fea164736f6c6343000813000a",
+  "libraries": {
+    "ContractKeys": "0x733aC632056AA272130Af63809fF3301C80bD1e7"
+  },
+  "devdoc": {
+    "author": "NFTfi",
+    "details": "Registry for the contracts supported by NFTfi protocol.",
+    "events": {
+      "ContractUpdated(bytes32,address)": {
+        "params": {
+          "contractAddress": "- Address of the contract.",
+          "contractKey": "- Contract key e.g. bytes32('PERMITTED_NFTS')."
+        }
+      },
+      "Paused(address)": {
+        "details": "Emitted when the pause is triggered by `account`."
+      },
+      "Unpaused(address)": {
+        "details": "Emitted when the pause is lifted by `account`."
+      }
+    },
+    "kind": "dev",
+    "methods": {
+      "constructor": {
+        "details": "Initializes `contracts` with a batch of permitted contracts",
+        "params": {
+          "_admin": "- Initial admin of this contract.",
+          "_contractAddresses": "- Initial associated contract addresses.",
+          "_contractKeys": "- Initial contract keys."
+        }
+      },
+      "getContract(bytes32)": {
+        "params": {
+          "_contractKey": "- The index to the contract address."
+        }
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "paused()": {
+        "details": "Returns true if the contract is paused, and false otherwise."
+      },
+      "requestTransferOwnership(address)": {
+        "details": "Requests transferring ownership of the contract to a new account (`_newOwnerCandidate`). Can only be called by the current owner."
+      },
+      "setContract(string,address)": {
+        "params": {
+          "_contractAddress": "- The associated contract address.",
+          "_contractKey": "- New or existing contract key."
+        }
+      },
+      "setContracts(string[],address[])": {
+        "params": {
+          "_contractAddresses": "- The associated contract addresses.",
+          "_contractKeys": "- New or existing contract keys."
+        }
+      }
+    },
+    "title": "NftfiHub",
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "ContractUpdated(bytes32,address)": {
+        "notice": "This event is fired whenever the admin registers a contract."
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "getContract(bytes32)": {
+        "notice": "This function can be called by anyone to lookup the contract address associated with the key."
+      },
+      "setContract(string,address)": {
+        "notice": "Set or update the contract address for the given key."
+      },
+      "setContracts(string[],address[])": {
+        "notice": "Set or update the contract addresses for the given keys."
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 20389,
+        "contract": "contracts/NftfiHub.sol:NftfiHub",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 20391,
+        "contract": "contracts/NftfiHub.sol:NftfiHub",
+        "label": "_ownerCandidate",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_address"
+      },
+      {
+        "astId": 595,
+        "contract": "contracts/NftfiHub.sol:NftfiHub",
+        "label": "_paused",
+        "offset": 20,
+        "slot": "1",
+        "type": "t_bool"
+      },
+      {
+        "astId": 696,
+        "contract": "contracts/NftfiHub.sol:NftfiHub",
+        "label": "_status",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 8696,
+        "contract": "contracts/NftfiHub.sol:NftfiHub",
+        "label": "contracts",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_mapping(t_bytes32,t_address)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_bytes32": {
+        "encoding": "inplace",
+        "label": "bytes32",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_bytes32,t_address)": {
+        "encoding": "mapping",
+        "key": "t_bytes32",
+        "label": "mapping(bytes32 => address)",
+        "numberOfBytes": "32",
+        "value": "t_address"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
