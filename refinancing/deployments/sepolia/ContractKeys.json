@@ -1,0 +1,154 @@
+{
+  "address": "0x6910bE31b0674C03C23beD7665E2344E5Fd0F42B",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "LOAN_REGISTRY",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "NFT_TYPE_REGISTRY",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "PERMITTED_ERC20S",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "PERMITTED_NFTS",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "PERMITTED_PARTNERS",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "PERMITTED_SNFT_RECEIVER",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_key",
+          "type": "string"
+        }
+      ],
+      "name": "getIdFromStringKey",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "id",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x9348cd6af7a0755c655f58d14b23654d755a48a16385752e95d45c87664aacb6",
+  "receipt": {
+    "to": null,
+    "from": "0x02e037F56728E947e92Af2c05baF7FeF387Ddd06",
+    "contractAddress": "0x6910bE31b0674C03C23beD7665E2344E5Fd0F42B",
+    "transactionIndex": 10,
+    "gasUsed": "184639",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x87d152c34ebc48c47c852f308c6e7e3964f0d2391c4169d5d1c1960154162998",
+    "transactionHash": "0x9348cd6af7a0755c655f58d14b23654d755a48a16385752e95d45c87664aacb6",
+    "logs": [],
+    "blockNumber": 4871439,
+    "cumulativeGasUsed": "612954",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "1a8fa01f7869bdb20e0c3fb0bc984936",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"LOAN_REGISTRY\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"NFT_TYPE_REGISTRY\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"PERMITTED_ERC20S\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"PERMITTED_NFTS\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"PERMITTED_PARTNERS\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"PERMITTED_SNFT_RECEIVER\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_key\",\"type\":\"string\"}],\"name\":\"getIdFromStringKey\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"id\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"NFTfi\",\"details\":\"Common library for contract keys\",\"kind\":\"dev\",\"methods\":{\"getIdFromStringKey(string)\":{\"params\":{\"_key\":\"the string key\"},\"returns\":{\"id\":\"bytes32 representation\"}}},\"title\":\"ContractKeys\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getIdFromStringKey(string)\":{\"notice\":\"Returns the bytes32 representation of a string\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/utils/ContractKeys.sol\":\"ContractKeys\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100},\"remappings\":[]},\"sources\":{\"contracts/utils/ContractKeys.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.19;\\n\\n/**\\n * @title ContractKeys\\n * @author NFTfi\\n * @dev Common library for contract keys\\n */\\nlibrary ContractKeys {\\n    bytes32 public constant PERMITTED_ERC20S = bytes32(\\\"PERMITTED_ERC20S\\\");\\n    bytes32 public constant PERMITTED_NFTS = bytes32(\\\"PERMITTED_NFTS\\\");\\n    bytes32 public constant PERMITTED_PARTNERS = bytes32(\\\"PERMITTED_PARTNERS\\\");\\n    bytes32 public constant NFT_TYPE_REGISTRY = bytes32(\\\"NFT_TYPE_REGISTRY\\\");\\n    bytes32 public constant LOAN_REGISTRY = bytes32(\\\"LOAN_REGISTRY\\\");\\n    bytes32 public constant PERMITTED_SNFT_RECEIVER = bytes32(\\\"PERMITTED_SNFT_RECEIVER\\\");\\n\\n    /**\\n     * @notice Returns the bytes32 representation of a string\\n     * @param _key the string key\\n     * @return id bytes32 representation\\n     */\\n    function getIdFromStringKey(string memory _key) external pure returns (bytes32 id) {\\n        // solhint-disable-next-line custom-errors\\n        require(bytes(_key).length <= 32, \\\"invalid key\\\");\\n\\n        // solhint-disable-next-line no-inline-assembly\\n        assembly {\\n            id := mload(add(_key, 32))\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x4adb3340f227161360eb398650bb58b850e80041d46c57a538f8b63ad61608b6\",\"license\":\"BUSL-1.1\"}},\"version\":1}",
+  "bytecode": "0x61025f61003a600b82828239805160001a60731461002d57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600436106100775760003560e01c806326a9d63a1461007c5780632fd0cd8c146100a857806341be0f97146100c95780636a8155fb146100e4578063b2b49019146100fb578063bc94124814610117578063f99a8ffb1461012f575b600080fd5b6100966f5045524d49545445445f45524332305360801b81565b60405190815260200160405180910390f35b610096762822a926a4aa2a22a22fa9a7232a2fa922a1a2a4ab22a960491b81565b610096704e46545f545950455f524547495354525960781b81565b6100966c4c4f414e5f524547495354525960981b81565b610096715045524d49545445445f504152544e45525360701b81565b6100966d5045524d49545445445f4e46545360901b81565b61009661013d3660046101a1565b60006020825111156101835760405162461bcd60e51b815260206004820152600b60248201526a696e76616c6964206b657960a81b604482015260640160405180910390fd5b506020015190565b634e487b7160e01b600052604160045260246000fd5b6000602082840312156101b357600080fd5b813567ffffffffffffffff808211156101cb57600080fd5b818401915084601f8301126101df57600080fd5b8135818111156101f1576101f161018b565b604051601f8201601f19908116603f011681019083821181831017156102195761021961018b565b8160405282815287602084870101111561023257600080fd5b82602086016020830137600092810160200192909252509594505050505056fea164736f6c6343000813000a",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600436106100775760003560e01c806326a9d63a1461007c5780632fd0cd8c146100a857806341be0f97146100c95780636a8155fb146100e4578063b2b49019146100fb578063bc94124814610117578063f99a8ffb1461012f575b600080fd5b6100966f5045524d49545445445f45524332305360801b81565b60405190815260200160405180910390f35b610096762822a926a4aa2a22a22fa9a7232a2fa922a1a2a4ab22a960491b81565b610096704e46545f545950455f524547495354525960781b81565b6100966c4c4f414e5f524547495354525960981b81565b610096715045524d49545445445f504152544e45525360701b81565b6100966d5045524d49545445445f4e46545360901b81565b61009661013d3660046101a1565b60006020825111156101835760405162461bcd60e51b815260206004820152600b60248201526a696e76616c6964206b657960a81b604482015260640160405180910390fd5b506020015190565b634e487b7160e01b600052604160045260246000fd5b6000602082840312156101b357600080fd5b813567ffffffffffffffff808211156101cb57600080fd5b818401915084601f8301126101df57600080fd5b8135818111156101f1576101f161018b565b604051601f8201601f19908116603f011681019083821181831017156102195761021961018b565b8160405282815287602084870101111561023257600080fd5b82602086016020830137600092810160200192909252509594505050505056fea164736f6c6343000813000a",
+  "devdoc": {
+    "author": "NFTfi",
+    "details": "Common library for contract keys",
+    "kind": "dev",
+    "methods": {
+      "getIdFromStringKey(string)": {
+        "params": {
+          "_key": "the string key"
+        },
+        "returns": {
+          "id": "bytes32 representation"
+        }
+      }
+    },
+    "title": "ContractKeys",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "getIdFromStringKey(string)": {
+        "notice": "Returns the bytes32 representation of a string"
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}

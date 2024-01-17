@@ -1,0 +1,149 @@
+{
+  "address": "0x10061070964d958F33A8db4408c6B8CFFbDb7C9F",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "nftContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "approveNFT",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_nftContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_sender",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_nftContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_nftId",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferNFT",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x511f6c683334274128020035996d7b8a2330811ecf602647368f9fcc4e5255e5",
+  "receipt": {
+    "to": null,
+    "from": "0x02e037F56728E947e92Af2c05baF7FeF387Ddd06",
+    "contractAddress": "0x10061070964d958F33A8db4408c6B8CFFbDb7C9F",
+    "transactionIndex": 75,
+    "gasUsed": "238474",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x6e656d90a475406bcb7d454a9b49ae614b362a63c588de52ae4bf003bd646219",
+    "transactionHash": "0x511f6c683334274128020035996d7b8a2330811ecf602647368f9fcc4e5255e5",
+    "logs": [],
+    "blockNumber": 10315585,
+    "cumulativeGasUsed": "15495960",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 2,
+  "solcInputHash": "6a433a122138320e8af0b7baaa609789",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"nftContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"approveNFT\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_nftContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_recipient\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_nftContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_nftId\",\"type\":\"uint256\"}],\"name\":\"transferNFT\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"NFTfi\",\"details\":\"Provides logic to transfer CryptoKitties\",\"kind\":\"dev\",\"methods\":{\"transferNFT(address,address,address,uint256)\":{\"details\":\"Transfers Kitty `_nftId` handled by the contract `_nftContract` from `_sender` to `_recipient`\",\"params\":{\"_nftContract\":\"- CryptoKitties contract\",\"_nftId\":\"- Kitty id\",\"_recipient\":\"- The new owner of the Kitty\",\"_sender\":\"- The current owner of the Kitty\"},\"returns\":{\"_0\":\"true if successfully transferred, false otherwise\"}}},\"title\":\"CryptoKittiesWrapper\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/nftTypeRegistry/nftTypes/CryptoKittiesWrapper.sol\":\"CryptoKittiesWrapper\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100},\"remappings\":[]},\"sources\":{\"contracts/interfaces/ICryptoKitties.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\npragma solidity 0.8.19;\\n\\n/**\\n * @title TestSuperRareV1\\n * @author NFTfi\\n * @dev Test contract with SuperRareV1 ERC721 related functionalities.\\n * Extracted from https://etherscan.io/address/0x41a322b28d0ff354040e2cbc676f0320d8c8850d#code\\n */\\ninterface ICryptoKitties {\\n    // Events\\n    event Transfer(address from, address to, uint256 tokenId);\\n    event Approval(address owner, address approved, uint256 tokenId);\\n\\n    function approve(address _to, uint256 _tokenId) external;\\n\\n    function transfer(address _to, uint256 _tokenId) external;\\n\\n    function transferFrom(address _from, address _to, uint256 _tokenId) external;\\n\\n    // Required methods\\n    function totalSupply() external view returns (uint256 total);\\n\\n    function balanceOf(address _owner) external view returns (uint256 balance);\\n\\n    function ownerOf(uint256 _tokenId) external view returns (address owner);\\n\\n    // Optional\\n    // function name() public view returns (string name);\\n    // function symbol() public view returns (string symbol);\\n    // function tokensOfOwner(address _owner) external view returns (uint256[] tokenIds);\\n    // function tokenMetadata(uint256 _tokenId, string _preferredTransport) public view returns (string infoUrl);\\n\\n    // ERC-165 Compatibility (https://github.com/ethereum/EIPs/issues/165)\\n    function supportsInterface(bytes4 _interfaceID) external view returns (bool);\\n}\\n\",\"keccak256\":\"0xb428918908e0d0b17c9ff1004ee9b0d4553f443ffb9b3082052a252ad71a2422\",\"license\":\"BUSL-1.1\"},\"contracts/interfaces/INftWrapper.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.19;\\n\\n/**\\n * @title INftTypeRegistry\\n * @author NFTfi\\n * @dev Interface for NFT Wrappers.\\n */\\ninterface INftWrapper {\\n    function transferNFT(address from, address to, address nftContract, uint256 tokenId) external returns (bool);\\n\\n    function approveNFT(address to, address nftContract, uint256 tokenId) external returns (bool);\\n\\n    function isOwner(address owner, address nftContract, uint256 tokenId) external view returns (bool);\\n}\\n\",\"keccak256\":\"0xb848e20f9e0461f522f673cd64c819b90e9659a24d445cde9d231f0f1dbc9f54\",\"license\":\"BUSL-1.1\"},\"contracts/nftTypeRegistry/nftTypes/CryptoKittiesWrapper.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\npragma solidity 0.8.19;\\n\\nimport {INftWrapper} from \\\"../../interfaces/INftWrapper.sol\\\";\\nimport {ICryptoKitties} from \\\"../../interfaces/ICryptoKitties.sol\\\";\\n\\n/**\\n * @title CryptoKittiesWrapper\\n * @author NFTfi\\n * @dev Provides logic to transfer CryptoKitties\\n */\\ncontract CryptoKittiesWrapper is INftWrapper {\\n    /**\\n     * @dev Transfers Kitty `_nftId` handled by the contract `_nftContract` from `_sender` to `_recipient`\\n     *\\n     * @param _sender - The current owner of the Kitty\\n     * @param _recipient - The new owner of the Kitty\\n     * @param _nftContract - CryptoKitties contract\\n     * @param _nftId - Kitty id\\n     *\\n     * @return true if successfully transferred, false otherwise\\n     */\\n    function transferNFT(\\n        address _sender,\\n        address _recipient,\\n        address _nftContract,\\n        uint256 _nftId\\n    ) external override returns (bool) {\\n        if (_sender == address(this)) {\\n            ICryptoKitties(_nftContract).transfer(_recipient, _nftId);\\n        } else {\\n            ICryptoKitties(_nftContract).transferFrom(_sender, _recipient, _nftId);\\n        }\\n\\n        return true;\\n    }\\n\\n    function approveNFT(address to, address nftContract, uint256 tokenId) external override returns (bool) {\\n        ICryptoKitties(nftContract).approve(to, tokenId);\\n        return true;\\n    }\\n\\n    function isOwner(address _owner, address _nftContract, uint256 _tokenId) external view override returns (bool) {\\n        return ICryptoKitties(_nftContract).ownerOf(_tokenId) == _owner;\\n    }\\n}\\n\",\"keccak256\":\"0x32365017564248b37c6e0329681cc74a36b2f986e49489e6aad7000230dfe885\",\"license\":\"BUSL-1.1\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061035a806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80637336aaf014610046578063b03066711461006d578063f370e8c514610080575b600080fd5b610059610054366004610297565b610093565b604051901515815260200160405180910390f35b61005961007b3660046102d8565b610103565b61005961008e366004610297565b6101f2565b60405163095ea7b360e01b81526001600160a01b038481166004830152602482018390526000919084169063095ea7b390604401600060405180830381600087803b1580156100e157600080fd5b505af11580156100f5573d6000803e3d6000fd5b506001979650505050505050565b6000306001600160a01b0386160361017c5760405163a9059cbb60e01b81526001600160a01b0385811660048301526024820184905284169063a9059cbb90604401600060405180830381600087803b15801561015f57600080fd5b505af1158015610173573d6000803e3d6000fd5b505050506101e7565b6040516323b872dd60e01b81526001600160a01b0386811660048301528581166024830152604482018490528416906323b872dd90606401600060405180830381600087803b1580156101ce57600080fd5b505af11580156101e2573d6000803e3d6000fd5b505050505b506001949350505050565b6000836001600160a01b0316836001600160a01b0316636352211e846040518263ffffffff1660e01b815260040161022c91815260200190565b602060405180830381865afa158015610249573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061026d9190610329565b6001600160a01b031614949350505050565b6001600160a01b038116811461029457600080fd5b50565b6000806000606084860312156102ac57600080fd5b83356102b78161027f565b925060208401356102c78161027f565b929592945050506040919091013590565b600080600080608085870312156102ee57600080fd5b84356102f98161027f565b935060208501356103098161027f565b925060408501356103198161027f565b9396929550929360600135925050565b60006020828403121561033b57600080fd5b81516103468161027f565b939250505056fea164736f6c6343000813000a",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80637336aaf014610046578063b03066711461006d578063f370e8c514610080575b600080fd5b610059610054366004610297565b610093565b604051901515815260200160405180910390f35b61005961007b3660046102d8565b610103565b61005961008e366004610297565b6101f2565b60405163095ea7b360e01b81526001600160a01b038481166004830152602482018390526000919084169063095ea7b390604401600060405180830381600087803b1580156100e157600080fd5b505af11580156100f5573d6000803e3d6000fd5b506001979650505050505050565b6000306001600160a01b0386160361017c5760405163a9059cbb60e01b81526001600160a01b0385811660048301526024820184905284169063a9059cbb90604401600060405180830381600087803b15801561015f57600080fd5b505af1158015610173573d6000803e3d6000fd5b505050506101e7565b6040516323b872dd60e01b81526001600160a01b0386811660048301528581166024830152604482018490528416906323b872dd90606401600060405180830381600087803b1580156101ce57600080fd5b505af11580156101e2573d6000803e3d6000fd5b505050505b506001949350505050565b6000836001600160a01b0316836001600160a01b0316636352211e846040518263ffffffff1660e01b815260040161022c91815260200190565b602060405180830381865afa158015610249573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061026d9190610329565b6001600160a01b031614949350505050565b6001600160a01b038116811461029457600080fd5b50565b6000806000606084860312156102ac57600080fd5b83356102b78161027f565b925060208401356102c78161027f565b929592945050506040919091013590565b600080600080608085870312156102ee57600080fd5b84356102f98161027f565b935060208501356103098161027f565b925060408501356103198161027f565b9396929550929360600135925050565b60006020828403121561033b57600080fd5b81516103468161027f565b939250505056fea164736f6c6343000813000a",
+  "devdoc": {
+    "author": "NFTfi",
+    "details": "Provides logic to transfer CryptoKitties",
+    "kind": "dev",
+    "methods": {
+      "transferNFT(address,address,address,uint256)": {
+        "details": "Transfers Kitty `_nftId` handled by the contract `_nftContract` from `_sender` to `_recipient`",
+        "params": {
+          "_nftContract": "- CryptoKitties contract",
+          "_nftId": "- Kitty id",
+          "_recipient": "- The new owner of the Kitty",
+          "_sender": "- The current owner of the Kitty"
+        },
+        "returns": {
+          "_0": "true if successfully transferred, false otherwise"
+        }
+      }
+    },
+    "title": "CryptoKittiesWrapper",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}

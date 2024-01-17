@@ -1,0 +1,268 @@
+{
+  "address": "0x1918080Fddb4cA7148b2BBb14638C3454ACAe037",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_admin",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "partner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint16",
+          "name": "revenueShareInBasisPoints",
+          "type": "uint16"
+        }
+      ],
+      "name": "PartnerRevenueShare",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "HUNDRED_PERCENT",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_partner",
+          "type": "address"
+        }
+      ],
+      "name": "getPartnerPermit",
+      "outputs": [
+        {
+          "internalType": "uint16",
+          "name": "",
+          "type": "uint16"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_partner",
+          "type": "address"
+        },
+        {
+          "internalType": "uint16",
+          "name": "_revenueShareInBasisPoints",
+          "type": "uint16"
+        }
+      ],
+      "name": "setPartnerRevenueShare",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x6aee85b02586aa7e440c169ea15b3cf6448153197fb9ab4448ffcbc0f8a56c0d",
+  "receipt": {
+    "to": null,
+    "from": "0x02e037F56728E947e92Af2c05baF7FeF387Ddd06",
+    "contractAddress": "0x1918080Fddb4cA7148b2BBb14638C3454ACAe037",
+    "transactionIndex": 9,
+    "gasUsed": "291931",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000001000000000000000000000000000000000000020000000000000000001800000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000200000008000000000000000000000000000002000000000000000",
+    "blockHash": "0x3e0403499e325ca9de1ec43401c0e3e6bbe019313772dd122b7662da02875322",
+    "transactionHash": "0x6aee85b02586aa7e440c169ea15b3cf6448153197fb9ab4448ffcbc0f8a56c0d",
+    "logs": [
+      {
+        "transactionIndex": 9,
+        "blockNumber": 7721240,
+        "transactionHash": "0x6aee85b02586aa7e440c169ea15b3cf6448153197fb9ab4448ffcbc0f8a56c0d",
+        "address": "0x1918080Fddb4cA7148b2BBb14638C3454ACAe037",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x00000000000000000000000042e0911810c50ff07b12305365495aeb0b2b4f93"
+        ],
+        "data": "0x",
+        "logIndex": 10,
+        "blockHash": "0x3e0403499e325ca9de1ec43401c0e3e6bbe019313772dd122b7662da02875322"
+      }
+    ],
+    "blockNumber": 7721240,
+    "cumulativeGasUsed": "3038213",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": ["0x42e0911810C50FF07B12305365495aeb0b2b4f93"],
+  "numDeployments": 1,
+  "solcInputHash": "32dd1857130027c4619df8c447073dac",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_admin\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"partner\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint16\",\"name\":\"revenueShareInBasisPoints\",\"type\":\"uint16\"}],\"name\":\"PartnerRevenueShare\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"HUNDRED_PERCENT\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_partner\",\"type\":\"address\"}],\"name\":\"getPartnerPermit\",\"outputs\":[{\"internalType\":\"uint16\",\"name\":\"\",\"type\":\"uint16\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_partner\",\"type\":\"address\"},{\"internalType\":\"uint16\",\"name\":\"_revenueShareInBasisPoints\",\"type\":\"uint16\"}],\"name\":\"setPartnerRevenueShare\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"NFTfi\",\"details\":\"Registry for partners permitted for reciving a revenue share. Each partner's address is associated with the percent of the admin fee shared.\",\"events\":{\"PartnerRevenueShare(address,uint16)\":{\"params\":{\"partner\":\"- The address of the partner.\",\"revenueShareInBasisPoints\":\"- The percent (measured in basis points) of the admin fee amount that will be taken as a revenue share for a the partner.\"}}},\"kind\":\"dev\",\"methods\":{\"constructor\":{\"params\":{\"_admin\":\"- Initial admin of this contract.\"}},\"getPartnerPermit(address)\":{\"params\":{\"_partner\":\"- The address of the partner.\"},\"returns\":{\"_0\":\"Returns the partner's revenue share\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"setPartnerRevenueShare(address,uint16)\":{\"params\":{\"_partner\":\"- The address of the partner.\",\"_revenueShareInBasisPoints\":\"- The percent (measured in basis points) of the admin fee amount that will be taken as a revenue share for a the partner.\"}},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"title\":\"PermittedPartners\",\"version\":1},\"userdoc\":{\"events\":{\"PartnerRevenueShare(address,uint16)\":{\"notice\":\"This event is fired whenever the admin sets a partner's revenue share.\"}},\"kind\":\"user\",\"methods\":{\"constructor\":{\"notice\":\"Sets the admin of the contract.\"},\"getPartnerPermit(address)\":{\"notice\":\"This function can be called by anyone to get the revenue share parcent associated with the partner.\"},\"setPartnerRevenueShare(address,uint16)\":{\"notice\":\"This function can be called by admins to change the revenue share status of a partner. This includes adding an partner to the revenue share list, removing it and updating the revenue share percent.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/permittedLists/PermittedPartners.sol\":\"PermittedPartners\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/Context.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        return msg.data;\\n    }\\n}\\n\",\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\"},\"contracts/interfaces/INftTypeRegistry.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.4;\\n\\n/**\\n * @title INftTypeRegistry\\n * @author NFTfi\\n * @dev Interface for NFT Types Registry supported by NFTfi.\\n */\\ninterface INftTypeRegistry {\\n    function setNftType(bytes32 _nftType, address _nftWrapper) external;\\n\\n    function getNftTypeWrapper(bytes32 _nftType) external view returns (address);\\n}\\n\",\"keccak256\":\"0x761736106ffdf91af4c05fabded37f6a15945a1a353e3b2a55fae002a9ea461a\",\"license\":\"BUSL-1.1\"},\"contracts/interfaces/IPermittedPartners.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.4;\\n\\ninterface IPermittedPartners {\\n    function getPartnerPermit(address _partner) external view returns (uint16);\\n}\\n\",\"keccak256\":\"0x288db42f55648b3d0305f95b1a47132b30a374b380f41ec848b0e5fd02dbd7f8\",\"license\":\"BUSL-1.1\"},\"contracts/permittedLists/PermittedPartners.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.4;\\n\\nimport \\\"../interfaces/INftTypeRegistry.sol\\\";\\nimport \\\"../interfaces/IPermittedPartners.sol\\\";\\n\\nimport \\\"../utils/Ownable.sol\\\";\\n\\n/**\\n * @title  PermittedPartners\\n * @author NFTfi\\n * @dev Registry for partners permitted for reciving a revenue share.\\n * Each partner's address is associated with the percent of the admin fee shared.\\n */\\ncontract PermittedPartners is Ownable, IPermittedPartners {\\n    /* ******* */\\n    /* STORAGE */\\n    /* ******* */\\n\\n    uint256 public constant HUNDRED_PERCENT = 10000;\\n\\n    /**\\n     * @notice A mapping from a partner's address to the percent of the admin fee shared with them. A zero indicates\\n     * non-permitted.\\n     */\\n    mapping(address => uint16) private partnerRevenueShare;\\n\\n    /* ****** */\\n    /* EVENTS */\\n    /* ****** */\\n\\n    /**\\n     * @notice This event is fired whenever the admin sets a partner's revenue share.\\n     *\\n     * @param partner - The address of the partner.\\n     * @param revenueShareInBasisPoints - The percent (measured in basis points) of the admin fee amount that will be\\n     * taken as a revenue share for a the partner.\\n     */\\n    event PartnerRevenueShare(address indexed partner, uint16 revenueShareInBasisPoints);\\n\\n    /* *********** */\\n    /* CONSTRUCTOR */\\n    /* *********** */\\n\\n    /**\\n     * @notice Sets the admin of the contract.\\n     *\\n     * @param _admin - Initial admin of this contract.\\n     */\\n    constructor(address _admin) Ownable(_admin) {\\n        // solhint-disable-previous-line no-empty-blocks\\n    }\\n\\n    /* ********* */\\n    /* FUNCTIONS */\\n    /* ********* */\\n\\n    /**\\n     * @notice This function can be called by admins to change the revenue share status of a partner. This includes\\n     * adding an partner to the revenue share list, removing it and updating the revenue share percent.\\n     *\\n     * @param _partner - The address of the partner.\\n     * @param _revenueShareInBasisPoints - The percent (measured in basis points) of the admin fee amount that will be\\n     * taken as a revenue share for a the partner.\\n     */\\n    function setPartnerRevenueShare(address _partner, uint16 _revenueShareInBasisPoints) external onlyOwner {\\n        require(_partner != address(0), \\\"Partner is address zero\\\");\\n        require(_revenueShareInBasisPoints <= HUNDRED_PERCENT, \\\"Revenue share too big\\\");\\n        partnerRevenueShare[_partner] = _revenueShareInBasisPoints;\\n        emit PartnerRevenueShare(_partner, _revenueShareInBasisPoints);\\n    }\\n\\n    /**\\n     * @notice This function can be called by anyone to get the revenue share parcent associated with the partner.\\n     *\\n     * @param _partner - The address of the partner.\\n     *\\n     * @return Returns the partner's revenue share\\n     */\\n    function getPartnerPermit(address _partner) external view override returns (uint16) {\\n        return partnerRevenueShare[_partner];\\n    }\\n}\\n\",\"keccak256\":\"0x0ba509abfa1720408e8f9cfcfac48db53c5d313363fc63223aad927324355749\",\"license\":\"BUSL-1.1\"},\"contracts/utils/Ownable.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.4;\\n\\nimport \\\"@openzeppelin/contracts/utils/Context.sol\\\";\\n\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * By default, the owner account will be the one that deploys the contract. This\\n * can later be changed with {transferOwnership}.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n *\\n * Modified version from openzeppelin/contracts/access/Ownable.sol that allows to\\n * initialize the owner using a parameter in the constructor\\n */\\nabstract contract Ownable is Context {\\n    address private _owner;\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        require(owner() == _msgSender(), \\\"Ownable: caller is not the owner\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @dev Initializes the contract setting the deployer as the initial owner.\\n     */\\n    constructor(address _initialOwner) {\\n        _setOwner(_initialOwner);\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Can only be called by the current owner.\\n     */\\n    function transferOwnership(address _newOwner) public virtual onlyOwner {\\n        require(_newOwner != address(0), \\\"Ownable: new owner is the zero address\\\");\\n        _setOwner(_newOwner);\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view virtual returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Sets the owner.\\n     */\\n    function _setOwner(address _newOwner) private {\\n        address oldOwner = _owner;\\n        _owner = _newOwner;\\n        emit OwnershipTransferred(oldOwner, _newOwner);\\n    }\\n}\\n\",\"keccak256\":\"0xa1dcb2ae57518644f7c702a4033493c34d5f8a0fe6f9f07c487df10aa95c2ea9\",\"license\":\"BUSL-1.1\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516104a13803806104a183398101604081905261002f91610090565b8061003981610040565b50506100be565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b6000602082840312156100a1578081fd5b81516001600160a01b03811681146100b7578182fd5b9392505050565b6103d4806100cd6000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c8063410ed2e51461005c5780636ed93dd0146100a15780638da5cb5b146100b857806392df8fe1146100d3578063f2fde38b146100e8575b600080fd5b61008961006a366004610335565b6001600160a01b031660009081526001602052604090205461ffff1690565b60405161ffff90911681526020015b60405180910390f35b6100aa61271081565b604051908152602001610098565b6000546040516001600160a01b039091168152602001610098565b6100e66100e1366004610356565b6100fb565b005b6100e66100f6366004610335565b61022e565b6000546001600160a01b0316331461012e5760405162461bcd60e51b815260040161012590610392565b60405180910390fd5b6001600160a01b03821661017e5760405162461bcd60e51b8152602060048201526017602482015276506172746e65722069732061646472657373207a65726f60481b6044820152606401610125565b6127108161ffff1611156101cc5760405162461bcd60e51b8152602060048201526015602482015274526576656e756520736861726520746f6f2062696760581b6044820152606401610125565b6001600160a01b038216600081815260016020908152604091829020805461ffff191661ffff861690811790915591519182527fd783e82274aa6b01921b08d2e05a8261d1c1fda099b201e77805f6e1f75279ab910160405180910390a25050565b6000546001600160a01b031633146102585760405162461bcd60e51b815260040161012590610392565b6001600160a01b0381166102bd5760405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b6064820152608401610125565b6102c6816102c9565b50565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b80356001600160a01b038116811461033057600080fd5b919050565b600060208284031215610346578081fd5b61034f82610319565b9392505050565b60008060408385031215610368578081fd5b61037183610319565b9150602083013561ffff81168114610387578182fd5b809150509250929050565b6020808252818101527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657260408201526060019056fea164736f6c6343000804000a",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c8063410ed2e51461005c5780636ed93dd0146100a15780638da5cb5b146100b857806392df8fe1146100d3578063f2fde38b146100e8575b600080fd5b61008961006a366004610335565b6001600160a01b031660009081526001602052604090205461ffff1690565b60405161ffff90911681526020015b60405180910390f35b6100aa61271081565b604051908152602001610098565b6000546040516001600160a01b039091168152602001610098565b6100e66100e1366004610356565b6100fb565b005b6100e66100f6366004610335565b61022e565b6000546001600160a01b0316331461012e5760405162461bcd60e51b815260040161012590610392565b60405180910390fd5b6001600160a01b03821661017e5760405162461bcd60e51b8152602060048201526017602482015276506172746e65722069732061646472657373207a65726f60481b6044820152606401610125565b6127108161ffff1611156101cc5760405162461bcd60e51b8152602060048201526015602482015274526576656e756520736861726520746f6f2062696760581b6044820152606401610125565b6001600160a01b038216600081815260016020908152604091829020805461ffff191661ffff861690811790915591519182527fd783e82274aa6b01921b08d2e05a8261d1c1fda099b201e77805f6e1f75279ab910160405180910390a25050565b6000546001600160a01b031633146102585760405162461bcd60e51b815260040161012590610392565b6001600160a01b0381166102bd5760405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b6064820152608401610125565b6102c6816102c9565b50565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b80356001600160a01b038116811461033057600080fd5b919050565b600060208284031215610346578081fd5b61034f82610319565b9392505050565b60008060408385031215610368578081fd5b61037183610319565b9150602083013561ffff81168114610387578182fd5b809150509250929050565b6020808252818101527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657260408201526060019056fea164736f6c6343000804000a",
+  "devdoc": {
+    "author": "NFTfi",
+    "details": "Registry for partners permitted for reciving a revenue share. Each partner's address is associated with the percent of the admin fee shared.",
+    "events": {
+      "PartnerRevenueShare(address,uint16)": {
+        "params": {
+          "partner": "- The address of the partner.",
+          "revenueShareInBasisPoints": "- The percent (measured in basis points) of the admin fee amount that will be taken as a revenue share for a the partner."
+        }
+      }
+    },
+    "kind": "dev",
+    "methods": {
+      "constructor": {
+        "params": {
+          "_admin": "- Initial admin of this contract."
+        }
+      },
+      "getPartnerPermit(address)": {
+        "params": {
+          "_partner": "- The address of the partner."
+        },
+        "returns": {
+          "_0": "Returns the partner's revenue share"
+        }
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "setPartnerRevenueShare(address,uint16)": {
+        "params": {
+          "_partner": "- The address of the partner.",
+          "_revenueShareInBasisPoints": "- The percent (measured in basis points) of the admin fee amount that will be taken as a revenue share for a the partner."
+        }
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "title": "PermittedPartners",
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "PartnerRevenueShare(address,uint16)": {
+        "notice": "This event is fired whenever the admin sets a partner's revenue share."
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "constructor": {
+        "notice": "Sets the admin of the contract."
+      },
+      "getPartnerPermit(address)": {
+        "notice": "This function can be called by anyone to get the revenue share parcent associated with the partner."
+      },
+      "setPartnerRevenueShare(address,uint16)": {
+        "notice": "This function can be called by admins to change the revenue share status of a partner. This includes adding an partner to the revenue share list, removing it and updating the revenue share percent."
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 24747,
+        "contract": "contracts/permittedLists/PermittedPartners.sol:PermittedPartners",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 22042,
+        "contract": "contracts/permittedLists/PermittedPartners.sol:PermittedPartners",
+        "label": "partnerRevenueShare",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_address,t_uint16)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_uint16)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint16)",
+        "numberOfBytes": "32",
+        "value": "t_uint16"
+      },
+      "t_uint16": {
+        "encoding": "inplace",
+        "label": "uint16",
+        "numberOfBytes": "2"
+      }
+    }
+  }
+}

@@ -1,0 +1,660 @@
+{
+  "address": "0x60358b897BaaE499D4b2520814e2eC35bbF122fA",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_admin",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_nftfiHub",
+          "type": "address"
+        },
+        {
+          "internalType": "string[]",
+          "name": "_definedNftTypes",
+          "type": "string[]"
+        },
+        {
+          "internalType": "address[]",
+          "name": "_definedNftWrappers",
+          "type": "address[]"
+        },
+        {
+          "internalType": "address[]",
+          "name": "_permittedNftContracts",
+          "type": "address[]"
+        },
+        {
+          "internalType": "string[]",
+          "name": "_permittedNftTypes",
+          "type": "string[]"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "nftContract",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "nftType",
+          "type": "bytes32"
+        }
+      ],
+      "name": "NFTPermit",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "nftType",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "nftWrapper",
+          "type": "address"
+        }
+      ],
+      "name": "TypeUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "acceptTransferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "cancelTransferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_nftContract",
+          "type": "address"
+        }
+      ],
+      "name": "getNFTPermit",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_nftContract",
+          "type": "address"
+        }
+      ],
+      "name": "getNFTWrapper",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_nftType",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getNftTypeWrapper",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "hub",
+      "outputs": [
+        {
+          "internalType": "contract INftfiHub",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "rejectTransferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newOwnerCandidate",
+          "type": "address"
+        }
+      ],
+      "name": "requestTransferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_nftContract",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "_nftType",
+          "type": "string"
+        }
+      ],
+      "name": "setNFTPermit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "_nftContracts",
+          "type": "address[]"
+        },
+        {
+          "internalType": "string[]",
+          "name": "_nftTypes",
+          "type": "string[]"
+        }
+      ],
+      "name": "setNFTPermits",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_nftType",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "_nftWrapper",
+          "type": "address"
+        }
+      ],
+      "name": "setNftType",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string[]",
+          "name": "_nftTypes",
+          "type": "string[]"
+        },
+        {
+          "internalType": "address[]",
+          "name": "_nftWrappers",
+          "type": "address[]"
+        }
+      ],
+      "name": "setNftTypes",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xcaa5821e9893de165303758fb700c850ea6bc8ccb9a50b032d8db0a0b8fff5b5",
+  "receipt": {
+    "to": null,
+    "from": "0x02e037F56728E947e92Af2c05baF7FeF387Ddd06",
+    "contractAddress": "0x60358b897BaaE499D4b2520814e2eC35bbF122fA",
+    "transactionIndex": 2,
+    "gasUsed": "1123894",
+    "logsBloom": "0x00010000000000000008011001800000000000000100000000800000800000000001000020000000000000000000000000000010004008000000000000000010001000000040000000000020200002000001008000000000000000000000000000000000420800100002000040800800000000000000000000000000000200410010000000000002000020000000000000001000080000000200000000000000000000400000000000000000000000208010000004000400000400000000000000200080000000004080000000008800000000000002002000000000000020000000000000000000000000000000020000400000000008000000000001000000",
+    "blockHash": "0x7f1386b46c2b841b5dbec5500c9afd18997753be1934ff2f3d93ac719ab98dad",
+    "transactionHash": "0xcaa5821e9893de165303758fb700c850ea6bc8ccb9a50b032d8db0a0b8fff5b5",
+    "logs": [
+      {
+        "transactionIndex": 2,
+        "blockNumber": 4871451,
+        "transactionHash": "0xcaa5821e9893de165303758fb700c850ea6bc8ccb9a50b032d8db0a0b8fff5b5",
+        "address": "0x60358b897BaaE499D4b2520814e2eC35bbF122fA",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x00000000000000000000000002e037f56728e947e92af2c05baf7fef387ddd06"
+        ],
+        "data": "0x",
+        "logIndex": 0,
+        "blockHash": "0x7f1386b46c2b841b5dbec5500c9afd18997753be1934ff2f3d93ac719ab98dad"
+      },
+      {
+        "transactionIndex": 2,
+        "blockNumber": 4871451,
+        "transactionHash": "0xcaa5821e9893de165303758fb700c850ea6bc8ccb9a50b032d8db0a0b8fff5b5",
+        "address": "0x60358b897BaaE499D4b2520814e2eC35bbF122fA",
+        "topics": [
+          "0x22be69269c1f7d73e73dcb25b710dd88c7aa1cf374c16d945def98df2107c2f8",
+          "0x4552433732310000000000000000000000000000000000000000000000000000",
+          "0x0000000000000000000000009ede10d090cdfba694a03b35829a76fd60d3d0d9"
+        ],
+        "data": "0x",
+        "logIndex": 1,
+        "blockHash": "0x7f1386b46c2b841b5dbec5500c9afd18997753be1934ff2f3d93ac719ab98dad"
+      },
+      {
+        "transactionIndex": 2,
+        "blockNumber": 4871451,
+        "transactionHash": "0xcaa5821e9893de165303758fb700c850ea6bc8ccb9a50b032d8db0a0b8fff5b5",
+        "address": "0x60358b897BaaE499D4b2520814e2eC35bbF122fA",
+        "topics": [
+          "0x22be69269c1f7d73e73dcb25b710dd88c7aa1cf374c16d945def98df2107c2f8",
+          "0x43727970746f4b69747469657300000000000000000000000000000000000000",
+          "0x000000000000000000000000670641fda29ff379affda29252d75516fa9de977"
+        ],
+        "data": "0x",
+        "logIndex": 2,
+        "blockHash": "0x7f1386b46c2b841b5dbec5500c9afd18997753be1934ff2f3d93ac719ab98dad"
+      },
+      {
+        "transactionIndex": 2,
+        "blockNumber": 4871451,
+        "transactionHash": "0xcaa5821e9893de165303758fb700c850ea6bc8ccb9a50b032d8db0a0b8fff5b5",
+        "address": "0x60358b897BaaE499D4b2520814e2eC35bbF122fA",
+        "topics": [
+          "0x22be69269c1f7d73e73dcb25b710dd88c7aa1cf374c16d945def98df2107c2f8",
+          "0x4552433732315f4c454741435900000000000000000000000000000000000000",
+          "0x000000000000000000000000fc5bbcdb3925ad9528249a831d74f789e962f563"
+        ],
+        "data": "0x",
+        "logIndex": 3,
+        "blockHash": "0x7f1386b46c2b841b5dbec5500c9afd18997753be1934ff2f3d93ac719ab98dad"
+      },
+      {
+        "transactionIndex": 2,
+        "blockNumber": 4871451,
+        "transactionHash": "0xcaa5821e9893de165303758fb700c850ea6bc8ccb9a50b032d8db0a0b8fff5b5",
+        "address": "0x60358b897BaaE499D4b2520814e2eC35bbF122fA",
+        "topics": [
+          "0x22be69269c1f7d73e73dcb25b710dd88c7aa1cf374c16d945def98df2107c2f8",
+          "0x4552433131353500000000000000000000000000000000000000000000000000",
+          "0x0000000000000000000000000b7a95f1af8d31bfaa3244544f88868b70845586"
+        ],
+        "data": "0x",
+        "logIndex": 4,
+        "blockHash": "0x7f1386b46c2b841b5dbec5500c9afd18997753be1934ff2f3d93ac719ab98dad"
+      },
+      {
+        "transactionIndex": 2,
+        "blockNumber": 4871451,
+        "transactionHash": "0xcaa5821e9893de165303758fb700c850ea6bc8ccb9a50b032d8db0a0b8fff5b5",
+        "address": "0x60358b897BaaE499D4b2520814e2eC35bbF122fA",
+        "topics": [
+          "0x22be69269c1f7d73e73dcb25b710dd88c7aa1cf374c16d945def98df2107c2f8",
+          "0x50554e4b53000000000000000000000000000000000000000000000000000000",
+          "0x000000000000000000000000c84e105e70bf3996534ae5b8c9e0f23ea7e15535"
+        ],
+        "data": "0x",
+        "logIndex": 5,
+        "blockHash": "0x7f1386b46c2b841b5dbec5500c9afd18997753be1934ff2f3d93ac719ab98dad"
+      },
+      {
+        "transactionIndex": 2,
+        "blockNumber": 4871451,
+        "transactionHash": "0xcaa5821e9893de165303758fb700c850ea6bc8ccb9a50b032d8db0a0b8fff5b5",
+        "address": "0x60358b897BaaE499D4b2520814e2eC35bbF122fA",
+        "topics": [
+          "0x903a211c8bcdc0ab18afc116fc4776504a9aac5c0121be0fda712d399017bd22",
+          "0x000000000000000000000000576fe471011f1130342342e1bd539df6408d8fd6",
+          "0x4552433732310000000000000000000000000000000000000000000000000000"
+        ],
+        "data": "0x",
+        "logIndex": 6,
+        "blockHash": "0x7f1386b46c2b841b5dbec5500c9afd18997753be1934ff2f3d93ac719ab98dad"
+      },
+      {
+        "transactionIndex": 2,
+        "blockNumber": 4871451,
+        "transactionHash": "0xcaa5821e9893de165303758fb700c850ea6bc8ccb9a50b032d8db0a0b8fff5b5",
+        "address": "0x60358b897BaaE499D4b2520814e2eC35bbF122fA",
+        "topics": [
+          "0x903a211c8bcdc0ab18afc116fc4776504a9aac5c0121be0fda712d399017bd22",
+          "0x00000000000000000000000014d321df46526fb1c7df354b2e5b4ffeef25f69e",
+          "0x4552433131353500000000000000000000000000000000000000000000000000"
+        ],
+        "data": "0x",
+        "logIndex": 7,
+        "blockHash": "0x7f1386b46c2b841b5dbec5500c9afd18997753be1934ff2f3d93ac719ab98dad"
+      },
+      {
+        "transactionIndex": 2,
+        "blockNumber": 4871451,
+        "transactionHash": "0xcaa5821e9893de165303758fb700c850ea6bc8ccb9a50b032d8db0a0b8fff5b5",
+        "address": "0x60358b897BaaE499D4b2520814e2eC35bbF122fA",
+        "topics": [
+          "0x903a211c8bcdc0ab18afc116fc4776504a9aac5c0121be0fda712d399017bd22",
+          "0x000000000000000000000000b52ed2dc8ebd49877de57de3f454fd71b75bc1fd",
+          "0x4552433131353500000000000000000000000000000000000000000000000000"
+        ],
+        "data": "0x",
+        "logIndex": 8,
+        "blockHash": "0x7f1386b46c2b841b5dbec5500c9afd18997753be1934ff2f3d93ac719ab98dad"
+      },
+      {
+        "transactionIndex": 2,
+        "blockNumber": 4871451,
+        "transactionHash": "0xcaa5821e9893de165303758fb700c850ea6bc8ccb9a50b032d8db0a0b8fff5b5",
+        "address": "0x60358b897BaaE499D4b2520814e2eC35bbF122fA",
+        "topics": [
+          "0x903a211c8bcdc0ab18afc116fc4776504a9aac5c0121be0fda712d399017bd22",
+          "0x00000000000000000000000089f2e3cacf5a664adc75e989ad9173dd513d6312",
+          "0x50554e4b53000000000000000000000000000000000000000000000000000000"
+        ],
+        "data": "0x",
+        "logIndex": 9,
+        "blockHash": "0x7f1386b46c2b841b5dbec5500c9afd18997753be1934ff2f3d93ac719ab98dad"
+      }
+    ],
+    "blockNumber": 4871451,
+    "cumulativeGasUsed": "1165894",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x02e037F56728E947e92Af2c05baF7FeF387Ddd06",
+    "0xa12E49d6fD2994d8606daca8963C84bB699962b7",
+    ["ERC721", "CryptoKitties", "ERC721_LEGACY", "ERC1155", "PUNKS"],
+    [
+      "0x9eDe10D090CDfbA694A03b35829a76Fd60d3d0d9",
+      "0x670641fda29Ff379AffDa29252D75516fa9DE977",
+      "0xfC5BBCDb3925aD9528249A831D74f789e962F563",
+      "0x0B7A95f1Af8d31bFAA3244544f88868b70845586",
+      "0xc84e105E70bf3996534AE5b8C9E0F23Ea7e15535"
+    ],
+    [
+      "0x576fe471011F1130342342e1bd539Df6408d8Fd6",
+      "0x14d321df46526fb1c7df354b2e5b4ffeef25f69e",
+      "0xb52ED2Dc8EBD49877De57De3f454Fd71b75bc1fD",
+      "0x89f2e3cacf5a664adc75e989ad9173dd513d6312"
+    ],
+    ["ERC721", "ERC1155", "ERC1155", "PUNKS"]
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "1a8fa01f7869bdb20e0c3fb0bc984936",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_admin\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_nftfiHub\",\"type\":\"address\"},{\"internalType\":\"string[]\",\"name\":\"_definedNftTypes\",\"type\":\"string[]\"},{\"internalType\":\"address[]\",\"name\":\"_definedNftWrappers\",\"type\":\"address[]\"},{\"internalType\":\"address[]\",\"name\":\"_permittedNftContracts\",\"type\":\"address[]\"},{\"internalType\":\"string[]\",\"name\":\"_permittedNftTypes\",\"type\":\"string[]\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"nftContract\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"nftType\",\"type\":\"bytes32\"}],\"name\":\"NFTPermit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"nftType\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"nftWrapper\",\"type\":\"address\"}],\"name\":\"TypeUpdated\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"acceptTransferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"cancelTransferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_nftContract\",\"type\":\"address\"}],\"name\":\"getNFTPermit\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_nftContract\",\"type\":\"address\"}],\"name\":\"getNFTWrapper\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_nftType\",\"type\":\"bytes32\"}],\"name\":\"getNftTypeWrapper\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"hub\",\"outputs\":[{\"internalType\":\"contract INftfiHub\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"rejectTransferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newOwnerCandidate\",\"type\":\"address\"}],\"name\":\"requestTransferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_nftContract\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"_nftType\",\"type\":\"string\"}],\"name\":\"setNFTPermit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"_nftContracts\",\"type\":\"address[]\"},{\"internalType\":\"string[]\",\"name\":\"_nftTypes\",\"type\":\"string[]\"}],\"name\":\"setNFTPermits\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_nftType\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"_nftWrapper\",\"type\":\"address\"}],\"name\":\"setNftType\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string[]\",\"name\":\"_nftTypes\",\"type\":\"string[]\"},{\"internalType\":\"address[]\",\"name\":\"_nftWrappers\",\"type\":\"address[]\"}],\"name\":\"setNftTypes\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"NFTfi\",\"details\":\"Registry for NFT contracts supported by NFTfi. Each NFT is associated with an NFT Type.\",\"events\":{\"NFTPermit(address,bytes32)\":{\"params\":{\"nftContract\":\"- Address of the NFT contract.\",\"nftType\":\"- NTF type e.g. bytes32(\\\"CRYPTO_KITTIES\\\")\"}},\"TypeUpdated(bytes32,address)\":{\"params\":{\"nftType\":\"- Nft type represented by keccak256('nft type').\",\"nftWrapper\":\"- Address of the wrapper contract.\"}}},\"kind\":\"dev\",\"methods\":{\"constructor\":{\"details\":\"Sets `nftTypeRegistry` Initialize `nftPermits` with a batch of permitted NFTs\",\"params\":{\"_admin\":\"- Initial admin of this contract.\",\"_definedNftTypes\":\"- All the ossible nft types\",\"_definedNftWrappers\":\"- All the possible wrappers for the types\",\"_nftfiHub\":\"- Address of the NftfiHub contract\",\"_permittedNftContracts\":\"- The addresses of the NFT contracts.\",\"_permittedNftTypes\":\"- The NFT Types. e.g. \\\"CRYPTO_KITTIES\\\" - \\\"\\\" means \\\"disable this permit\\\" - != \\\"\\\" means \\\"enable permit with the given NFT Type\\\"\"}},\"getNFTPermit(address)\":{\"params\":{\"_nftContract\":\"- The address of the NFT contract.\"}},\"getNFTWrapper(address)\":{\"params\":{\"_nftContract\":\"- The address of the NFT contract.\"}},\"getNftTypeWrapper(bytes32)\":{\"params\":{\"_nftType\":\"- The nft type, e.g. bytes32(\\\"ERC721\\\"), or bytes32(\\\"ERC1155\\\").\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"requestTransferOwnership(address)\":{\"details\":\"Requests transferring ownership of the contract to a new account (`_newOwnerCandidate`). Can only be called by the current owner.\"},\"setNFTPermit(address,string)\":{\"params\":{\"_nftContract\":\"- The address of the NFT contract.\",\"_nftType\":\"- The NFT Type. e.g. \\\"CRYPTO_KITTIES\\\" - \\\"\\\" means \\\"disable this permit\\\" - != \\\"\\\" means \\\"enable permit with the given NFT Type\\\"\"}},\"setNFTPermits(address[],string[])\":{\"params\":{\"_nftContracts\":\"- The addresses of the NFT contracts.\",\"_nftTypes\":\"- The NFT Types. e.g. \\\"CRYPTO_KITTIES\\\" - \\\"\\\" means \\\"disable this permit\\\" - != \\\"\\\" means \\\"enable permit with the given NFT Type\\\"\"}},\"setNftType(string,address)\":{\"params\":{\"_nftType\":\"- The nft type, e.g. \\\"ERC721\\\", or \\\"ERC1155\\\".\",\"_nftWrapper\":\"- The address of the wrapper contract that implements INftWrapper behaviour for dealing with NFTs.\"}},\"setNftTypes(string[],address[])\":{\"params\":{\"_nftTypes\":\"- The nft types, e.g. \\\"ERC721\\\", or \\\"ERC1155\\\".\",\"_nftWrappers\":\"- The addresses of the wrapper contract that implements INftWrapper behaviour for dealing with NFTs.\"}}},\"title\":\"PermittedNFTsAndTypeRegistry\",\"version\":1},\"userdoc\":{\"events\":{\"NFTPermit(address,bytes32)\":{\"notice\":\"This event is fired whenever the admin sets a NFT's permit.\"},\"TypeUpdated(bytes32,address)\":{\"notice\":\"This event is fired whenever the admins register a ntf type.\"}},\"kind\":\"user\",\"methods\":{\"getNFTPermit(address)\":{\"notice\":\"This function can be called by anyone to lookup the Nft Type associated with the contract.Returns the NFT Type: - bytes32(\\\"\\\") means \\\"not permitted\\\" - != bytes32(\\\"\\\") means \\\"permitted with the given NFT Type\\\"\"},\"getNFTWrapper(address)\":{\"notice\":\"This function can be called by anyone to lookup the address of the NftWrapper associated to the `_nftContract` type.\"},\"getNftTypeWrapper(bytes32)\":{\"notice\":\"This function can be called by anyone to get the contract address that implements the given nft type.\"},\"setNFTPermit(address,string)\":{\"notice\":\"This function can be called by admins to change the permitted list status of an NFT contract. This includes both adding an NFT contract to the permitted list and removing it. `_nftContract` can not be zero address.\"},\"setNFTPermits(address[],string[])\":{\"notice\":\"This function can be called by admins to change the permitted list status of a batch NFT contracts. This includes both adding an NFT contract to the permitted list and removing it. `_nftContract` can not be zero address.\"},\"setNftType(string,address)\":{\"notice\":\"Set or update the wrapper contract address for the given NFT Type. Set address(0) for a nft type for un-register such type.\"},\"setNftTypes(string[],address[])\":{\"notice\":\"Batch set or update the wrappers contract address for the given batch of NFT Types. Set address(0) for a nft type for un-register such type.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/permittedLists/PermittedNFTsAndTypeRegistry.sol\":\"PermittedNFTsAndTypeRegistry\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/Context.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        return msg.data;\\n    }\\n}\\n\",\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\"},\"contracts/interfaces/INftfiHub.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.19;\\n\\n/**\\n * @title INftfiHub\\n * @author NFTfi\\n * @dev NftfiHub interface\\n */\\ninterface INftfiHub {\\n    function setContract(string calldata _contractKey, address _contractAddress) external;\\n\\n    function getContract(bytes32 _contractKey) external view returns (address);\\n}\\n\",\"keccak256\":\"0x65320571d7049eefd4bfd6dcff48b752a4a01c56a23ae7acf0f3b7183b9b08db\",\"license\":\"BUSL-1.1\"},\"contracts/interfaces/IPermittedNFTs.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.19;\\n\\ninterface IPermittedNFTs {\\n    function setNFTPermit(address _nftContract, string memory _nftType) external;\\n\\n    function getNFTPermit(address _nftContract) external view returns (bytes32);\\n\\n    function getNFTWrapper(address _nftContract) external view returns (address);\\n}\\n\",\"keccak256\":\"0xd4fecefe929431211353fe1960aea2750fdbfb80b7692a13514c28cb48d07198\",\"license\":\"BUSL-1.1\"},\"contracts/permittedLists/PermittedNFTsAndTypeRegistry.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.19;\\n\\nimport {IPermittedNFTs} from \\\"../interfaces/IPermittedNFTs.sol\\\";\\nimport {INftfiHub} from \\\"../interfaces/INftfiHub.sol\\\";\\n\\nimport {Ownable} from \\\"../utils/Ownable.sol\\\";\\nimport {ContractKeys} from \\\"../utils/ContractKeys.sol\\\";\\n\\n/**\\n * @title  PermittedNFTsAndTypeRegistry\\n * @author NFTfi\\n * @dev Registry for NFT contracts supported by NFTfi.\\n * Each NFT is associated with an NFT Type.\\n */\\ncontract PermittedNFTsAndTypeRegistry is Ownable, IPermittedNFTs {\\n    INftfiHub public hub;\\n    mapping(bytes32 => address) private nftTypes;\\n\\n    /**\\n     * @notice A mapping from an NFT contract's address to the Token type of that contract. A zero Token Type indicates\\n     * non-permitted.\\n     */\\n    mapping(address => bytes32) private nftPermits;\\n\\n    /* ****** */\\n    /* EVENTS */\\n    /* ****** */\\n\\n    /**\\n     * @notice This event is fired whenever the admins register a ntf type.\\n     *\\n     * @param nftType - Nft type represented by keccak256('nft type').\\n     * @param nftWrapper - Address of the wrapper contract.\\n     */\\n    event TypeUpdated(bytes32 indexed nftType, address indexed nftWrapper);\\n\\n    /**\\n     * @notice This event is fired whenever the admin sets a NFT's permit.\\n     *\\n     * @param nftContract - Address of the NFT contract.\\n     * @param nftType - NTF type e.g. bytes32(\\\"CRYPTO_KITTIES\\\")\\n     */\\n    event NFTPermit(address indexed nftContract, bytes32 indexed nftType);\\n\\n    /* *********** */\\n    /* CONSTRUCTOR */\\n    /* *********** */\\n\\n    /**\\n     * @dev Sets `nftTypeRegistry`\\n     * Initialize `nftPermits` with a batch of permitted NFTs\\n     *\\n     * @param _admin - Initial admin of this contract.\\n     * @param _nftfiHub - Address of the NftfiHub contract\\n     * @param _definedNftTypes - All the ossible nft types\\n     * @param _definedNftWrappers - All the possible wrappers for the types\\n     * @param _permittedNftContracts - The addresses of the NFT contracts.\\n     * @param _permittedNftTypes - The NFT Types. e.g. \\\"CRYPTO_KITTIES\\\"\\n     * - \\\"\\\" means \\\"disable this permit\\\"\\n     * - != \\\"\\\" means \\\"enable permit with the given NFT Type\\\"\\n     */\\n    constructor(\\n        address _admin,\\n        address _nftfiHub,\\n        string[] memory _definedNftTypes,\\n        address[] memory _definedNftWrappers,\\n        address[] memory _permittedNftContracts,\\n        string[] memory _permittedNftTypes\\n    ) Ownable(_admin) {\\n        hub = INftfiHub(_nftfiHub);\\n        _setNftTypes(_definedNftTypes, _definedNftWrappers);\\n        _setNFTPermits(_permittedNftContracts, _permittedNftTypes);\\n    }\\n\\n    /* ********* */\\n    /* FUNCTIONS */\\n    /* ********* */\\n\\n    /**\\n     * @notice This function can be called by admins to change the permitted list status of an NFT contract. This\\n     * includes both adding an NFT contract to the permitted list and removing it.\\n     * `_nftContract` can not be zero address.\\n     *\\n     * @param _nftContract - The address of the NFT contract.\\n     * @param _nftType - The NFT Type. e.g. \\\"CRYPTO_KITTIES\\\"\\n     * - \\\"\\\" means \\\"disable this permit\\\"\\n     * - != \\\"\\\" means \\\"enable permit with the given NFT Type\\\"\\n     */\\n    function setNFTPermit(address _nftContract, string memory _nftType) external override onlyOwner {\\n        _setNFTPermit(_nftContract, _nftType);\\n    }\\n\\n    /**\\n     * @notice This function can be called by admins to change the permitted list status of a batch NFT contracts. This\\n     * includes both adding an NFT contract to the permitted list and removing it.\\n     * `_nftContract` can not be zero address.\\n     *\\n     * @param _nftContracts - The addresses of the NFT contracts.\\n     * @param _nftTypes - The NFT Types. e.g. \\\"CRYPTO_KITTIES\\\"\\n     * - \\\"\\\" means \\\"disable this permit\\\"\\n     * - != \\\"\\\" means \\\"enable permit with the given NFT Type\\\"\\n     */\\n    function setNFTPermits(address[] memory _nftContracts, string[] memory _nftTypes) external onlyOwner {\\n        _setNFTPermits(_nftContracts, _nftTypes);\\n    }\\n\\n    /**\\n     * @notice This function can be called by anyone to lookup the Nft Type associated with the contract.\\n     * @param  _nftContract - The address of the NFT contract.\\n     * @notice Returns the NFT Type:\\n     * - bytes32(\\\"\\\") means \\\"not permitted\\\"\\n     * - != bytes32(\\\"\\\") means \\\"permitted with the given NFT Type\\\"\\n     */\\n    function getNFTPermit(address _nftContract) external view override returns (bytes32) {\\n        return nftPermits[_nftContract];\\n    }\\n\\n    /**\\n     * @notice This function can be called by anyone to lookup the address of the NftWrapper associated to the\\n     * `_nftContract` type.\\n     * @param _nftContract - The address of the NFT contract.\\n     */\\n    function getNFTWrapper(address _nftContract) external view override returns (address) {\\n        bytes32 nftType = nftPermits[_nftContract];\\n        return getNftTypeWrapper(nftType);\\n    }\\n\\n    /**\\n     * @notice Set or update the wrapper contract address for the given NFT Type.\\n     * Set address(0) for a nft type for un-register such type.\\n     *\\n     * @param _nftType - The nft type, e.g. \\\"ERC721\\\", or \\\"ERC1155\\\".\\n     * @param _nftWrapper - The address of the wrapper contract that implements INftWrapper behaviour for dealing with\\n     * NFTs.\\n     */\\n    function setNftType(string memory _nftType, address _nftWrapper) external onlyOwner {\\n        _setNftType(_nftType, _nftWrapper);\\n    }\\n\\n    /**\\n     * @notice Batch set or update the wrappers contract address for the given batch of NFT Types.\\n     * Set address(0) for a nft type for un-register such type.\\n     *\\n     * @param _nftTypes - The nft types, e.g. \\\"ERC721\\\", or \\\"ERC1155\\\".\\n     * @param _nftWrappers - The addresses of the wrapper contract that implements INftWrapper behaviour for dealing\\n     * with NFTs.\\n     */\\n    function setNftTypes(string[] memory _nftTypes, address[] memory _nftWrappers) external onlyOwner {\\n        _setNftTypes(_nftTypes, _nftWrappers);\\n    }\\n\\n    /**\\n     * @notice This function can be called by anyone to get the contract address that implements the given nft type.\\n     *\\n     * @param  _nftType - The nft type, e.g. bytes32(\\\"ERC721\\\"), or bytes32(\\\"ERC1155\\\").\\n     */\\n    function getNftTypeWrapper(bytes32 _nftType) public view returns (address) {\\n        return nftTypes[_nftType];\\n    }\\n\\n    /**\\n     * @notice Set or update the wrapper contract address for the given NFT Type.\\n     * Set address(0) for a nft type for un-register such type.\\n     *\\n     * @param _nftType - The nft type, e.g. \\\"ERC721\\\", or \\\"ERC1155\\\".\\n     * @param _nftWrapper - The address of the wrapper contract that implements INftWrapper behaviour for dealing with\\n     * NFTs.\\n     */\\n    function _setNftType(string memory _nftType, address _nftWrapper) internal {\\n        // solhint-disable-next-line custom-errors\\n        require(bytes(_nftType).length != 0, \\\"nftType is empty\\\");\\n        bytes32 nftTypeKey = ContractKeys.getIdFromStringKey(_nftType);\\n\\n        nftTypes[nftTypeKey] = _nftWrapper;\\n\\n        emit TypeUpdated(nftTypeKey, _nftWrapper);\\n    }\\n\\n    /**\\n     * @notice Batch set or update the wrappers contract address for the given batch of NFT Types.\\n     * Set address(0) for a nft type for un-register such type.\\n     *\\n     * @param _nftTypes - The nft types, e.g. keccak256(\\\"ERC721\\\"), or keccak256(\\\"ERC1155\\\").\\n     * @param _nftWrappers - The addresses of the wrapper contract that implements INftWrapper behaviour for dealing\\n     * with NFTs.\\n     */\\n    function _setNftTypes(string[] memory _nftTypes, address[] memory _nftWrappers) internal {\\n        // solhint-disable-next-line custom-errors\\n        require(_nftTypes.length == _nftWrappers.length, \\\"setNftTypes function information arity mismatch\\\");\\n\\n        for (uint256 i; i < _nftWrappers.length; ++i) {\\n            _setNftType(_nftTypes[i], _nftWrappers[i]);\\n        }\\n    }\\n\\n    /**\\n     * @notice This function changes the permitted list status of an NFT contract. This includes both adding an NFT\\n     * contract to the permitted list and removing it.\\n     * @param _nftContract - The address of the NFT contract.\\n     * @param _nftType - The NFT Type. e.g. bytes32(\\\"CRYPTO_KITTIES\\\")\\n     * - bytes32(\\\"\\\") means \\\"disable this permit\\\"\\n     * - != bytes32(\\\"\\\") means \\\"enable permit with the given NFT Type\\\"\\n     */\\n    function _setNFTPermit(address _nftContract, string memory _nftType) internal {\\n        // solhint-disable-next-line custom-errors\\n        require(_nftContract != address(0), \\\"nftContract is zero address\\\");\\n        bytes32 nftTypeKey = ContractKeys.getIdFromStringKey(_nftType);\\n\\n        if (nftTypeKey != 0) {\\n            // solhint-disable-next-line custom-errors\\n            require(getNftTypeWrapper(nftTypeKey) != address(0), \\\"NFT type not registered\\\");\\n        }\\n\\n        nftPermits[_nftContract] = nftTypeKey;\\n        emit NFTPermit(_nftContract, nftTypeKey);\\n    }\\n\\n    /**\\n     * @notice This function changes the permitted list status of a batch NFT contracts. This includes both adding an\\n     * NFT contract to the permitted list and removing it.\\n     * @param _nftContracts - The addresses of the NFT contracts.\\n     * @param _nftTypes - The NFT Types. e.g. \\\"CRYPTO_KITTIES\\\"\\n     * - \\\"\\\" means \\\"disable this permit\\\"\\n     * - != \\\"\\\" means \\\"enable permit with the given NFT Type\\\"\\n     */\\n    function _setNFTPermits(address[] memory _nftContracts, string[] memory _nftTypes) internal {\\n        // solhint-disable-next-line custom-errors\\n        require(_nftContracts.length == _nftTypes.length, \\\"setNFTPermits function information arity mismatch\\\");\\n\\n        for (uint256 i; i < _nftContracts.length; ++i) {\\n            _setNFTPermit(_nftContracts[i], _nftTypes[i]);\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x77eeefb864d2dc582ad7ae5406fcb4efd8d82612f9d9deedf143061ab9154e7f\",\"license\":\"BUSL-1.1\"},\"contracts/utils/ContractKeys.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.19;\\n\\n/**\\n * @title ContractKeys\\n * @author NFTfi\\n * @dev Common library for contract keys\\n */\\nlibrary ContractKeys {\\n    bytes32 public constant PERMITTED_ERC20S = bytes32(\\\"PERMITTED_ERC20S\\\");\\n    bytes32 public constant PERMITTED_NFTS = bytes32(\\\"PERMITTED_NFTS\\\");\\n    bytes32 public constant PERMITTED_PARTNERS = bytes32(\\\"PERMITTED_PARTNERS\\\");\\n    bytes32 public constant NFT_TYPE_REGISTRY = bytes32(\\\"NFT_TYPE_REGISTRY\\\");\\n    bytes32 public constant LOAN_REGISTRY = bytes32(\\\"LOAN_REGISTRY\\\");\\n    bytes32 public constant PERMITTED_SNFT_RECEIVER = bytes32(\\\"PERMITTED_SNFT_RECEIVER\\\");\\n\\n    /**\\n     * @notice Returns the bytes32 representation of a string\\n     * @param _key the string key\\n     * @return id bytes32 representation\\n     */\\n    function getIdFromStringKey(string memory _key) external pure returns (bytes32 id) {\\n        // solhint-disable-next-line custom-errors\\n        require(bytes(_key).length <= 32, \\\"invalid key\\\");\\n\\n        // solhint-disable-next-line no-inline-assembly\\n        assembly {\\n            id := mload(add(_key, 32))\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x4adb3340f227161360eb398650bb58b850e80041d46c57a538f8b63ad61608b6\",\"license\":\"BUSL-1.1\"},\"contracts/utils/Ownable.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.19;\\n\\nimport {Context} from \\\"@openzeppelin/contracts/utils/Context.sol\\\";\\n\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * By default, the owner account will be the one that deploys the contract. This\\n * can later be changed with {transferOwnership}.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n *\\n * Modified version from openzeppelin/contracts/access/Ownable.sol that allows to\\n * initialize the owner using a parameter in the constructor\\n */\\nabstract contract Ownable is Context {\\n    address private _owner;\\n\\n    address private _ownerCandidate;\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        // solhint-disable-next-line custom-errors\\n        require(owner() == _msgSender(), \\\"Ownable: caller is not the owner\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @dev Initializes the contract setting the deployer as the initial owner.\\n     */\\n    constructor(address _initialOwner) {\\n        _setOwner(_initialOwner);\\n    }\\n\\n    /**\\n     * @dev Requests transferring ownership of the contract to a new account (`_newOwnerCandidate`).\\n     * Can only be called by the current owner.\\n     */\\n    function requestTransferOwnership(address _newOwnerCandidate) public virtual onlyOwner {\\n        // solhint-disable-next-line custom-errors\\n        require(_newOwnerCandidate != address(0), \\\"Ownable: new owner is the zero address\\\");\\n        _ownerCandidate = _newOwnerCandidate;\\n    }\\n\\n    function acceptTransferOwnership() public virtual {\\n        // solhint-disable-next-line custom-errors\\n        require(_ownerCandidate == _msgSender(), \\\"Ownable: not owner candidate\\\");\\n        _setOwner(_ownerCandidate);\\n        delete _ownerCandidate;\\n    }\\n\\n    function cancelTransferOwnership() public virtual onlyOwner {\\n        delete _ownerCandidate;\\n    }\\n\\n    function rejectTransferOwnership() public virtual {\\n        // solhint-disable-next-line custom-errors\\n        require(_ownerCandidate == _msgSender(), \\\"Ownable: not owner candidate\\\");\\n        delete _ownerCandidate;\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view virtual returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Sets the owner.\\n     */\\n    function _setOwner(address _newOwner) internal {\\n        address oldOwner = _owner;\\n        _owner = _newOwner;\\n        emit OwnershipTransferred(oldOwner, _newOwner);\\n    }\\n}\\n\",\"keccak256\":\"0x4f1dc29ae64fcd354c09865ae56d8a3612541ebfc9db9b87b7af6f18ca36cf65\",\"license\":\"BUSL-1.1\"}},\"version\":1}",
+  "bytecode": "0x60806040523480156200001157600080fd5b506040516200163938038062001639833981016040819052620000349162000757565b85620000408162000080565b50600280546001600160a01b0319166001600160a01b038716179055620000688484620000d0565b620000748282620001ae565b505050505050620008c2565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b80518251146200013f5760405162461bcd60e51b815260206004820152602f60248201527f7365744e667454797065732066756e6374696f6e20696e666f726d6174696f6e60448201526e040c2e4d2e8f240dad2e6dac2e8c6d608b1b60648201526084015b60405180910390fd5b60005b8151811015620001a9576200019683828151811062000165576200016562000835565b602002602001015183838151811062000182576200018262000835565b60200260200101516200028560201b60201c565b620001a1816200084b565b905062000142565b505050565b80518251146200021b5760405162461bcd60e51b815260206004820152603160248201527f7365744e46545065726d6974732066756e6374696f6e20696e666f726d6174696044820152700dedc40c2e4d2e8f240dad2e6dac2e8c6d607b1b606482015260840162000136565b60005b8251811015620001a9576200027283828151811062000241576200024162000835565b60200260200101518383815181106200025e576200025e62000835565b6020026020010151620003a660201b60201c565b6200027d816200084b565b90506200021e565b8151600003620002cb5760405162461bcd60e51b815260206004820152601060248201526f6e66745479706520697320656d70747960801b604482015260640162000136565b60405163f99a8ffb60e01b8152600090736910bE31b0674C03C23beD7665E2344E5Fd0F42B9063f99a8ffb906200030790869060040162000873565b602060405180830381865af415801562000325573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906200034b9190620008a8565b60008181526003602052604080822080546001600160a01b0319166001600160a01b03871690811790915590519293509183917f22be69269c1f7d73e73dcb25b710dd88c7aa1cf374c16d945def98df2107c2f891a3505050565b6001600160a01b038216620003fe5760405162461bcd60e51b815260206004820152601b60248201527f6e6674436f6e7472616374206973207a65726f20616464726573730000000000604482015260640162000136565b60405163f99a8ffb60e01b8152600090736910bE31b0674C03C23beD7665E2344E5Fd0F42B9063f99a8ffb906200043a90859060040162000873565b602060405180830381865af415801562000458573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906200047e9190620008a8565b90508015620004ed576000818152600360205260409020546001600160a01b0316620004ed5760405162461bcd60e51b815260206004820152601760248201527f4e46542074797065206e6f742072656769737465726564000000000000000000604482015260640162000136565b6001600160a01b038316600081815260046020526040808220849055518392917f903a211c8bcdc0ab18afc116fc4776504a9aac5c0121be0fda712d399017bd2291a3505050565b80516001600160a01b03811681146200054d57600080fd5b919050565b634e487b7160e01b600052604160045260246000fd5b604051601f8201601f191681016001600160401b038111828210171562000593576200059362000552565b604052919050565b60006001600160401b03821115620005b757620005b762000552565b5060051b60200190565b60005b83811015620005de578181015183820152602001620005c4565b50506000910152565b6000601f8381840112620005fa57600080fd5b82516020620006136200060d836200059b565b62000568565b82815260059290921b850181019181810190878411156200063357600080fd5b8287015b84811015620006d55780516001600160401b0380821115620006595760008081fd5b818a0191508a603f8301126200066f5760008081fd5b8582015160408282111562000688576200068862000552565b6200069b828b01601f1916890162000568565b92508183528c81838601011115620006b35760008081fd5b620006c482898501838701620005c1565b505084525091830191830162000637565b50979650505050505050565b600082601f830112620006f357600080fd5b81516020620007066200060d836200059b565b82815260059290921b840181019181810190868411156200072657600080fd5b8286015b848110156200074c576200073e8162000535565b83529183019183016200072a565b509695505050505050565b60008060008060008060c087890312156200077157600080fd5b6200077c8762000535565b95506200078c6020880162000535565b60408801519095506001600160401b0380821115620007aa57600080fd5b620007b88a838b01620005e7565b95506060890151915080821115620007cf57600080fd5b620007dd8a838b01620006e1565b94506080890151915080821115620007f457600080fd5b620008028a838b01620006e1565b935060a08901519150808211156200081957600080fd5b506200082889828a01620005e7565b9150509295509295509295565b634e487b7160e01b600052603260045260246000fd5b6000600182016200086c57634e487b7160e01b600052601160045260246000fd5b5060010190565b602081526000825180602084015262000894816040850160208701620005c1565b601f01601f19169190910160400192915050565b600060208284031215620008bb57600080fd5b5051919050565b610d6780620008d26000396000f3fe608060405234801561001057600080fd5b50600436106100bf5760003560e01c80638da5cb5b1161007c5780638da5cb5b1461016357806392fede001461016b57806395244b94146101735780639d6fa61814610186578063b8c8aff814610199578063c88641a2146101ac578063d8e4e93e146101bf57600080fd5b80630a21cc43146100c45780631a3dd0a5146100d9578063365a86fc146101095780635f992fdd1461011c5780636651f11d146101245780637b3711071461015b575b600080fd5b6100d76100d2366004610aca565b6101d2565b005b6100ec6100e7366004610b2d565b610218565b6040516001600160a01b0390911681526020015b60405180910390f35b6002546100ec906001600160a01b031681565b6100d7610233565b61014d610132366004610b46565b6001600160a01b031660009081526004602052604090205490565b604051908152602001610100565b6100d761026f565b6100ec6102ae565b6100d76102bd565b6100d7610181366004610b61565b6102ec565b6100d7610194366004610b46565b610325565b6100ec6101a7366004610b46565b6103db565b6100d76101ba366004610bba565b610404565b6100d76101cd366004610bfd565b61043d565b336101db6102ae565b6001600160a01b03161461020a5760405162461bcd60e51b815260040161020190610c4a565b60405180910390fd5b6102148282610476565b5050565b6000908152600360205260409020546001600160a01b031690565b6001546001600160a01b0316331461025d5760405162461bcd60e51b815260040161020190610c7f565b600180546001600160a01b0319169055565b6001546001600160a01b031633146102995760405162461bcd60e51b815260040161020190610c7f565b60015461025d906001600160a01b031661053c565b6000546001600160a01b031690565b336102c66102ae565b6001600160a01b03161461025d5760405162461bcd60e51b815260040161020190610c4a565b336102f56102ae565b6001600160a01b03161461031b5760405162461bcd60e51b815260040161020190610c4a565b610214828261058c565b3361032e6102ae565b6001600160a01b0316146103545760405162461bcd60e51b815260040161020190610c4a565b6001600160a01b0381166103b95760405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b6064820152608401610201565b600180546001600160a01b0319166001600160a01b0392909216919091179055565b6001600160a01b0381166000908152600460205260408120546103fd81610218565b9392505050565b3361040d6102ae565b6001600160a01b0316146104335760405162461bcd60e51b815260040161020190610c4a565b610214828261064f565b336104466102ae565b6001600160a01b03161461046c5760405162461bcd60e51b815260040161020190610c4a565b61021482826107cb565b80518251146104df5760405162461bcd60e51b815260206004820152602f60248201527f7365744e667454797065732066756e6374696f6e20696e666f726d6174696f6e60448201526e040c2e4d2e8f240dad2e6dac2e8c6d608b1b6064820152608401610201565b60005b81518110156105375761052783828151811061050057610500610cb6565b602002602001015183838151811061051a5761051a610cb6565b60200260200101516107cb565b61053081610ccc565b90506104e2565b505050565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b80518251146105f75760405162461bcd60e51b815260206004820152603160248201527f7365744e46545065726d6974732066756e6374696f6e20696e666f726d6174696044820152700dedc40c2e4d2e8f240dad2e6dac2e8c6d607b1b6064820152608401610201565b60005b82518110156105375761063f83828151811061061857610618610cb6565b602002602001015183838151811061063257610632610cb6565b602002602001015161064f565b61064881610ccc565b90506105fa565b6001600160a01b0382166106a55760405162461bcd60e51b815260206004820152601b60248201527f6e6674436f6e7472616374206973207a65726f206164647265737300000000006044820152606401610201565b60405163f99a8ffb60e01b8152600090736910bE31b0674C03C23beD7665E2344E5Fd0F42B9063f99a8ffb906106df908590600401610cf3565b602060405180830381865af41580156106fc573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906107209190610d41565b9050801561078357600061073382610218565b6001600160a01b0316036107835760405162461bcd60e51b8152602060048201526017602482015276139195081d1e5c19481b9bdd081c9959da5cdd195c9959604a1b6044820152606401610201565b6001600160a01b038316600081815260046020526040808220849055518392917f903a211c8bcdc0ab18afc116fc4776504a9aac5c0121be0fda712d399017bd2291a3505050565b815160000361080f5760405162461bcd60e51b815260206004820152601060248201526f6e66745479706520697320656d70747960801b6044820152606401610201565b60405163f99a8ffb60e01b8152600090736910bE31b0674C03C23beD7665E2344E5Fd0F42B9063f99a8ffb90610849908690600401610cf3565b602060405180830381865af4158015610866573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061088a9190610d41565b60008181526003602052604080822080546001600160a01b0319166001600160a01b03871690811790915590519293509183917f22be69269c1f7d73e73dcb25b710dd88c7aa1cf374c16d945def98df2107c2f891a3505050565b634e487b7160e01b600052604160045260246000fd5b604051601f8201601f191681016001600160401b0381118282101715610923576109236108e5565b604052919050565b60006001600160401b03821115610944576109446108e5565b5060051b60200190565b600082601f83011261095f57600080fd5b81356001600160401b03811115610978576109786108e5565b61098b601f8201601f19166020016108fb565b8181528460208386010111156109a057600080fd5b816020850160208301376000918101602001919091529392505050565b600082601f8301126109ce57600080fd5b813560206109e36109de8361092b565b6108fb565b82815260059290921b84018101918181019086841115610a0257600080fd5b8286015b84811015610a415780356001600160401b03811115610a255760008081fd5b610a338986838b010161094e565b845250918301918301610a06565b509695505050505050565b80356001600160a01b0381168114610a6357600080fd5b919050565b600082601f830112610a7957600080fd5b81356020610a896109de8361092b565b82815260059290921b84018101918181019086841115610aa857600080fd5b8286015b84811015610a4157610abd81610a4c565b8352918301918301610aac565b60008060408385031215610add57600080fd5b82356001600160401b0380821115610af457600080fd5b610b00868387016109bd565b93506020850135915080821115610b1657600080fd5b50610b2385828601610a68565b9150509250929050565b600060208284031215610b3f57600080fd5b5035919050565b600060208284031215610b5857600080fd5b6103fd82610a4c565b60008060408385031215610b7457600080fd5b82356001600160401b0380821115610b8b57600080fd5b610b9786838701610a68565b93506020850135915080821115610bad57600080fd5b50610b23858286016109bd565b60008060408385031215610bcd57600080fd5b610bd683610a4c565b915060208301356001600160401b03811115610bf157600080fd5b610b238582860161094e565b60008060408385031215610c1057600080fd5b82356001600160401b03811115610c2657600080fd5b610c328582860161094e565b925050610c4160208401610a4c565b90509250929050565b6020808252818101527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604082015260600190565b6020808252601c908201527f4f776e61626c653a206e6f74206f776e65722063616e64696461746500000000604082015260600190565b634e487b7160e01b600052603260045260246000fd5b600060018201610cec57634e487b7160e01b600052601160045260246000fd5b5060010190565b600060208083528351808285015260005b81811015610d2057858101830151858201604001528201610d04565b506000604082860101526040601f19601f8301168501019250505092915050565b600060208284031215610d5357600080fd5b505191905056fea164736f6c6343000813000a",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100bf5760003560e01c80638da5cb5b1161007c5780638da5cb5b1461016357806392fede001461016b57806395244b94146101735780639d6fa61814610186578063b8c8aff814610199578063c88641a2146101ac578063d8e4e93e146101bf57600080fd5b80630a21cc43146100c45780631a3dd0a5146100d9578063365a86fc146101095780635f992fdd1461011c5780636651f11d146101245780637b3711071461015b575b600080fd5b6100d76100d2366004610aca565b6101d2565b005b6100ec6100e7366004610b2d565b610218565b6040516001600160a01b0390911681526020015b60405180910390f35b6002546100ec906001600160a01b031681565b6100d7610233565b61014d610132366004610b46565b6001600160a01b031660009081526004602052604090205490565b604051908152602001610100565b6100d761026f565b6100ec6102ae565b6100d76102bd565b6100d7610181366004610b61565b6102ec565b6100d7610194366004610b46565b610325565b6100ec6101a7366004610b46565b6103db565b6100d76101ba366004610bba565b610404565b6100d76101cd366004610bfd565b61043d565b336101db6102ae565b6001600160a01b03161461020a5760405162461bcd60e51b815260040161020190610c4a565b60405180910390fd5b6102148282610476565b5050565b6000908152600360205260409020546001600160a01b031690565b6001546001600160a01b0316331461025d5760405162461bcd60e51b815260040161020190610c7f565b600180546001600160a01b0319169055565b6001546001600160a01b031633146102995760405162461bcd60e51b815260040161020190610c7f565b60015461025d906001600160a01b031661053c565b6000546001600160a01b031690565b336102c66102ae565b6001600160a01b03161461025d5760405162461bcd60e51b815260040161020190610c4a565b336102f56102ae565b6001600160a01b03161461031b5760405162461bcd60e51b815260040161020190610c4a565b610214828261058c565b3361032e6102ae565b6001600160a01b0316146103545760405162461bcd60e51b815260040161020190610c4a565b6001600160a01b0381166103b95760405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b6064820152608401610201565b600180546001600160a01b0319166001600160a01b0392909216919091179055565b6001600160a01b0381166000908152600460205260408120546103fd81610218565b9392505050565b3361040d6102ae565b6001600160a01b0316146104335760405162461bcd60e51b815260040161020190610c4a565b610214828261064f565b336104466102ae565b6001600160a01b03161461046c5760405162461bcd60e51b815260040161020190610c4a565b61021482826107cb565b80518251146104df5760405162461bcd60e51b815260206004820152602f60248201527f7365744e667454797065732066756e6374696f6e20696e666f726d6174696f6e60448201526e040c2e4d2e8f240dad2e6dac2e8c6d608b1b6064820152608401610201565b60005b81518110156105375761052783828151811061050057610500610cb6565b602002602001015183838151811061051a5761051a610cb6565b60200260200101516107cb565b61053081610ccc565b90506104e2565b505050565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b80518251146105f75760405162461bcd60e51b815260206004820152603160248201527f7365744e46545065726d6974732066756e6374696f6e20696e666f726d6174696044820152700dedc40c2e4d2e8f240dad2e6dac2e8c6d607b1b6064820152608401610201565b60005b82518110156105375761063f83828151811061061857610618610cb6565b602002602001015183838151811061063257610632610cb6565b602002602001015161064f565b61064881610ccc565b90506105fa565b6001600160a01b0382166106a55760405162461bcd60e51b815260206004820152601b60248201527f6e6674436f6e7472616374206973207a65726f206164647265737300000000006044820152606401610201565b60405163f99a8ffb60e01b815260009073__$d7e2e0a2db402280e6c36233d590dce656$__9063f99a8ffb906106df908590600401610cf3565b602060405180830381865af41580156106fc573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906107209190610d41565b9050801561078357600061073382610218565b6001600160a01b0316036107835760405162461bcd60e51b8152602060048201526017602482015276139195081d1e5c19481b9bdd081c9959da5cdd195c9959604a1b6044820152606401610201565b6001600160a01b038316600081815260046020526040808220849055518392917f903a211c8bcdc0ab18afc116fc4776504a9aac5c0121be0fda712d399017bd2291a3505050565b815160000361080f5760405162461bcd60e51b815260206004820152601060248201526f6e66745479706520697320656d70747960801b6044820152606401610201565b60405163f99a8ffb60e01b815260009073__$d7e2e0a2db402280e6c36233d590dce656$__9063f99a8ffb90610849908690600401610cf3565b602060405180830381865af4158015610866573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061088a9190610d41565b60008181526003602052604080822080546001600160a01b0319166001600160a01b03871690811790915590519293509183917f22be69269c1f7d73e73dcb25b710dd88c7aa1cf374c16d945def98df2107c2f891a3505050565b634e487b7160e01b600052604160045260246000fd5b604051601f8201601f191681016001600160401b0381118282101715610923576109236108e5565b604052919050565b60006001600160401b03821115610944576109446108e5565b5060051b60200190565b600082601f83011261095f57600080fd5b81356001600160401b03811115610978576109786108e5565b61098b601f8201601f19166020016108fb565b8181528460208386010111156109a057600080fd5b816020850160208301376000918101602001919091529392505050565b600082601f8301126109ce57600080fd5b813560206109e36109de8361092b565b6108fb565b82815260059290921b84018101918181019086841115610a0257600080fd5b8286015b84811015610a415780356001600160401b03811115610a255760008081fd5b610a338986838b010161094e565b845250918301918301610a06565b509695505050505050565b80356001600160a01b0381168114610a6357600080fd5b919050565b600082601f830112610a7957600080fd5b81356020610a896109de8361092b565b82815260059290921b84018101918181019086841115610aa857600080fd5b8286015b84811015610a4157610abd81610a4c565b8352918301918301610aac565b60008060408385031215610add57600080fd5b82356001600160401b0380821115610af457600080fd5b610b00868387016109bd565b93506020850135915080821115610b1657600080fd5b50610b2385828601610a68565b9150509250929050565b600060208284031215610b3f57600080fd5b5035919050565b600060208284031215610b5857600080fd5b6103fd82610a4c565b60008060408385031215610b7457600080fd5b82356001600160401b0380821115610b8b57600080fd5b610b9786838701610a68565b93506020850135915080821115610bad57600080fd5b50610b23858286016109bd565b60008060408385031215610bcd57600080fd5b610bd683610a4c565b915060208301356001600160401b03811115610bf157600080fd5b610b238582860161094e565b60008060408385031215610c1057600080fd5b82356001600160401b03811115610c2657600080fd5b610c328582860161094e565b925050610c4160208401610a4c565b90509250929050565b6020808252818101527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604082015260600190565b6020808252601c908201527f4f776e61626c653a206e6f74206f776e65722063616e64696461746500000000604082015260600190565b634e487b7160e01b600052603260045260246000fd5b600060018201610cec57634e487b7160e01b600052601160045260246000fd5b5060010190565b600060208083528351808285015260005b81811015610d2057858101830151858201604001528201610d04565b506000604082860101526040601f19601f8301168501019250505092915050565b600060208284031215610d5357600080fd5b505191905056fea164736f6c6343000813000a",
+  "libraries": {
+    "ContractKeys": "0x6910bE31b0674C03C23beD7665E2344E5Fd0F42B"
+  },
+  "devdoc": {
+    "author": "NFTfi",
+    "details": "Registry for NFT contracts supported by NFTfi. Each NFT is associated with an NFT Type.",
+    "events": {
+      "NFTPermit(address,bytes32)": {
+        "params": {
+          "nftContract": "- Address of the NFT contract.",
+          "nftType": "- NTF type e.g. bytes32(\"CRYPTO_KITTIES\")"
+        }
+      },
+      "TypeUpdated(bytes32,address)": {
+        "params": {
+          "nftType": "- Nft type represented by keccak256('nft type').",
+          "nftWrapper": "- Address of the wrapper contract."
+        }
+      }
+    },
+    "kind": "dev",
+    "methods": {
+      "constructor": {
+        "details": "Sets `nftTypeRegistry` Initialize `nftPermits` with a batch of permitted NFTs",
+        "params": {
+          "_admin": "- Initial admin of this contract.",
+          "_definedNftTypes": "- All the ossible nft types",
+          "_definedNftWrappers": "- All the possible wrappers for the types",
+          "_nftfiHub": "- Address of the NftfiHub contract",
+          "_permittedNftContracts": "- The addresses of the NFT contracts.",
+          "_permittedNftTypes": "- The NFT Types. e.g. \"CRYPTO_KITTIES\" - \"\" means \"disable this permit\" - != \"\" means \"enable permit with the given NFT Type\""
+        }
+      },
+      "getNFTPermit(address)": {
+        "params": {
+          "_nftContract": "- The address of the NFT contract."
+        }
+      },
+      "getNFTWrapper(address)": {
+        "params": {
+          "_nftContract": "- The address of the NFT contract."
+        }
+      },
+      "getNftTypeWrapper(bytes32)": {
+        "params": {
+          "_nftType": "- The nft type, e.g. bytes32(\"ERC721\"), or bytes32(\"ERC1155\")."
+        }
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "requestTransferOwnership(address)": {
+        "details": "Requests transferring ownership of the contract to a new account (`_newOwnerCandidate`). Can only be called by the current owner."
+      },
+      "setNFTPermit(address,string)": {
+        "params": {
+          "_nftContract": "- The address of the NFT contract.",
+          "_nftType": "- The NFT Type. e.g. \"CRYPTO_KITTIES\" - \"\" means \"disable this permit\" - != \"\" means \"enable permit with the given NFT Type\""
+        }
+      },
+      "setNFTPermits(address[],string[])": {
+        "params": {
+          "_nftContracts": "- The addresses of the NFT contracts.",
+          "_nftTypes": "- The NFT Types. e.g. \"CRYPTO_KITTIES\" - \"\" means \"disable this permit\" - != \"\" means \"enable permit with the given NFT Type\""
+        }
+      },
+      "setNftType(string,address)": {
+        "params": {
+          "_nftType": "- The nft type, e.g. \"ERC721\", or \"ERC1155\".",
+          "_nftWrapper": "- The address of the wrapper contract that implements INftWrapper behaviour for dealing with NFTs."
+        }
+      },
+      "setNftTypes(string[],address[])": {
+        "params": {
+          "_nftTypes": "- The nft types, e.g. \"ERC721\", or \"ERC1155\".",
+          "_nftWrappers": "- The addresses of the wrapper contract that implements INftWrapper behaviour for dealing with NFTs."
+        }
+      }
+    },
+    "title": "PermittedNFTsAndTypeRegistry",
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "NFTPermit(address,bytes32)": {
+        "notice": "This event is fired whenever the admin sets a NFT's permit."
+      },
+      "TypeUpdated(bytes32,address)": {
+        "notice": "This event is fired whenever the admins register a ntf type."
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "getNFTPermit(address)": {
+        "notice": "This function can be called by anyone to lookup the Nft Type associated with the contract.Returns the NFT Type: - bytes32(\"\") means \"not permitted\" - != bytes32(\"\") means \"permitted with the given NFT Type\""
+      },
+      "getNFTWrapper(address)": {
+        "notice": "This function can be called by anyone to lookup the address of the NftWrapper associated to the `_nftContract` type."
+      },
+      "getNftTypeWrapper(bytes32)": {
+        "notice": "This function can be called by anyone to get the contract address that implements the given nft type."
+      },
+      "setNFTPermit(address,string)": {
+        "notice": "This function can be called by admins to change the permitted list status of an NFT contract. This includes both adding an NFT contract to the permitted list and removing it. `_nftContract` can not be zero address."
+      },
+      "setNFTPermits(address[],string[])": {
+        "notice": "This function can be called by admins to change the permitted list status of a batch NFT contracts. This includes both adding an NFT contract to the permitted list and removing it. `_nftContract` can not be zero address."
+      },
+      "setNftType(string,address)": {
+        "notice": "Set or update the wrapper contract address for the given NFT Type. Set address(0) for a nft type for un-register such type."
+      },
+      "setNftTypes(string[],address[])": {
+        "notice": "Batch set or update the wrappers contract address for the given batch of NFT Types. Set address(0) for a nft type for un-register such type."
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 23178,
+        "contract": "contracts/permittedLists/PermittedNFTsAndTypeRegistry.sol:PermittedNFTsAndTypeRegistry",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 23180,
+        "contract": "contracts/permittedLists/PermittedNFTsAndTypeRegistry.sol:PermittedNFTsAndTypeRegistry",
+        "label": "_ownerCandidate",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_address"
+      },
+      {
+        "astId": 14635,
+        "contract": "contracts/permittedLists/PermittedNFTsAndTypeRegistry.sol:PermittedNFTsAndTypeRegistry",
+        "label": "hub",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_contract(INftfiHub)9575"
+      },
+      {
+        "astId": 14639,
+        "contract": "contracts/permittedLists/PermittedNFTsAndTypeRegistry.sol:PermittedNFTsAndTypeRegistry",
+        "label": "nftTypes",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_mapping(t_bytes32,t_address)"
+      },
+      {
+        "astId": 14644,
+        "contract": "contracts/permittedLists/PermittedNFTsAndTypeRegistry.sol:PermittedNFTsAndTypeRegistry",
+        "label": "nftPermits",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_mapping(t_address,t_bytes32)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bytes32": {
+        "encoding": "inplace",
+        "label": "bytes32",
+        "numberOfBytes": "32"
+      },
+      "t_contract(INftfiHub)9575": {
+        "encoding": "inplace",
+        "label": "contract INftfiHub",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_bytes32)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bytes32)",
+        "numberOfBytes": "32",
+        "value": "t_bytes32"
+      },
+      "t_mapping(t_bytes32,t_address)": {
+        "encoding": "mapping",
+        "key": "t_bytes32",
+        "label": "mapping(bytes32 => address)",
+        "numberOfBytes": "32",
+        "value": "t_address"
+      }
+    }
+  }
+}
