@@ -1,0 +1,421 @@
+{
+  "address": "0x911EfFE486d01160C286f9b0A09f0A79416a0F4c",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_admin",
+          "type": "address"
+        },
+        {
+          "internalType": "address[]",
+          "name": "_tokenLockAddresses",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_weightedAvgLockTime",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_acruedUserAmount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_totalWeightedAvgLockTime",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_totalAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Update",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "acceptTransferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "_tokenLockAddresses",
+          "type": "address[]"
+        }
+      ],
+      "name": "addTokenLocks",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "amounts",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "cancelTransferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "lock",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "rejectTransferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "_tokenLockAddresses",
+          "type": "address[]"
+        }
+      ],
+      "name": "removeTokenLocks",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newOwnerCandidate",
+          "type": "address"
+        }
+      ],
+      "name": "requestTransferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "tokenLocks",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalWeightedAvgLockTime",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "unlock",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "weightedAvgLockTimes",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x842ebc53b68b13394aa51c51da09feab521aacb1a1b0a40acc6fa58062886f21",
+  "receipt": {
+    "to": null,
+    "from": "0x02e037F56728E947e92Af2c05baF7FeF387Ddd06",
+    "contractAddress": "0x911EfFE486d01160C286f9b0A09f0A79416a0F4c",
+    "transactionIndex": 13,
+    "gasUsed": "681604",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000020800000000000000000000000000800000000000000000000000000000000080000000000000000000000000000000000000000000000000001000000000000000000000000000000000000020000000000000000000800000000000000000004000000000000400000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xba1070ee2edb3540c606356419b8511ff8331940eeb6b2c006b12f0a5ee74278",
+    "transactionHash": "0x842ebc53b68b13394aa51c51da09feab521aacb1a1b0a40acc6fa58062886f21",
+    "logs": [
+      {
+        "transactionIndex": 13,
+        "blockNumber": 5491436,
+        "transactionHash": "0x842ebc53b68b13394aa51c51da09feab521aacb1a1b0a40acc6fa58062886f21",
+        "address": "0x911EfFE486d01160C286f9b0A09f0A79416a0F4c",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x000000000000000000000000beebcd47b8315b9ffc949318269a329aeb7d97b4"
+        ],
+        "data": "0x",
+        "logIndex": 12,
+        "blockHash": "0xba1070ee2edb3540c606356419b8511ff8331940eeb6b2c006b12f0a5ee74278"
+      }
+    ],
+    "blockNumber": 5491436,
+    "cumulativeGasUsed": "1253497",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0xbeEBCD47B8315B9fFC949318269A329AEb7D97b4",
+    [
+      "0x475B1A580ff6e6204E9a690a5b0C118c004024ef",
+      "0x7296760851F265eF0aFaf83917528E7f11915726"
+    ]
+  ],
+  "solcInputHash": "d598d1a3b4fa9fa79952df1e52e16f2f",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_admin\",\"type\":\"address\"},{\"internalType\":\"address[]\",\"name\":\"_tokenLockAddresses\",\"type\":\"address[]\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_weightedAvgLockTime\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_acruedUserAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_totalWeightedAvgLockTime\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_totalAmount\",\"type\":\"uint256\"}],\"name\":\"Update\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"acceptTransferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"_tokenLockAddresses\",\"type\":\"address[]\"}],\"name\":\"addTokenLocks\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"amounts\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"cancelTransferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"lock\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"rejectTransferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"_tokenLockAddresses\",\"type\":\"address[]\"}],\"name\":\"removeTokenLocks\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newOwnerCandidate\",\"type\":\"address\"}],\"name\":\"requestTransferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"tokenLocks\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalWeightedAvgLockTime\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"unlock\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"weightedAvgLockTimes\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"NFTfi\",\"kind\":\"dev\",\"methods\":{\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"requestTransferOwnership(address)\":{\"details\":\"Requests transferring ownership of the contract to a new account (`_newOwnerCandidate`). Can only be called by the current owner.\"}},\"title\":\"TokenUtilityAccounting\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/TokenUtilityAccounting.sol\":\"TokenUtilityAccounting\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.9.4) (utils/Context.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        return msg.data;\\n    }\\n\\n    function _contextSuffixLength() internal view virtual returns (uint256) {\\n        return 0;\\n    }\\n}\\n\",\"keccak256\":\"0xa92e4fa126feb6907daa0513ddd816b2eb91f30a808de54f63c17d0e162c3439\",\"license\":\"MIT\"},\"contracts/TokenUtilityAccounting.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.19;\\n\\nimport \\\"./utils/Ownable.sol\\\";\\n\\n/**\\n * @title TokenUtilityAccounting\\n * @author NFTfi\\n * @dev\\n */\\ncontract TokenUtilityAccounting is Ownable {\\n    mapping(address => bool) public tokenLocks;\\n\\n    mapping(address => uint256) public weightedAvgLockTimes;\\n    mapping(address => uint256) public amounts;\\n\\n    // these two only needed if we wanted to distribute a finite,\\n    // given amount of rewards proportionally for locking times and amounts acrued\\n    uint256 public totalWeightedAvgLockTime;\\n    uint256 public totalAmount;\\n\\n    event Update(\\n        address indexed _user,\\n        uint256 _weightedAvgLockTime,\\n        uint256 _acruedUserAmount,\\n        uint256 _totalWeightedAvgLockTime,\\n        uint256 _totalAmount\\n    );\\n\\n    constructor(address _admin, address[] memory _tokenLockAddresses) Ownable(_admin) {\\n        _addTokenLocks(_tokenLockAddresses);\\n    }\\n\\n    modifier onlyTokenLock() {\\n        require(tokenLocks[msg.sender], \\\"Only token lock\\\");\\n        _;\\n    }\\n\\n    function lock(address _user, uint256 _amount) external onlyTokenLock {\\n        _updateUserWeightedAvgLockTime(_user, _amount);\\n        _updateTotalWeightedAvgLockTime(_amount);\\n        amounts[_user] += _amount;\\n        totalAmount += _amount;\\n        emit Update(_user, weightedAvgLockTimes[_user], amounts[_user], totalWeightedAvgLockTime, totalAmount);\\n    }\\n\\n    function unlock(address _user, uint256 _amount) external onlyTokenLock {\\n        amounts[_user] -= _amount;\\n        totalAmount -= _amount;\\n        emit Update(_user, weightedAvgLockTimes[_user], amounts[_user], totalWeightedAvgLockTime, totalAmount);\\n    }\\n\\n    /**\\n     * @dev updates weighted avg lock time for a given user based on the added amount\\n     * @param _user -\\n     * @param _amount - amount added\\n     */\\n    function _updateUserWeightedAvgLockTime(address _user, uint256 _amount) internal {\\n        weightedAvgLockTimes[_user] = _calculateWeightedAvgLockTime(\\n            _amount,\\n            amounts[_user],\\n            weightedAvgLockTimes[_user]\\n        );\\n    }\\n\\n    /**\\n     * @dev updates weighted avg lock time for the whole system based on the added amount\\n     * @param _amount - amount added\\n     */\\n    function _updateTotalWeightedAvgLockTime(uint256 _amount) internal {\\n        totalWeightedAvgLockTime = _calculateWeightedAvgLockTime(_amount, totalAmount, totalWeightedAvgLockTime);\\n    }\\n\\n    /**\\n     * @dev calculates weightedAvgMultiplier virtual timestamp value with\\n     * a new data point of token _amount weight and the current time\\n     * This function is either called by _updateAvgMultiplierStart or has to be called after\\n     * an explicit stake() or a deleteWithdrawRequest(), or any other possible instances,\\n     * The function takes the existing average and it's weight (existing balance) then calculates\\n     * it with the new value and weight with a weighted avg calculation between the 2 datapoints.\\n     * @param _amount - amount added\\n     * @param _oldAmount - cumulative amount before\\n     * @param _oldWeightedAvgLockTime -\\n     */\\n    function _calculateWeightedAvgLockTime(\\n        uint256 _amount,\\n        uint256 _oldAmount,\\n        uint256 _oldWeightedAvgLockTime\\n    ) internal view returns (uint256) {\\n        if (_oldAmount == 0 || _oldWeightedAvgLockTime == 0) {\\n            // if we are at initial state with just 1 datapoint\\n            return block.timestamp;\\n        } else {\\n            uint256 totalWeight = _oldAmount + _amount;\\n            // weighted avg calculation between the old value and the new lock timestamp\\n            return (_oldAmount * _oldWeightedAvgLockTime + _amount * block.timestamp) / totalWeight;\\n        }\\n    }\\n\\n    function _addTokenLocks(address[] memory _tokenLockAddresses) internal {\\n        for (uint256 index = 0; index < _tokenLockAddresses.length; ++index) {\\n            tokenLocks[_tokenLockAddresses[index]] = true;\\n        }\\n    }\\n\\n    function addTokenLocks(address[] memory _tokenLockAddresses) external onlyOwner {\\n        _addTokenLocks(_tokenLockAddresses);\\n    }\\n\\n    function removeTokenLocks(address[] memory _tokenLockAddresses) external onlyOwner {\\n        for (uint256 index = 0; index < _tokenLockAddresses.length; ++index) {\\n            tokenLocks[_tokenLockAddresses[index]] = false;\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0xd185f83cfb1302f687e5026fe388af15fda36bd64bc5291abd9dc2b9f35db7a0\",\"license\":\"BUSL-1.1\"},\"contracts/utils/Ownable.sol\":{\"content\":\"// SPDX-License-Identifier: BUSL-1.1\\n\\npragma solidity 0.8.19;\\n\\nimport \\\"@openzeppelin/contracts/utils/Context.sol\\\";\\n\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * By default, the owner account will be the one that deploys the contract. This\\n * can later be changed with {transferOwnership}.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n *\\n * Modified version from openzeppelin/contracts/access/Ownable.sol that allows to\\n * initialize the owner using a parameter in the constructor\\n */\\nabstract contract Ownable is Context {\\n    address private _owner;\\n\\n    address private _ownerCandidate;\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        require(owner() == _msgSender(), \\\"Ownable: caller is not the owner\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @dev Initializes the contract setting the deployer as the initial owner.\\n     */\\n    constructor(address _initialOwner) {\\n        _setOwner(_initialOwner);\\n    }\\n\\n    /**\\n     * @dev Requests transferring ownership of the contract to a new account (`_newOwnerCandidate`).\\n     * Can only be called by the current owner.\\n     */\\n    function requestTransferOwnership(address _newOwnerCandidate) public virtual onlyOwner {\\n        require(_newOwnerCandidate != address(0), \\\"Ownable: new owner is the zero address\\\");\\n        _ownerCandidate = _newOwnerCandidate;\\n    }\\n\\n    function acceptTransferOwnership() public virtual {\\n        require(_ownerCandidate == _msgSender(), \\\"Ownable: not owner candidate\\\");\\n        _setOwner(_ownerCandidate);\\n        delete _ownerCandidate;\\n    }\\n\\n    function cancelTransferOwnership() public virtual onlyOwner {\\n        delete _ownerCandidate;\\n    }\\n\\n    function rejectTransferOwnership() public virtual {\\n        require(_ownerCandidate == _msgSender(), \\\"Ownable: not owner candidate\\\");\\n        delete _ownerCandidate;\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view virtual returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Sets the owner.\\n     */\\n    function _setOwner(address _newOwner) internal {\\n        address oldOwner = _owner;\\n        _owner = _newOwner;\\n        emit OwnershipTransferred(oldOwner, _newOwner);\\n    }\\n}\\n\",\"keccak256\":\"0x49779c1a0636477c162d193e201860fec0ef1f103c7d76b3afb88a81a8e555bc\",\"license\":\"BUSL-1.1\"}},\"version\":1}",
+  "bytecode": "0x60806040523480156200001157600080fd5b5060405162000c6a38038062000c6a833981016040819052620000349162000148565b81620000408162000054565b506200004c81620000a4565b50506200026f565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b60005b81518110156200011157600160026000848481518110620000cc57620000cc62000231565b6020908102919091018101516001600160a01b03168252810191909152604001600020805460ff1916911515919091179055620001098162000247565b9050620000a7565b5050565b80516001600160a01b03811681146200012d57600080fd5b919050565b634e487b7160e01b600052604160045260246000fd5b600080604083850312156200015c57600080fd5b620001678362000115565b602084810151919350906001600160401b03808211156200018757600080fd5b818601915086601f8301126200019c57600080fd5b815181811115620001b157620001b162000132565b8060051b604051601f19603f83011681018181108582111715620001d957620001d962000132565b604052918252848201925083810185019189831115620001f857600080fd5b938501935b828510156200022157620002118562000115565b84529385019392850192620001fd565b8096505050505050509250929050565b634e487b7160e01b600052603260045260246000fd5b6000600182016200026857634e487b7160e01b600052601160045260246000fd5b5060010190565b6109eb806200027f6000396000f3fe608060405234801561001057600080fd5b50600436106100ea5760003560e01c80637eee288d1161008c5780638da5cb5b116100665780638da5cb5b146101d257806392fede00146101ed57806393447163146101f55780639d6fa6181461020857600080fd5b80637eee288d146101965780637f7f66d7146101a957806387930fc2146101b257600080fd5b806356b63df7116100c857806356b63df7146101405780635f992fdd146101735780637b3711071461017b5780637ec7ed681461018357600080fd5b80631a39d8ef146100ef578063282d3fdf1461010b57806355a3b2c114610120575b600080fd5b6100f860065481565b6040519081526020015b60405180910390f35b61011e6101193660046107df565b61021b565b005b6100f861012e366004610809565b60046020526000908152604090205481565b61016361014e366004610809565b60026020526000908152604090205460ff1681565b6040519015158152602001610102565b61011e61033b565b61011e6103a7565b61011e61019136600461083a565b610416565b61011e6101a43660046107df565b6104aa565b6100f860055481565b6100f86101c0366004610809565b60036020526000908152604090205481565b6000546040516001600160a01b039091168152602001610102565b61011e61053c565b61011e61020336600461083a565b610566565b61011e610216366004610809565b61059c565b3360009081526002602052604090205460ff166102715760405162461bcd60e51b815260206004820152600f60248201526e4f6e6c7920746f6b656e206c6f636b60881b60448201526064015b60405180910390fd5b61027b828261064d565b6102848161069d565b6001600160a01b038216600090815260046020526040812080548392906102ac908490610915565b9250508190555080600660008282546102c59190610915565b90915550506001600160a01b0382166000818152600360209081526040808320546004835292819020546005546006548351958652938501919091529083015260608201527f5b66beb724d7901f17fa655b9ac52727adb614a0de954ac47f187be24ae874599060800160405180910390a25050565b6001546001600160a01b031633146103955760405162461bcd60e51b815260206004820152601c60248201527f4f776e61626c653a206e6f74206f776e65722063616e646964617465000000006044820152606401610268565b600180546001600160a01b0319169055565b6001546001600160a01b031633146104015760405162461bcd60e51b815260206004820152601c60248201527f4f776e61626c653a206e6f74206f776e65722063616e646964617465000000006044820152606401610268565b600154610395906001600160a01b03166106b2565b6000546001600160a01b031633146104405760405162461bcd60e51b81526004016102689061092e565b60005b81518110156104a65760006002600084848151811061046457610464610963565b6020908102919091018101516001600160a01b03168252810191909152604001600020805460ff191691151591909117905561049f81610979565b9050610443565b5050565b3360009081526002602052604090205460ff166104fb5760405162461bcd60e51b815260206004820152600f60248201526e4f6e6c7920746f6b656e206c6f636b60881b6044820152606401610268565b6001600160a01b03821660009081526004602052604081208054839290610523908490610992565b9250508190555080600660008282546102c59190610992565b6000546001600160a01b031633146103955760405162461bcd60e51b81526004016102689061092e565b6000546001600160a01b031633146105905760405162461bcd60e51b81526004016102689061092e565b61059981610702565b50565b6000546001600160a01b031633146105c65760405162461bcd60e51b81526004016102689061092e565b6001600160a01b03811661062b5760405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b6064820152608401610268565b600180546001600160a01b0319166001600160a01b0392909216919091179055565b6001600160a01b03821660009081526004602090815260408083205460039092529091205461067d918391610768565b6001600160a01b0390921660009081526003602052604090209190915550565b6106ac81600654600554610768565b60055550565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b60005b81518110156104a65760016002600084848151811061072657610726610963565b6020908102919091018101516001600160a01b03168252810191909152604001600020805460ff191691151591909117905561076181610979565b9050610705565b6000821580610775575081155b156107815750426107bc565b600061078d8585610915565b90508061079a42876109a5565b6107a485876109a5565b6107ae9190610915565b6107b891906109bc565b9150505b9392505050565b80356001600160a01b03811681146107da57600080fd5b919050565b600080604083850312156107f257600080fd5b6107fb836107c3565b946020939093013593505050565b60006020828403121561081b57600080fd5b6107bc826107c3565b634e487b7160e01b600052604160045260246000fd5b6000602080838503121561084d57600080fd5b823567ffffffffffffffff8082111561086557600080fd5b818501915085601f83011261087957600080fd5b81358181111561088b5761088b610824565b8060051b604051601f19603f830116810181811085821117156108b0576108b0610824565b6040529182528482019250838101850191888311156108ce57600080fd5b938501935b828510156108f3576108e4856107c3565b845293850193928501926108d3565b98975050505050505050565b634e487b7160e01b600052601160045260246000fd5b80820180821115610928576109286108ff565b92915050565b6020808252818101527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604082015260600190565b634e487b7160e01b600052603260045260246000fd5b60006001820161098b5761098b6108ff565b5060010190565b81810381811115610928576109286108ff565b8082028115828204841417610928576109286108ff565b6000826109d957634e487b7160e01b600052601260045260246000fd5b50049056fea164736f6c6343000813000a",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100ea5760003560e01c80637eee288d1161008c5780638da5cb5b116100665780638da5cb5b146101d257806392fede00146101ed57806393447163146101f55780639d6fa6181461020857600080fd5b80637eee288d146101965780637f7f66d7146101a957806387930fc2146101b257600080fd5b806356b63df7116100c857806356b63df7146101405780635f992fdd146101735780637b3711071461017b5780637ec7ed681461018357600080fd5b80631a39d8ef146100ef578063282d3fdf1461010b57806355a3b2c114610120575b600080fd5b6100f860065481565b6040519081526020015b60405180910390f35b61011e6101193660046107df565b61021b565b005b6100f861012e366004610809565b60046020526000908152604090205481565b61016361014e366004610809565b60026020526000908152604090205460ff1681565b6040519015158152602001610102565b61011e61033b565b61011e6103a7565b61011e61019136600461083a565b610416565b61011e6101a43660046107df565b6104aa565b6100f860055481565b6100f86101c0366004610809565b60036020526000908152604090205481565b6000546040516001600160a01b039091168152602001610102565b61011e61053c565b61011e61020336600461083a565b610566565b61011e610216366004610809565b61059c565b3360009081526002602052604090205460ff166102715760405162461bcd60e51b815260206004820152600f60248201526e4f6e6c7920746f6b656e206c6f636b60881b60448201526064015b60405180910390fd5b61027b828261064d565b6102848161069d565b6001600160a01b038216600090815260046020526040812080548392906102ac908490610915565b9250508190555080600660008282546102c59190610915565b90915550506001600160a01b0382166000818152600360209081526040808320546004835292819020546005546006548351958652938501919091529083015260608201527f5b66beb724d7901f17fa655b9ac52727adb614a0de954ac47f187be24ae874599060800160405180910390a25050565b6001546001600160a01b031633146103955760405162461bcd60e51b815260206004820152601c60248201527f4f776e61626c653a206e6f74206f776e65722063616e646964617465000000006044820152606401610268565b600180546001600160a01b0319169055565b6001546001600160a01b031633146104015760405162461bcd60e51b815260206004820152601c60248201527f4f776e61626c653a206e6f74206f776e65722063616e646964617465000000006044820152606401610268565b600154610395906001600160a01b03166106b2565b6000546001600160a01b031633146104405760405162461bcd60e51b81526004016102689061092e565b60005b81518110156104a65760006002600084848151811061046457610464610963565b6020908102919091018101516001600160a01b03168252810191909152604001600020805460ff191691151591909117905561049f81610979565b9050610443565b5050565b3360009081526002602052604090205460ff166104fb5760405162461bcd60e51b815260206004820152600f60248201526e4f6e6c7920746f6b656e206c6f636b60881b6044820152606401610268565b6001600160a01b03821660009081526004602052604081208054839290610523908490610992565b9250508190555080600660008282546102c59190610992565b6000546001600160a01b031633146103955760405162461bcd60e51b81526004016102689061092e565b6000546001600160a01b031633146105905760405162461bcd60e51b81526004016102689061092e565b61059981610702565b50565b6000546001600160a01b031633146105c65760405162461bcd60e51b81526004016102689061092e565b6001600160a01b03811661062b5760405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b6064820152608401610268565b600180546001600160a01b0319166001600160a01b0392909216919091179055565b6001600160a01b03821660009081526004602090815260408083205460039092529091205461067d918391610768565b6001600160a01b0390921660009081526003602052604090209190915550565b6106ac81600654600554610768565b60055550565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b60005b81518110156104a65760016002600084848151811061072657610726610963565b6020908102919091018101516001600160a01b03168252810191909152604001600020805460ff191691151591909117905561076181610979565b9050610705565b6000821580610775575081155b156107815750426107bc565b600061078d8585610915565b90508061079a42876109a5565b6107a485876109a5565b6107ae9190610915565b6107b891906109bc565b9150505b9392505050565b80356001600160a01b03811681146107da57600080fd5b919050565b600080604083850312156107f257600080fd5b6107fb836107c3565b946020939093013593505050565b60006020828403121561081b57600080fd5b6107bc826107c3565b634e487b7160e01b600052604160045260246000fd5b6000602080838503121561084d57600080fd5b823567ffffffffffffffff8082111561086557600080fd5b818501915085601f83011261087957600080fd5b81358181111561088b5761088b610824565b8060051b604051601f19603f830116810181811085821117156108b0576108b0610824565b6040529182528482019250838101850191888311156108ce57600080fd5b938501935b828510156108f3576108e4856107c3565b845293850193928501926108d3565b98975050505050505050565b634e487b7160e01b600052601160045260246000fd5b80820180821115610928576109286108ff565b92915050565b6020808252818101527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604082015260600190565b634e487b7160e01b600052603260045260246000fd5b60006001820161098b5761098b6108ff565b5060010190565b81810381811115610928576109286108ff565b8082028115828204841417610928576109286108ff565b6000826109d957634e487b7160e01b600052601260045260246000fd5b50049056fea164736f6c6343000813000a",
+  "devdoc": {
+    "author": "NFTfi",
+    "kind": "dev",
+    "methods": {
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "requestTransferOwnership(address)": {
+        "details": "Requests transferring ownership of the contract to a new account (`_newOwnerCandidate`). Can only be called by the current owner."
+      }
+    },
+    "title": "TokenUtilityAccounting",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 6312,
+        "contract": "contracts/TokenUtilityAccounting.sol:TokenUtilityAccounting",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 6314,
+        "contract": "contracts/TokenUtilityAccounting.sol:TokenUtilityAccounting",
+        "label": "_ownerCandidate",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_address"
+      },
+      {
+        "astId": 5908,
+        "contract": "contracts/TokenUtilityAccounting.sol:TokenUtilityAccounting",
+        "label": "tokenLocks",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_address,t_bool)"
+      },
+      {
+        "astId": 5912,
+        "contract": "contracts/TokenUtilityAccounting.sol:TokenUtilityAccounting",
+        "label": "weightedAvgLockTimes",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 5916,
+        "contract": "contracts/TokenUtilityAccounting.sol:TokenUtilityAccounting",
+        "label": "amounts",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 5918,
+        "contract": "contracts/TokenUtilityAccounting.sol:TokenUtilityAccounting",
+        "label": "totalWeightedAvgLockTime",
+        "offset": 0,
+        "slot": "5",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 5920,
+        "contract": "contracts/TokenUtilityAccounting.sol:TokenUtilityAccounting",
+        "label": "totalAmount",
+        "offset": 0,
+        "slot": "6",
+        "type": "t_uint256"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_address,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
