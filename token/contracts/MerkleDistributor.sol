@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
 import {Pausable} from "@openzeppelin/contracts/security/Pausable.sol";
 
-import "./NFTFI.sol";
+import "./NFTfiToken.sol";
 import "./DistributorTokenLock.sol";
 
 import "./utils/Ownable.sol";
@@ -19,7 +19,7 @@ import "./utils/Ownable.sol";
  * we transfer it to the tokenLock contract
  */
 contract MerkleDistributor is Ownable, Pausable {
-    NFTFI public immutable nftfi;
+    NFTfiToken public immutable nftfiToken;
     DistributorTokenLock public immutable distributorTokenLock;
     address public immutable distributorRegistry;
     uint256 public immutable claimCutoffDate;
@@ -34,19 +34,19 @@ contract MerkleDistributor is Ownable, Pausable {
      * @dev Constructor initializes references for NFTfi token and TokenLock contract.
      * It also sets the owner of the contract.
      * @param _admin The initial owner of the contract, usually able to set Merkle roots.
-     * @param _nftfi Address of the NFTfi token contract.
+     * @param _nftfiToken Address of the NFTfi token contract.
      * @param _distributorTokenLock Address of the TokenLock contract where tokens are transferred upon claims.
      */
     constructor(
         bytes32 _merkleRoot,
         address _admin,
-        address _nftfi,
+        address _nftfiToken,
         address _distributorTokenLock,
         address _distributorRegistry,
         uint256 _claimCutoffDate
     ) Ownable(_admin) {
         merkleRoot = _merkleRoot;
-        nftfi = NFTFI(_nftfi);
+        nftfiToken = NFTfiToken(_nftfiToken);
         distributorTokenLock = DistributorTokenLock(_distributorTokenLock);
         distributorRegistry = _distributorRegistry;
         claimCutoffDate = _claimCutoffDate;
@@ -66,11 +66,7 @@ contract MerkleDistributor is Ownable, Pausable {
         claimedBitMap[claimedWordIndex] = claimedBitMap[claimedWordIndex] | (1 << claimedBitIndex);
     }
 
-    function claim(
-        uint256 _index,
-        uint256 _amount,
-        bytes32[] memory _merkleProof
-    ) external {
+    function claim(uint256 _index, uint256 _amount, bytes32[] memory _merkleProof) external {
         _claim(_index, _amount, _merkleProof, msg.sender);
     }
 
@@ -101,7 +97,7 @@ contract MerkleDistributor is Ownable, Pausable {
         // Mark it claimed and send the token.
         _setClaimed(_index);
 
-        nftfi.approve(address(distributorTokenLock), _amount);
+        nftfiToken.approve(address(distributorTokenLock), _amount);
         distributorTokenLock.lockTokens(_amount, _claimer);
 
         emit Claimed(_index, _amount, _merkleProof, _claimer);
@@ -112,7 +108,7 @@ contract MerkleDistributor is Ownable, Pausable {
      * @param _amount of tokens to drain
      */
     function drain(uint256 _amount) public onlyOwner {
-        nftfi.transfer(owner(), _amount);
+        nftfiToken.transfer(owner(), _amount);
     }
 
     /**

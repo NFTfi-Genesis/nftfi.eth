@@ -5,7 +5,7 @@ pragma solidity 0.8.19;
 import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 import {Pausable} from "@openzeppelin/contracts/security/Pausable.sol";
 
-import "./NFTFI.sol";
+import "./NFTfiToken.sol";
 import "./TokenUtilityAccounting.sol";
 
 import "./utils/Ownable.sol";
@@ -18,12 +18,12 @@ import "./utils/Ownable.sol";
  * and not from an external source. It integrates with a `TokenUtilityAccounting` contract.
  */
 abstract contract BaseTokenLock is Ownable, Pausable {
-    using SafeERC20 for NFTFI;
+    using SafeERC20 for NFTfiToken;
 
     // Contract that calculates a token utility score with a (locked) time based multiplier.
     // Optional, can be left zero-address and added in the future.
     TokenUtilityAccounting public tokenUtilityAccounting;
-    NFTFI public immutable nftfiToken;
+    NFTfiToken public immutable nftfiToken;
 
     // Cooldown time before a withdrawal can be executed after request in seconds
     uint256 public cooldown;
@@ -67,16 +67,16 @@ abstract contract BaseTokenLock is Ownable, Pausable {
     /**
      * @dev Initializes the contract, setting initial admin, token, distributor, and cooldown values.
      * @param _admin Admin's address.
-     * @param _nftfi Address of the NFTFI token.
+     * @param _nftfiToken Address of the NFTFI token.
      * @param _cooldown Cooldown time in seconds.
      */
     constructor(
         address _admin,
-        address _nftfi,
+        address _nftfiToken,
         address _tokenUtilityAccounting,
         uint256 _cooldown
     ) Ownable(_admin) {
-        nftfiToken = NFTFI(_nftfi);
+        nftfiToken = NFTfiToken(_nftfiToken);
         tokenUtilityAccounting = TokenUtilityAccounting(_tokenUtilityAccounting);
         cooldown = _cooldown;
     }
